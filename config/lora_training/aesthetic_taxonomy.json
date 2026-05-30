@@ -1,0 +1,173 @@
+{
+  "version": "1.0.0",
+  "purpose": "Reserved taxonomy for future LoRA aesthetic tuning from real case images and reference images.",
+  "dataset_root": "lora_training_sandbox/aesthetic_corpus",
+  "track_images_in_git": false,
+  "image_groups": [
+    "reference_images",
+    "case_images",
+    "rejected_images",
+    "comparison_sets"
+  ],
+  "metadata_groups": [
+    "captions",
+    "manifests",
+    "quality_reviews"
+  ],
+  "design_domains": [
+    {
+      "id": "ui",
+      "name_zh": "UI 界面",
+      "name_en": "UI",
+      "description": "App, dashboard, web product, mobile screen, component, and design-system references."
+    },
+    {
+      "id": "poster",
+      "name_zh": "海报",
+      "name_en": "Poster",
+      "description": "Key visual, campaign poster, typography poster, event poster, and series poster references."
+    },
+    {
+      "id": "exhibition-board",
+      "name_zh": "展板",
+      "name_en": "Exhibition Board",
+      "description": "Competition board, presentation board, multi-panel layout, and analysis board references."
+    },
+    {
+      "id": "vi-brand",
+      "name_zh": "VI/品牌",
+      "name_en": "VI and Brand",
+      "description": "Logo, brand identity, brand boards, visual systems, and brand application references."
+    },
+    {
+      "id": "environmental-art",
+      "name_zh": "环艺/空间",
+      "name_en": "Environmental Art",
+      "description": "Interior, landscape, exhibition, spatial analysis, and environment-board references."
+    },
+    {
+      "id": "packaging",
+      "name_zh": "包装",
+      "name_en": "Packaging",
+      "description": "Product packaging, label, box, bag, bottle, and commerce touchpoint references."
+    },
+    {
+      "id": "typography",
+      "name_zh": "字体/排版",
+      "name_en": "Typography",
+      "description": "Expressive type, custom lettering, layout rhythm, and text hierarchy references."
+    },
+    {
+      "id": "infovis",
+      "name_zh": "信息可视化",
+      "name_en": "Information Visualization",
+      "description": "Diagram, map, data narrative, timeline, flowchart, and technical visualization references."
+    },
+    {
+      "id": "web",
+      "name_zh": "网页",
+      "name_en": "Web",
+      "description": "Landing page, editorial web, product site, documentation, and responsive web references."
+    },
+    {
+      "id": "short-video-aigc",
+      "name_zh": "短剧/AIGC 视频",
+      "name_en": "Short Video AIGC",
+      "description": "Storyboard, shot board, scene style, character continuity, and video prompt references."
+    }
+  ],
+  "style_axes": [
+    {
+      "id": "minimal-premium",
+      "name_zh": "极简高级",
+      "control_goal": "quiet surface, restrained palette, clear focal anchor, high whitespace"
+    },
+    {
+      "id": "editorial-grid",
+      "name_zh": "编辑网格",
+      "control_goal": "strong grid, reading path, modular hierarchy, print-like order"
+    },
+    {
+      "id": "swiss-modern",
+      "name_zh": "瑞士现代",
+      "control_goal": "geometric alignment, sans typography, strict spacing, neutral contrast"
+    },
+    {
+      "id": "commercial-product",
+      "name_zh": "商业产品",
+      "control_goal": "inspectable product, clean lighting, controlled reflections, credible material"
+    },
+    {
+      "id": "soft-luxury",
+      "name_zh": "柔和奢感",
+      "control_goal": "soft light, warm neutrals, delicate material, low-noise atmosphere"
+    },
+    {
+      "id": "tech-futurism",
+      "name_zh": "科技未来",
+      "control_goal": "precise geometry, luminous accents, dark-light contrast, no random sci-fi clutter"
+    },
+    {
+      "id": "cultural-contemporary",
+      "name_zh": "当代文化",
+      "control_goal": "cultural symbols translated into modern structure without literal ornament overload"
+    },
+    {
+      "id": "environmental-competition",
+      "name_zh": "环艺竞赛",
+      "control_goal": "clear analysis logic, plan fidelity, spatial hierarchy, board-level readability"
+    },
+    {
+      "id": "experimental-typography",
+      "name_zh": "实验字体",
+      "control_goal": "expressive letterform, exact text, legible hierarchy, controlled distortion"
+    },
+    {
+      "id": "infographic-technical",
+      "name_zh": "技术图解",
+      "control_goal": "label accuracy, diagram clarity, visual grouping, thin-line discipline"
+    }
+  ],
+  "quality_labels": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "good_negative_space",
+    "layout_ordered",
+    "text_accurate",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity",
+    "fragmented_visual",
+    "dirty_texture_noise",
+    "layout_disorder",
+    "text_error",
+    "mojibake",
+    "generic_style",
+    "overdecorated"
+  ],
+  "caption_schema": {
+    "required_fields": [
+      "source_type",
+      "domain_id",
+      "style_axis_ids",
+      "quality_labels",
+      "positive_aesthetic_notes",
+      "negative_failure_notes",
+      "text_accuracy_notes",
+      "layout_notes",
+      "rights_status"
+    ],
+    "source_types": [
+      "reference_image",
+      "case_image",
+      "rejected_image",
+      "comparison_set"
+    ],
+    "rights_status": [
+      "owned",
+      "licensed",
+      "public_reference_only",
+      "unknown_do_not_train"
+    ]
+  }
+}

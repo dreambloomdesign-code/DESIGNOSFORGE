@@ -1,0 +1,63 @@
+{
+  "domain": {
+    "id": "typography",
+    "name_zh": "字体/排版",
+    "name_en": "Typography",
+    "description": "Expressive type, custom lettering, layout rhythm, and text hierarchy references."
+  },
+  "allowed_style_axis_ids": [
+    "minimal-premium",
+    "editorial-grid",
+    "swiss-modern",
+    "commercial-product",
+    "soft-luxury",
+    "tech-futurism",
+    "cultural-contemporary",
+    "environmental-competition",
+    "experimental-typography",
+    "infographic-technical"
+  ],
+  "allowed_quality_labels": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "good_negative_space",
+    "layout_ordered",
+    "text_accurate",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity",
+    "fragmented_visual",
+    "dirty_texture_noise",
+    "layout_disorder",
+    "text_error",
+    "mojibake",
+    "generic_style",
+    "overdecorated"
+  ],
+  "caption_schema": {
+    "required_fields": [
+      "source_type",
+      "domain_id",
+      "style_axis_ids",
+      "quality_labels",
+      "positive_aesthetic_notes",
+      "negative_failure_notes",
+      "text_accuracy_notes",
+      "layout_notes",
+      "rights_status"
+    ],
+    "source_types": [
+      "reference_image",
+      "case_image",
+      "rejected_image",
+      "comparison_set"
+    ],
+    "rights_status": [
+      "owned",
+      "licensed",
+      "public_reference_only",
+      "unknown_do_not_train"
+    ]
+  },
+  "notes": "Store images outside git by default; track captions, manifests, and quality reviews."
+}

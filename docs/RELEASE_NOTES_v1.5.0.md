@@ -10,12 +10,14 @@ DESIGNOSFORGE v1.5.0 is a quality jump focused on visual discipline and prompt r
 - Better text: exact visible text, spelling locks, no pseudo-text, and no mojibake are now first-class gates.
 - Better layout: grid, margin, reading path, density ceiling, and no-overlap concerns are explicit.
 - Better release process: GitHub validation workflow, PR body, release notes, and source skill validator are included.
+- LoRA-ready aesthetic corpus: reserved dataset taxonomy and folders for real case images, reference images, rejected examples, captions, manifests, and quality reviews.
 
 ## Developer Notes
 
 - New module: `app.core.aesthetic_quality`
 - New CLI: `python -m app.cli quality audit "<text>"`
 - New CLI: `python -m app.cli quality guardrails "<text>"`
+- New CLI: `python -m app.cli lora init-aesthetic-space`
 - New workflow: `.github/workflows/validate.yml`
 - New validator: `tools/validate_source_skill.py`
 - New install guide: `docs/CODEX_INSTALL.md`

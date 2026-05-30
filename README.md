@@ -1,4 +1,4 @@
-# DESIGNOSFORGE v1.5 Source for Codex
+# DESIGNOSFORGE v1.5.1 Source for Codex
 
 DESIGNOSFORGE is an open-source Codex agent/skill system for turning AI design from prompt guessing into a governed design workflow.
 
@@ -16,6 +16,7 @@ Use it to study, adapt, and extend:
 - design-agent orchestration
 - visual prompt governance
 - aesthetic quality gates
+- LoRA aesthetic corpus planning
 - GitHub-ready release workflows
 
 See `docs/CODEX_INSTALL.md` for local Codex skill installation.
@@ -39,8 +40,9 @@ PYTHONPATH=. python -m app.cli capabilities
 PYTHONPATH=. python -m app.cli run "做一个品牌 VI 方案" --prompt-packet
 PYTHONPATH=. python -m app.cli gitops sync-registry
 PYTHONPATH=. python -m app.cli github status
-PYTHONPATH=. python -m app.cli github release-plan --version v1.5.0
+PYTHONPATH=. python -m app.cli github release-plan --version v1.5.1
 PYTHONPATH=. python -m app.cli quality audit "高级 大气 细碎 脏乱 生成一张海报"
+PYTHONPATH=. python -m app.cli lora init-aesthetic-space
 PYTHONPATH=. pytest -q
 ```
 

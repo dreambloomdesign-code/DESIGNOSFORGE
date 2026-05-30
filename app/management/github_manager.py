@@ -60,7 +60,7 @@ class GitHubManager:
         }
         return json.dumps(payload, ensure_ascii=False, indent=2)
 
-    def release_plan(self, version="v1.5.0"):
+    def release_plan(self, version="v1.5.1"):
         branch = f"release/{version.lstrip('v')}"
         lines = [
             f"# DESIGNOSFORGE {version} GitHub Release Plan",
@@ -77,7 +77,7 @@ class GitHubManager:
         ]
         return "\n".join(lines)
 
-    def pr_template(self, version="v1.5.0"):
+    def pr_template(self, version="v1.5.1"):
         return "\n".join([
             f"# Release DESIGNOSFORGE {version}",
             "",

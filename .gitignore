@@ -5,4 +5,12 @@ __pycache__/
 .venv/
 lora_training_sandbox/libraries/*/dataset/assets/*
 lora_training_sandbox/libraries/*/outputs/*
+lora_training_sandbox/aesthetic_corpus/domains/*/reference_images/*
+lora_training_sandbox/aesthetic_corpus/domains/*/case_images/*
+lora_training_sandbox/aesthetic_corpus/domains/*/rejected_images/*
+lora_training_sandbox/aesthetic_corpus/domains/*/comparison_sets/*
+!lora_training_sandbox/aesthetic_corpus/domains/*/reference_images/.gitkeep
+!lora_training_sandbox/aesthetic_corpus/domains/*/case_images/.gitkeep
+!lora_training_sandbox/aesthetic_corpus/domains/*/rejected_images/.gitkeep
+!lora_training_sandbox/aesthetic_corpus/domains/*/comparison_sets/.gitkeep
 !lora_training_sandbox/.gitkeep

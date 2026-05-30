@@ -7,6 +7,7 @@
 - Add quality CLI actions, text-health audit script, and stronger poster/typography/UI subskill gates.
 - Preserve GitHub management, image-generation confirmation gates, and environment-aware routing.
 - Publish the project as an MIT-licensed open-source Codex agent/skill system.
+- Reserve LoRA aesthetic corpus space for real case/reference images by design domain and style axis.
 
 ## Validation
 
@@ -17,6 +18,7 @@
 - [x] `quality audit` detects clutter and mojibake risks
 - [x] Text-health audit reports `mojibake_count: 0`
 - [x] MIT License, contributing guide, security policy, and Codex install guide included
+- [x] LoRA aesthetic space initializer and taxonomy covered by tests
 
 ## Risk Notes
 

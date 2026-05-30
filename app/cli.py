@@ -2,6 +2,7 @@ import argparse
 from app.core.aesthetic_quality import AestheticQualityGate
 from app.core.capabilities import capability_report
 from app.core.orchestrator import MasterOrchestrator
+from app.lora_training.aesthetic_space import LoRAAestheticSpace
 from app.lora_training.service import LoRAStyleTrainingLibrary
 from app.management.git_ops_manager import GitOpsManager
 from app.management.github_manager import GitHubManager
@@ -16,16 +17,18 @@ def main():
     run_parser.add_argument("--confirm-image-generation", action="store_true")
     run_parser.add_argument("--prompt-packet", action="store_true")
     lora_parser = sub.add_parser("lora")
-    lora_parser.add_argument("action", choices=("status", "init"))
+    lora_parser.add_argument("action", choices=("status", "init", "init-aesthetic-space"))
     lora_parser.add_argument("--name", default="default-style-library")
     lora_parser.add_argument("--style-token", default="<designosforge_style>")
+    lora_parser.add_argument("--root", default="lora_training_sandbox/aesthetic_corpus")
+    lora_parser.add_argument("--taxonomy", default="config/lora_training/aesthetic_taxonomy.json")
     gitops_parser = sub.add_parser("gitops")
     gitops_parser.add_argument("action", choices=("status", "diff", "sync-registry"))
     gitops_parser.add_argument("--repo", default=".")
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v1.5.0")
+    github_parser.add_argument("--version", default="v1.5.1")
     quality_parser = sub.add_parser("quality")
     quality_parser.add_argument("action", choices=("audit", "guardrails"))
     quality_parser.add_argument("text")
@@ -35,8 +38,11 @@ def main():
     elif args.command == "run":
         print(MasterOrchestrator().run(args.prompt, args.confirm_image_generation, args.prompt_packet))
     elif args.command == "lora":
-        service = LoRAStyleTrainingLibrary()
-        print(service.status() if args.action == "status" else service.init_library(args.name, args.style_token))
+        if args.action == "init-aesthetic-space":
+            print(LoRAAestheticSpace(args.root, args.taxonomy).init_space())
+        else:
+            service = LoRAStyleTrainingLibrary()
+            print(service.status() if args.action == "status" else service.init_library(args.name, args.style_token))
     elif args.command == "gitops":
         print(SkillRegistrySyncAgent(args.repo).report() if args.action == "sync-registry" else (GitOpsManager(args.repo).status() if args.action == "status" else GitOpsManager(args.repo).diff()))
     elif args.command == "github":

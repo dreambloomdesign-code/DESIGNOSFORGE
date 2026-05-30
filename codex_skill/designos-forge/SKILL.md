@@ -1,9 +1,9 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v1.5.0. Use when Codex needs to act as the user's design assistant for brand VI, logo, posters, typography, PPT/decks, Web/UI/Figma, infovis, environmental/spatial/exhibition boards, packaging, short-video AIGC prompts, reference recreation, layered PSD/PDF/PNG/PPTX/ZIP delivery, PromptPacket generation, aesthetic quality gates, anti-fragmentation/clean-visual control, text precision, UTF-8/mojibake checks, layout order, redundancy reduction, image-generation planning with confirmation gates, environment-aware routing, LoRA style-training planning, GitOps/skill-registry management, GitHub repository/branch/PR/release planning, or when the user says DesignOS, Forge, DESIGNOSFORGE, 调用DesignForge, 终极助手, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, 冗余机制, GitHub管理, 版本升级.
+description: End-to-end local design-agent orchestration for DesignOS Forge v1.5.1. Use when Codex needs to act as the user's design assistant for brand VI, logo, posters, typography, PPT/decks, Web/UI/Figma, infovis, environmental/spatial/exhibition boards, packaging, short-video AIGC prompts, reference recreation, layered PSD/PDF/PNG/PPTX/ZIP delivery, PromptPacket generation, aesthetic quality gates, anti-fragmentation/clean-visual control, text precision, UTF-8/mojibake checks, layout order, redundancy reduction, image-generation planning with confirmation gates, environment-aware routing, LoRA aesthetic corpus planning, LoRA style-training planning, GitOps/skill-registry management, GitHub repository/branch/PR/release planning, or when the user says DesignOS, Forge, DESIGNOSFORGE, 调用DesignForge, 终极助手, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, 冗余机制, LoRA训练, 参考图分类, 案例图分类, GitHub管理, 版本升级.
 ---
 
-# DesignOS Forge v1.5.0
+# DesignOS Forge v1.5.1
 
 ## Core Rule
 
@@ -15,7 +15,7 @@ When triggered, explicitly state:
 
 Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes design work, guide the user through briefing, strategy, exploration, refinement, validation, and only then delivery. Use one-shot packaging only when the user explicitly gives a complete brief or asks to export.
 
-Use the v1.5.0 environment layer before execution: identify which local skills, plugins, runtimes, source packages, Git/GitHub state, and asset tools are available, then route work to the strongest available capability. Read `references/environment-toolchain.md` when the task mentions upgrades, environment checks, Figma, browser QA, image generation, CAD, documents, presentations, spreadsheets, or local source/package health. Read `references/github-management.md` when the task mentions Git, GitHub, branches, tags, releases, PRs, CI, or version upgrade direction. Read `references/aesthetic-prompt-governance.md` when the task mentions aesthetics, dirty/fragmented visuals, prompt richness, text precision, garbled text, layout order, or redundant mechanisms.
+Use the v1.5.0 environment layer before execution: identify which local skills, plugins, runtimes, source packages, Git/GitHub state, and asset tools are available, then route work to the strongest available capability. Read `references/environment-toolchain.md` when the task mentions upgrades, environment checks, Figma, browser QA, image generation, CAD, documents, presentations, spreadsheets, or local source/package health. Read `references/github-management.md` when the task mentions Git, GitHub, branches, tags, releases, PRs, CI, or version upgrade direction. Read `references/aesthetic-prompt-governance.md` when the task mentions aesthetics, dirty/fragmented visuals, prompt richness, text precision, garbled text, layout order, or redundant mechanisms. Read `references/lora-aesthetic-space.md` when the task mentions LoRA training, case images, reference images, aesthetic corpus, style classification, or domain classification.
 
 Official wake command:
 
@@ -112,6 +112,7 @@ Use the closest v1.4 subskill route:
 - `ShortDramaAIGC_OS`: short drama, video, storyboard, Seedance/即梦/TapNow prompts.
 - `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
 - `LoRAStyleTrainingLibrary`: style dataset and adapter planning.
+- `LoRAAestheticSpace`: reserved corpus taxonomy for real case images, reference images, rejected examples, captions, manifests, and quality reviews across design domains and style axes.
 - `AestheticQualityGate`: visual cleanliness, layout order, exact text, encoding health, prompt specificity, and redundancy QA.
 - `GitOpsManager` and `GitHubManager`: local version state, branch/tag/PR/release planning, registry sync, and GitHub handoff.
 - `GeneralDesignOS`: fallback design coordination and general GitOps registry work.

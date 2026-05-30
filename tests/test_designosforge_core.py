@@ -8,7 +8,7 @@ from app.management.skill_registry_sync import SkillRegistrySyncAgent
 
 def test_capabilities_include_core_agents():
     report = capability_report()
-    assert "DESIGNOSFORGE v1.5.0" in report
+    assert "DESIGNOSFORGE v1.5.1" in report
     assert "AestheticQualityGate" in report
     assert "GitOpsManager" in report
     assert "GitHubManager" in report
