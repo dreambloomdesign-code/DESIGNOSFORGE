@@ -35,7 +35,7 @@ The script returns JSON with detected skill folders, source package locations, P
 - Image prompts and visual prompt engineering: use `image-prompt-crafter`, `gpt-image-2-style-library`, `prompt-engineering`, or `zh-prompt-library`.
 - Real bitmap generation or editing: use image generation/editing only after DESIGNOSFORGE's confirmation gate passes.
 - PPT/decks, documents, and spreadsheets: use Presentations, Documents, or Spreadsheets capabilities and render/verify outputs before delivery.
-- GitHub, GitOps, registry sync, and source publishing: use GitHub skills, `references/github-management.md`, the v1.4.2 `github` CLI, or the `gitops` CLI only when code/source state is part of the request.
+- GitHub, GitOps, registry sync, and source publishing: use GitHub skills, `references/github-management.md`, the v1.5.0 `github` CLI, or the `gitops` CLI only when code/source state is part of the request.
 - Supabase-backed apps: use Supabase capabilities for schema, auth, storage, vectors, and SSR integration tasks.
 
 ## Runtime Validation
@@ -55,6 +55,7 @@ $env:PYTHONUTF8='1'
 py -3 -m app.cli capabilities
 py -3 -m app.cli run '做一张海报并开始生图'
 py -3 -m app.cli github status
+py -3 -m app.cli quality audit '高级 大气 细碎 脏乱 生成一张海报'
 ```
 
 The source package's editable install needs explicit setuptools discovery that includes `app*` and excludes resource folders.

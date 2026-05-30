@@ -1,7 +1,7 @@
 interface:
   display_name: "DesignOS Forge"
-  short_description: "DesignOS Forge v1.4.2 design and GitHub orchestration"
-  default_prompt: "Use $designos-forge to route this design request through v1.4.2 inference, environment-aware tool selection, GitHub/GitOps management, PromptPacket planning, confirmation gates, and final delivery."
+  short_description: "DesignOS Forge v1.5 aesthetic and GitHub orchestration"
+  default_prompt: "Use $designos-forge to route this design request through v1.5 inference, aesthetic quality gates, prompt precision, text/encoding health, environment-aware tool selection, GitHub/GitOps management, and final delivery."
 
 policy:
   allow_implicit_invocation: true

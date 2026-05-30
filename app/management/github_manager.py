@@ -60,7 +60,7 @@ class GitHubManager:
         }
         return json.dumps(payload, ensure_ascii=False, indent=2)
 
-    def release_plan(self, version="v1.4.2"):
+    def release_plan(self, version="v1.5.0"):
         branch = f"release/{version.lstrip('v')}"
         lines = [
             f"# DESIGNOSFORGE {version} GitHub Release Plan",
@@ -77,13 +77,13 @@ class GitHubManager:
         ]
         return "\n".join(lines)
 
-    def pr_template(self, version="v1.4.2"):
+    def pr_template(self, version="v1.5.0"):
         return "\n".join([
             f"# Release DESIGNOSFORGE {version}",
             "",
             "## Summary",
-            "- Add Git/GitHub management layer.",
-            "- Preserve DESIGNOSFORGE inference, PromptPacket, and image confirmation gates.",
+            "- Add v1.5 aesthetic quality, prompt precision, layout order, text accuracy, encoding, and redundancy gates.",
+            "- Preserve DESIGNOSFORGE inference, GitHub management, and image confirmation gates.",
             "",
             "## Validation",
             "- [ ] Skill quick_validate passed",

@@ -12,4 +12,5 @@ Core rules:
 - Keep the three-step inference process.
 - Do not generate final images before user confirmation.
 - Feed constraints into PromptOrchestrationEngine and QAAgent.
+- Enforce layout order with grid, spacing scale, alignment rules, content density ceiling, text wrapping, and no overlap before delivery.
 - Keep outputs executable, traceable, and delivery-ready.

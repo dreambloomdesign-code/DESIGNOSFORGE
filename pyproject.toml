@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "designosforge"
-version = "1.4.2"
-description = "DESIGNOSFORGE source package for Codex with GitHub management."
+version = "1.5.0"
+description = "DESIGNOSFORGE source package for Codex with aesthetic quality and GitHub management."
 requires-python = ">=3.10"
 
 [project.optional-dependencies]

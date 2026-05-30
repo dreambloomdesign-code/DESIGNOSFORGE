@@ -43,7 +43,7 @@ class DesignInferenceProtocol:
 
     def _content_for_step(self, state: DesignSessionState) -> str:
         if state.design_inference_step == 1:
-            return "锁定任务类型、受众、平台规格、交付形式、参考限制、是否涉及图片生成或最终视觉输出。"
+            return "锁定任务类型、受众、平台规格、交付形式、参考限制、是否涉及图片生成或最终视觉输出；同步标记乱码、文字、版式和细碎脏乱风险。"
         if state.design_inference_step == 2:
-            return "拆解风格 DNA、构图系统、色彩字体、材质光影、参考图锁定、负向约束与可变创意空间。"
-        return "整理可执行方案、PromptPacket 或交付清单；三步完成后主动推荐是否进入生图、出图或交付阶段，并等待用户确认。"
+            return "拆解风格 DNA、主视觉锚点、构图层级、网格密度、色彩字体、材质光影、参考图锁定、负向约束与可变创意空间。"
+        return "整理 v1.5 PromptPacket 或交付清单；先通过审美一致性、排版秩序、文字精准、编码健康、反细碎脏乱 QA，再询问是否进入生图、出图或交付阶段。"

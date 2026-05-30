@@ -12,4 +12,5 @@ Core rules:
 - Keep the three-step inference process.
 - Do not generate final images before user confirmation.
 - Feed constraints into PromptOrchestrationEngine and QAAgent.
+- Treat typography as a precision system: exact visible text, spelling lock, readable hierarchy, controlled tracking/leading, and no pseudo-text or mojibake.
 - Keep outputs executable, traceable, and delivery-ready.

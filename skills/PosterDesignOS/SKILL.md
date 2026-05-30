@@ -12,4 +12,5 @@ Core rules:
 - Keep the three-step inference process.
 - Do not generate final images before user confirmation.
 - Feed constraints into PromptOrchestrationEngine and QAAgent.
+- Prevent fragmented or dirty visuals by limiting the poster to one dominant visual anchor, two secondary supports, quiet background zones, and explicit negative space.
 - Keep outputs executable, traceable, and delivery-ready.

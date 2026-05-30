@@ -1,4 +1,5 @@
 import argparse
+from app.core.aesthetic_quality import AestheticQualityGate
 from app.core.capabilities import capability_report
 from app.core.orchestrator import MasterOrchestrator
 from app.lora_training.service import LoRAStyleTrainingLibrary
@@ -24,7 +25,10 @@ def main():
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v1.4.2")
+    github_parser.add_argument("--version", default="v1.5.0")
+    quality_parser = sub.add_parser("quality")
+    quality_parser.add_argument("action", choices=("audit", "guardrails"))
+    quality_parser.add_argument("text")
     args = parser.parse_args()
     if args.command == "capabilities":
         print(capability_report())
@@ -43,6 +47,9 @@ def main():
             print(manager.release_plan(args.version))
         else:
             print(manager.pr_template(args.version))
+    elif args.command == "quality":
+        gate = AestheticQualityGate()
+        print(gate.audit_json(args.text) if args.action == "audit" else gate.guardrail_text(args.text))
 
 if __name__ == "__main__":
     main()

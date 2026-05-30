@@ -11,9 +11,9 @@ Use semantic versioning with explicit release lanes:
 Recommended near-term path:
 
 1. `v1.4.2`: add GitHub management, release planning, PR templates, and local repository status checks.
-2. `v1.4.3`: add CI workflow templates and automated skill/source validation.
-3. `v1.5.0`: add plugin-aware release publishing, changelog generation, and multi-skill compatibility matrix.
-4. `v1.5.1+`: add issue templates for design requests, bug reports, model/render failures, and environment reports.
+2. `v1.5.0`: add aesthetic quality gates, PromptPacket v1.5, text/encoding health, layout order, and redundancy governance.
+3. `v1.5.1`: add CI workflow templates and automated skill/source validation.
+4. `v1.6.0`: add plugin-aware release publishing, changelog generation, issue templates, and multi-skill compatibility matrix.
 
 ## Branch, Tag, and Release Rules
 
@@ -45,8 +45,8 @@ From the source package root:
 $env:PYTHONPATH='.'
 $env:PYTHONUTF8='1'
 py -3 -m app.cli github status
-py -3 -m app.cli github release-plan --version v1.4.2
-py -3 -m app.cli github pr-template --version v1.4.2
+py -3 -m app.cli github release-plan --version v1.5.0
+py -3 -m app.cli github pr-template --version v1.5.0
 ```
 
 If the folder is not yet a Git repository, initialize and publish only after the user confirms the target GitHub owner/repo:
@@ -54,7 +54,7 @@ If the folder is not yet a Git repository, initialize and publish only after the
 ```powershell
 git init
 git add .
-git commit -m "release: designosforge v1.4.2"
+git commit -m "release: designosforge v1.5.0"
 git remote add origin https://github.com/<owner>/<repo>.git
 git push -u origin main
 ```

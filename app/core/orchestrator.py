@@ -1,4 +1,5 @@
 from .design_inference_protocol import DesignInferenceProtocol
+from .aesthetic_quality import AestheticQualityGate
 from .models import DesignSessionState
 from .prompt_packet import PromptPacketBuilder
 from .task_router import TaskRouterAgent
@@ -8,6 +9,7 @@ class MasterOrchestrator:
         self.router = TaskRouterAgent()
         self.protocol = DesignInferenceProtocol()
         self.prompt_packet = PromptPacketBuilder()
+        self.quality = AestheticQualityGate()
 
     def run(self, prompt, confirm_image_generation=False, emit_prompt_packet=False):
         route = self.router.route(prompt)
@@ -15,7 +17,10 @@ class MasterOrchestrator:
         if confirm_image_generation:
             state.prompt = f"确认生图 {state.prompt}"
         step = self.protocol.next_step(state)
+        quality = self.quality.evaluate(prompt)
         lines = ["正在调用 DESIGNOSFORGE。", "", f"TaskRoute: {route.task_type} -> {route.skill_name}", f"InferenceStep: Step {step.step}｜{step.title}", step.content]
+        if quality.risks:
+            lines.append(f"QualityGate: {', '.join(quality.risks)}")
         if step.image_generation_blocked:
             lines.append("ImageGate: 已拦截。用户未确认前不生图、不出最终图。")
         if step.recommend_image_generation:

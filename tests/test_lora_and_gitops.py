@@ -22,3 +22,6 @@ def test_github_release_plan_mentions_version():
     plan = GitHubManager(".").release_plan("v9.9.9")
     assert "v9.9.9" in plan
     assert "draft PR" in plan
+
+def test_github_default_release_plan_targets_v1_5():
+    assert "v1.5.0" in GitHubManager(".").release_plan()

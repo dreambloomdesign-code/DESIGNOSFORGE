@@ -57,7 +57,11 @@ if (-not $exists) {
         $status.git_status = (Run-Command @("git", "status", "--short") $Repo).output
         $status.git_branch = (Run-Command @("git", "branch", "--show-current") $Repo).output
         $status.git_remotes = (Run-Command @("git", "remote", "-v") $Repo).output
-        $status.recommendation = "Use release branch, validation, PR, tag, and GitHub Release workflow."
+        if ([string]::IsNullOrWhiteSpace($status.git_remotes)) {
+            $status.recommendation = "Add a GitHub remote named origin before PR, tag push, or GitHub Release workflow."
+        } else {
+            $status.recommendation = "Use release branch, validation, PR, tag, and GitHub Release workflow."
+        }
     }
 }
 
