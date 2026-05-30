@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
+  "title_zh": "云悠山色高端红茶",
+  "primary_domain_id": "vi-brand",
+  "cross_domain_id": "packaging",
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/manifests/yunyoushanse-black-tea-hiiibrand-2025.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/yunyoushanse-black-tea-hiiibrand-2025.caption.jsonl",
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/yunyoushanse-black-tea-hiiibrand-2025",
+  "packaging_training_value": [
+    "cylindrical tea container hero presentation",
+    "outer rigid box front and back presentation",
+    "label variant comparison",
+    "bamboo lid and matte white body material contrast",
+    "black box with metallic gold foil stamping",
+    "premium product macro material references"
+  ],
+  "packaging_risk_controls": [
+    "do not duplicate the same images under packaging; cross-reference the vi-brand batch instead",
+    "do not train exact dense text without source copy",
+    "keep product object count controlled for clean packaging renders"
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+}

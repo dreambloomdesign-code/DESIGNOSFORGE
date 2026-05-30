@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.5.1",
+  "overall_score": 8.8,
+  "domain_fit": {
+    "vi-brand": 0.95,
+    "packaging": 0.95,
+    "typography": 0.72
+  },
+  "style_axis_fit": {
+    "minimal-premium": 0.92,
+    "commercial-product": 0.94,
+    "soft-luxury": 0.86,
+    "cultural-contemporary": 0.86,
+    "editorial-grid": 0.78
+  },
+  "quality_scores": {
+    "clean_composition": 9.0,
+    "strong_focal_anchor": 9.2,
+    "good_negative_space": 8.7,
+    "layout_ordered": 8.8,
+    "material_credible": 9.1,
+    "color_controlled": 9.0,
+    "reference_fidelity": 8.9,
+    "text_precision_risk_control": 6.8,
+    "anti_fragmentation_value": 9.1
+  },
+  "core_aesthetic_takeaways": [
+    "The batch is valuable for training quiet luxury in packaging: one clear product or logo anchor, restrained palette, and strong negative space.",
+    "The strongest transferable feature is the relationship between matte white product bodies, warm bamboo lids, red or charcoal vertical labels, dark textured boxes, and metallic gold foil.",
+    "The system layout image is useful for teaching ordered VI packaging presentation without visual clutter.",
+    "The macro images are useful as material references for foil stamping and textured substrate, but should be weighted lower for global composition training."
+  ],
+  "prompt_structure_lessons": [
+    "Start prompts with product category and design domain, then lock object count and view type.",
+    "Describe the visual anchor before material detail.",
+    "Separate exact text requirements from texture-like microcopy.",
+    "Use explicit negative constraints against extra props, decorative landscapes, random ornaments, background noise, and pseudo-Chinese typography.",
+    "For macro material prompts, state that shallow depth of field is intentional and should not imply cropped product mistakes in hero views."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text": [
+      "云悠山色"
+    ],
+    "requires_source_confirmation": [
+      "dense label copy",
+      "gold foil small text blocks",
+      "partial macro Chinese characters"
+    ],
+    "training_rule": "Use this batch for visual hierarchy, label placement, foil material, and brand-system order. Do not train exact Chinese body copy unless vector/OCR ground truth is added."
+  },
+  "risk_controls": [
+    {
+      "risk": "pseudo Chinese text",
+      "severity": "high",
+      "mitigation": "caption dense copy as microcopy risk, add exact text source before text-positive training, and avoid using this batch as the only typography dataset."
+    },
+    {
+      "risk": "dirty texture noise",
+      "severity": "medium",
+      "mitigation": "separate material texture labels from pale background grain; downweight background texture during crop selection."
+    },
+    {
+      "risk": "overfitting to one brand mark",
+      "severity": "medium",
+      "mitigation": "tag brand mark as abstract logo scale and placement; do not use it as a universal mark shape."
+    },
+    {
+      "risk": "macro crop leakage into hero renders",
+      "severity": "medium",
+      "mitigation": "separate view_type labels for hero, system layout, and macro material study."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as high-quality positive case batch after rights review",
+    "stage_2_caption_tuning": "use captions to teach premium packaging hierarchy and anti-fragmentation rules",
+    "stage_3_lora_training": "train only after adding more tea/food packaging cases and exact text ground truth where typography precision matters",
+    "suggested_weighting": {
+      "hero_views": 1.0,
+      "system_layout": 0.85,
+      "macro_material_views": 0.65
+    }
+  },
+  "negative_prompt_atoms": [
+    "extra random props",
+    "messy tea leaves scattered around the product",
+    "decorative landscape background",
+    "dirty gray noise as a main style",
+    "illegible pseudo-Chinese as exact text",
+    "too many labels or seals",
+    "overdecorated cultural motifs",
+    "warped cylinder geometry",
+    "uncontrolled gold glare"
+  ]
+}

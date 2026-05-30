@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
+  "title_zh": "云悠山色高端红茶",
+  "title_en": "Yunyoushanse Premium Black Tea",
+  "source_collection": "Hiiibrand Awards 2025 reference case",
+  "source_original_dir_label": "训练集/云悠山色高端红茶 - Hiiibrand Awards 2025",
+  "source_type": "case_image",
+  "primary_domain_id": "vi-brand",
+  "secondary_domain_ids": [
+    "packaging",
+    "typography"
+  ],
+  "style_axis_ids": [
+    "minimal-premium",
+    "commercial-product",
+    "soft-luxury",
+    "cultural-contemporary",
+    "editorial-grid"
+  ],
+  "quality_labels_positive": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "good_negative_space",
+    "layout_ordered",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "text_error",
+    "dirty_texture_noise"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User provided these files as training images. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 7,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/yunyoushanse-black-tea-hiiibrand-2025",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/yunyoushanse-black-tea-hiiibrand-2025.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/quality_reviews/yunyoushanse-black-tea-hiiibrand-2025.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/packaging/manifests/yunyoushanse-black-tea-hiiibrand-2025.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "premium contemporary Chinese tea packaging with quiet luxury, controlled cultural symbolism, and disciplined product presentation",
+    "composition_system": "single hero, paired product hero, modular VI board, and macro material studies",
+    "color_system": [
+      "matte white",
+      "warm bamboo",
+      "deep black brown",
+      "metallic gold",
+      "label red",
+      "charcoal gray"
+    ],
+    "material_system": [
+      "matte ceramic or coated paper cylinder",
+      "bamboo or wood lid",
+      "textured vertical seal label",
+      "dark textured rigid box",
+      "gold foil stamping",
+      "white textured substrate"
+    ],
+    "typography_system": "large abstract brand mark, vertical brand label, dense supporting Chinese microcopy, restrained gold small text blocks",
+    "anti_fragmentation_rules": [
+      "keep one dominant product or brand mark anchor per image",
+      "use large quiet negative space around product heroes",
+      "separate material texture from background grain",
+      "do not add extra props or decorative tea scenery",
+      "do not treat dense microcopy as legible text without source copy"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "yunyoushanse_black_tea_01",
+      "file_name": "yunyoushanse_black_tea_01_single_cylinder_front.jpg",
+      "original_file_name": "imgi_5_d56011ba76d8450a88435fab4ae1099b_1766458142467.jpg",
+      "view_type": "single product front hero"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_02",
+      "file_name": "yunyoushanse_black_tea_02_cylinder_and_box_pair.jpg",
+      "original_file_name": "imgi_6_4aa33f8103484fc6845707c66b05d8cd_1766458148643.jpg",
+      "view_type": "paired product and outer box hero"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_03",
+      "file_name": "yunyoushanse_black_tea_03_vi_packaging_system_layout.jpg",
+      "original_file_name": "imgi_7_3e858415d0434107b262279c5500d1ab_1766458148643.jpg",
+      "view_type": "brand packaging system layout board"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_04",
+      "file_name": "yunyoushanse_black_tea_04_two_cylinder_variants.jpg",
+      "original_file_name": "imgi_8_b1c531651b3d479aba2c118016cf56d9_1766458148644.jpg",
+      "view_type": "two product variant comparison"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_05",
+      "file_name": "yunyoushanse_black_tea_05_closeup_red_label_cylinder.jpg",
+      "original_file_name": "imgi_9_01f1cc870c74460eb86c475bf61d16d9_1766458148644.jpg",
+      "view_type": "close-up label and product scale contrast"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_06",
+      "file_name": "yunyoushanse_black_tea_06_black_box_gold_foil_macro.jpg",
+      "original_file_name": "imgi_10_e07fce173ee14edf99f5003b9d2c0d0e_1766458148644.jpg",
+      "view_type": "black box gold foil macro material study"
+    },
+    {
+      "image_id": "yunyoushanse_black_tea_07",
+      "file_name": "yunyoushanse_black_tea_07_white_box_gold_foil_macro.jpg",
+      "original_file_name": "imgi_11_6af87d28870e4cbfa76587b8884031fa_1766458148645.jpg",
+      "view_type": "white box gold foil typography macro"
+    }
+  ]
+}
