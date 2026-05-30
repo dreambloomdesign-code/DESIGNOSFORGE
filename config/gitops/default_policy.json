@@ -1,0 +1,18 @@
+{
+  "name": "DESIGNOSFORGE GitOps default policy",
+  "allowed_commands": [
+    "status",
+    "diff",
+    "add",
+    "commit",
+    "tag",
+    "push",
+    "pull_ff_only"
+  ],
+  "blocked_commands": [
+    "reset_hard",
+    "force_push",
+    "clean_force"
+  ],
+  "destructive_actions_require_user_confirmation": true
+}

@@ -1,0 +1,10 @@
+{
+  "runner": "external",
+  "base_model": "stabilityai/stable-diffusion-xl-base-1.0",
+  "rank": 16,
+  "alpha": 16,
+  "resolution": 1024,
+  "steps": 1200,
+  "sandbox_only": true,
+  "track_weights_in_git": false
+}

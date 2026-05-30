@@ -1,0 +1,8 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.egg-info/
+.venv/
+lora_training_sandbox/libraries/*/dataset/assets/*
+lora_training_sandbox/libraries/*/outputs/*
+!lora_training_sandbox/.gitkeep
