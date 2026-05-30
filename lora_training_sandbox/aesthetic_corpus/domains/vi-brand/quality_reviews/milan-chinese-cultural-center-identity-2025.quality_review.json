@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "milan-chinese-cultural-center-identity-2025",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.5.1",
+  "overall_score": 8.6,
+  "domain_fit": {
+    "vi-brand": 0.97,
+    "poster": 0.86,
+    "environmental-art": 0.82,
+    "typography": 0.78
+  },
+  "style_axis_fit": {
+    "editorial-grid": 0.93,
+    "swiss-modern": 0.88,
+    "cultural-contemporary": 0.87,
+    "experimental-typography": 0.76,
+    "minimal-premium": 0.68,
+    "infographic-technical": 0.64
+  },
+  "quality_scores": {
+    "clean_composition": 8.4,
+    "strong_focal_anchor": 8.3,
+    "good_negative_space": 8.5,
+    "layout_ordered": 9.0,
+    "material_credible": 7.4,
+    "color_controlled": 8.8,
+    "reference_fidelity": 8.9,
+    "text_precision_risk_control": 7.1,
+    "anti_fragmentation_value": 8.7
+  },
+  "core_aesthetic_takeaways": [
+    "This batch is strongest as a civic-cultural identity system reference rather than a single poster style.",
+    "The transferable visual DNA is a modular circular C-like symbol language, not the exact logo itself.",
+    "The palette is highly distinctive: cream, oxblood brown, cyan, orange-red, pale yellow, soft gray, and dark brown type.",
+    "The best training value is cross-application consistency across posters, signage, stationery, outdoor media, facade signage, apparel, and social posts.",
+    "The batch helps solve fragmented visuals by showing how one small symbol grammar can expand into many touchpoints while staying ordered."
+  ],
+  "prompt_structure_lessons": [
+    "Start prompts by naming the application type: poster, wayfinding signage, stationery, facade sign, social grid, or brand guideline board.",
+    "Describe the identity grammar separately from the layout: circular modular marks, notch/arrow cutouts, three accent colors, cream/brown fields.",
+    "Lock object count and medium before adding cultural references; otherwise social posts, signage arrows, and architecture can collapse into one cluttered scene.",
+    "For text, specify exact short headlines only and mark small multilingual copy as placeholder unless source text is supplied.",
+    "When using architectural signage, preserve facade perspective and keep the logo lockup integrated into the surface."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "CHINESE CULTURAL CENTER OF MILAN",
+      "CENTRO CULTURALE CINESE",
+      "A MILANO",
+      "SERPENTE",
+      "Merry Christmas",
+      "HOLIDAYS"
+    ],
+    "requires_source_confirmation": [
+      "addresses",
+      "contact details",
+      "small footer copy",
+      "wayfinding pinyin-like annotations",
+      "long Italian invitation copy",
+      "RGB and hex annotations"
+    ],
+    "training_rule": "Use this batch for hierarchy, grid rhythm, color coding, signage logic, and application consistency."
+  },
+  "risk_controls": [
+    {
+      "risk": "exact logo overfit",
+      "severity": "high",
+      "mitigation": "Caption the mark as modular circular civic-symbol grammar; avoid using the exact mark as a reusable generated brand asset unless the user explicitly requests this project identity."
+    },
+    {
+      "risk": "pseudo multilingual text",
+      "severity": "high",
+      "mitigation": "Only train short verified headlines as exact text; treat small Italian, English, Chinese, address, email, and pinyin-like details as placeholder layout."
+    },
+    {
+      "risk": "application mixing clutter",
+      "severity": "medium",
+      "mitigation": "Keep separate view_type labels for poster, signage, stationery, facade, social media, apparel, and color-system boards."
+    },
+    {
+      "risk": "duplicate facade weighting",
+      "severity": "medium",
+      "mitigation": "Downweight the low-resolution facade image and use the high-resolution version as the primary facade signage reference."
+    },
+    {
+      "risk": "social media UI overfit",
+      "severity": "medium",
+      "mitigation": "Treat the Instagram-like chrome as presentation context, not a required brand element."
+    },
+    {
+      "risk": "decorative cultural overload",
+      "severity": "medium",
+      "mitigation": "Use cultural imagery only inside specific event posts; keep the core identity geometric and restrained."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as a high-quality VI and public-signage identity batch after rights review",
+    "stage_2_caption_tuning": "use captions to teach modular identity grammar, application separation, and multilingual text-risk control",
+    "stage_3_lora_training": "train as a VI/signage adapter with additional public cultural-institution identity cases before mixing with packaging or product photography",
+    "suggested_weighting": {
+      "poster_identity_views": 1.0,
+      "signage_and_facade_views": 0.95,
+      "brand_guideline_and_color_system_views": 0.85,
+      "stationery_and_apparel_views": 0.8,
+      "social_media_grid_views": 0.75,
+      "low_resolution_duplicate_reference": 0.25
+    }
+  },
+  "negative_prompt_atoms": [
+    "random floating circles without grid logic",
+    "fake Chinese or Italian text",
+    "too many arrows and pictograms",
+    "decorative brush calligraphy",
+    "lanterns, dragons, and generic cultural ornaments unless requested",
+    "social media UI chrome in every output",
+    "crowded poster field",
+    "inconsistent color coding",
+    "warped facade signage",
+    "low-resolution compression softness",
+    "overlapping unreadable multilingual copy"
+  ]
+}

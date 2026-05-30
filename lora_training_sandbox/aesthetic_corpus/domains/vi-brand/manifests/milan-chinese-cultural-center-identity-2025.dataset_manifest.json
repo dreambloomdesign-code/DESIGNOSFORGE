@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "milan-chinese-cultural-center-identity-2025",
+  "title_zh": "米兰中国文化交流中心标识系统再设计",
+  "title_en": "Chinese Cultural Center of Milan Identity System Redesign",
+  "source_collection": "Hiiibrand Awards 2025 reference case",
+  "source_original_dir_label": "训练集/米兰中国文化交流中心标识系统再设计 - Hiiibrand Awards 2025",
+  "source_type": "case_image",
+  "primary_domain_id": "vi-brand",
+  "secondary_domain_ids": [
+    "poster",
+    "typography",
+    "environmental-art"
+  ],
+  "style_axis_ids": [
+    "editorial-grid",
+    "swiss-modern",
+    "cultural-contemporary",
+    "experimental-typography",
+    "minimal-premium",
+    "infographic-technical"
+  ],
+  "quality_labels_positive": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "good_negative_space",
+    "layout_ordered",
+    "color_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "text_error",
+    "generic_style",
+    "overdecorated",
+    "layout_disorder"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User provided these files as training images. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 12,
+  "unique_primary_image_count": 11,
+  "duplicate_policy": {
+    "duplicate_group_id": "milan_ccc_facade_signage",
+    "preferred_image_id": "milan_ccc_09",
+    "low_resolution_reference_image_id": "milan_ccc_08",
+    "rule": "Use the high-resolution facade signage image as the primary training sample; keep the low-resolution sibling only as a provenance and placement reference."
+  },
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/milan-chinese-cultural-center-identity-2025",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/milan-chinese-cultural-center-identity-2025.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/quality_reviews/milan-chinese-cultural-center-identity-2025.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/poster/manifests/milan-chinese-cultural-center-identity-2025.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/environmental-art/manifests/milan-chinese-cultural-center-identity-2025.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "playful but ordered civic cultural identity for a Chinese cultural center in Milan, blending Swiss-modern grid discipline with modular cultural symbolism",
+    "symbol_system": "modular circular C-like marks, arrow/notch cutouts, repeated grid patterns, symbol clusters, and color-coded direction logic",
+    "composition_system": "large negative space, poster triptychs, two-column guideline boards, square social post grids, outdoor signage placements, and facade applications",
+    "color_system": [
+      "cream",
+      "deep oxblood brown",
+      "cyan blue",
+      "orange red",
+      "pale yellow",
+      "soft gray",
+      "dark brown typography"
+    ],
+    "typography_system": "bold geometric sans typography, stacked bilingual institution names, Italian/English event copy, compact footer details, and guideline annotations",
+    "application_system": [
+      "poster",
+      "logo extension",
+      "T-shirt",
+      "stamp",
+      "wayfinding signage",
+      "stationery",
+      "business card",
+      "outdoor billboard",
+      "facade signage",
+      "social media posts"
+    ],
+    "anti_fragmentation_rules": [
+      "separate identity core marks from application mockups",
+      "keep symbol repetition aligned to a grid or clear cluster logic",
+      "use at most three accent colors per composition",
+      "do not add decorative Chinese ornament unless it is part of an application image",
+      "treat long multilingual copy as layout reference unless exact source text is supplied",
+      "avoid mixing signage arrows, social UI chrome, and architectural photos in a single generated scene unless explicitly requested"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "milan_ccc_01",
+      "file_name": "milan_ccc_01_poster_triptych_system.png",
+      "original_file_name": "imgi_12_a5acce77e2f54db384a1ec2ff3d92ad8_1761926676563.png",
+      "view_type": "poster triptych identity system",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "milan_ccc_02",
+      "file_name": "milan_ccc_02_single_poster_milan.jpeg",
+      "original_file_name": "imgi_13_14eb62faa7c94681a678014ff5394c5b_1761662250601.jpeg",
+      "view_type": "single poster identity layout",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "milan_ccc_03",
+      "file_name": "milan_ccc_03_logo_extensions_tshirt.jpg",
+      "original_file_name": "imgi_14_0ff0465fe03348fba16905a9cdc23656_1763946076271.jpg",
+      "view_type": "logo extension and apparel application",
+      "training_weight_hint": 0.85
+    },
+    {
+      "image_id": "milan_ccc_04",
+      "file_name": "milan_ccc_04_graphic_extension_stamp.jpg",
+      "original_file_name": "imgi_15_c19ba9a769c044788e50eb418746b9e5_1763945175040.jpg",
+      "view_type": "graphic extension stamp application",
+      "training_weight_hint": 0.85
+    },
+    {
+      "image_id": "milan_ccc_05",
+      "file_name": "milan_ccc_05_signage_wayfinding_system.jpg",
+      "original_file_name": "imgi_16_854dd21c374c4bc7ab5fe1894023d966_1763947138782.jpg",
+      "view_type": "signage and wayfinding system board",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "milan_ccc_06",
+      "file_name": "milan_ccc_06_stationery_communication_system.jpg",
+      "original_file_name": "imgi_17_787c9663b1524cf3980af73a7d12c916_1763946523891.jpg",
+      "view_type": "communication and stationery applications",
+      "training_weight_hint": 0.8
+    },
+    {
+      "image_id": "milan_ccc_07",
+      "file_name": "milan_ccc_07_outdoor_billboard.jpg",
+      "original_file_name": "imgi_18_1af0225b87004eaba4811c50f78fc946_1763946170080.jpg",
+      "view_type": "outdoor billboard application",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "milan_ccc_08",
+      "file_name": "milan_ccc_08_facade_signage_lowres_reference.jpg",
+      "original_file_name": "imgi_46_e5c9252d08f64cffbae52e40d639fa6e_1763937105753.jpg",
+      "view_type": "facade signage low resolution duplicate reference",
+      "duplicate_group": "milan_ccc_facade_signage",
+      "training_weight_hint": 0.25
+    },
+    {
+      "image_id": "milan_ccc_09",
+      "file_name": "milan_ccc_09_facade_signage_highres.jpg",
+      "original_file_name": "imgi_5_e5c9252d08f64cffbae52e40d639fa6e_1763937105753.jpg",
+      "view_type": "facade signage high resolution application",
+      "duplicate_group": "milan_ccc_facade_signage",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "milan_ccc_10",
+      "file_name": "milan_ccc_10_minimal_symbol_motion_frame.jpeg",
+      "original_file_name": "imgi_7_91d84ce08759452f8a3c255d78b27f8b_1761992606373.jpeg",
+      "view_type": "minimal symbol motion or spacing frame",
+      "training_weight_hint": 0.7
+    },
+    {
+      "image_id": "milan_ccc_11",
+      "file_name": "milan_ccc_11_color_symbol_field.jpg",
+      "original_file_name": "imgi_9_2942e394a6484709906e7e444cdd01d0_1763945567904.jpg",
+      "view_type": "color system and symbol field board",
+      "training_weight_hint": 0.85
+    },
+    {
+      "image_id": "milan_ccc_12",
+      "file_name": "milan_ccc_12_social_media_grid.png",
+      "original_file_name": "imgi_11_4cc7a14ee6224912aaea0dfecae15280_1762986969762.png",
+      "view_type": "social media post grid applications",
+      "training_weight_hint": 0.75
+    }
+  ]
+}

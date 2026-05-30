@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "milan-chinese-cultural-center-identity-2025",
+  "title_zh": "米兰中国文化交流中心标识系统再设计",
+  "primary_domain_id": "vi-brand",
+  "cross_domain_id": "poster",
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/manifests/milan-chinese-cultural-center-identity-2025.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/milan-chinese-cultural-center-identity-2025.caption.jsonl",
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/milan-chinese-cultural-center-identity-2025",
+  "poster_training_value": [
+    "cream civic poster layouts with large negative space",
+    "modular symbol clusters as poster focal anchors",
+    "bold geometric sans typography with bilingual naming",
+    "deep oxblood presentation board framing",
+    "social media square post systems with campaign consistency"
+  ],
+  "poster_risk_controls": [
+    "do not mix all application types into one poster prompt",
+    "use exact short copy only when provided",
+    "keep symbol repetition structured rather than decorative clutter"
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+}
