@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.6.0",
+  "batch_id": "city-identity-logo-systems-2026",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.6.0",
+  "overall_score": 8.5,
+  "project_context_fit": {
+    "public-cultural-communication": 0.94,
+    "commercial-project": 0.28,
+    "academic-discipline-competition": 0.32,
+    "cultural-china-research": 0.42
+  },
+  "domain_fit": {
+    "vi-brand": 0.96,
+    "typography": 0.86,
+    "infovis": 0.78,
+    "environmental-art": 0.58,
+    "poster": 0.52
+  },
+  "style_axis_fit": {
+    "swiss-modern": 0.9,
+    "editorial-grid": 0.88,
+    "cultural-contemporary": 0.82,
+    "experimental-typography": 0.76,
+    "infographic-technical": 0.72,
+    "minimal-premium": 0.64,
+    "commercial-product": 0.22
+  },
+  "quality_scores": {
+    "system_consistency": 8.9,
+    "place_identity_logic": 8.7,
+    "dynamic_identity_value": 8.8,
+    "layout_ordered": 8.4,
+    "color_controlled": 8.2,
+    "text_precision_risk_control": 6.8,
+    "anti_generic_city_logo_value": 8.6
+  },
+  "core_aesthetic_takeaways": [
+    "The batch is valuable for city identity systems that need a parent mark, sublogos, dynamic variants, and construction logic.",
+    "The strongest transferable pattern is not a single style, but the method: one skeleton, many controlled variants.",
+    "Place symbols should be abstracted through grid, node, letter, pixel, or local-feature rules instead of literal landmark stacking.",
+    "Use the batch to avoid generic municipal logos by requiring a repeatable identity grammar before color or landmark decoration."
+  ],
+  "prompt_structure_lessons": [
+    "Start city identity prompts by defining the public entity, parent mark skeleton, and sublogo logic.",
+    "Describe whether the system uses modular blocks, faceted polygons, grid icons, pixels, nodes, or typographic lines.",
+    "Require a variant grid and small-size legibility proof before final logo rendering.",
+    "Separate exact city name text from logo-structure training."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [],
+    "requires_source_confirmation": [
+      "all official city or township names",
+      "romanized public names",
+      "institution abbreviations",
+      "slogans and campaign text",
+      "government or municipal office names"
+    ],
+    "training_rule": "Use this batch for logo system grammar and city identity methods. Do not copy official marks, exact public names, or campaign slogans unless the user supplies and authorizes the text."
+  },
+  "risk_controls": [
+    {
+      "risk": "copying official public identities",
+      "severity": "high",
+      "mitigation": "Treat marks and names as reference-only. Generate new city identities from abstracted grammar, not from exact mark replication."
+    },
+    {
+      "risk": "generic city symbol stacking",
+      "severity": "high",
+      "mitigation": "Require one parent skeleton and a derivation rule before adding local references."
+    },
+    {
+      "risk": "variant chaos",
+      "severity": "medium",
+      "mitigation": "Keep all variants tied to a shared grid, node map, letter skeleton, or color system."
+    },
+    {
+      "risk": "text hallucination",
+      "severity": "medium",
+      "mitigation": "Exact city names, office names and slogans must be supplied by the user."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as a public-cultural-communication and vi-brand positive reference after rights review",
+    "stage_2_caption_tuning": "use captions to teach parent-child city identity systems, dynamic logo families, and grid-derived place symbols",
+    "stage_3_lora_training": "train as a civic identity subset before mixing with commercial brand VI or packaging cases",
+    "suggested_weighting": {
+      "modular_wordmark": 0.82,
+      "dynamic_grid_identity": 0.92,
+      "dynamic_city_m_system": 0.88,
+      "lettermark_variants": 0.72,
+      "township_icon_grid": 0.96,
+      "commune_sublogos": 0.94,
+      "pixel_motion_logo": 0.86,
+      "horizon_identity_system": 0.84
+    }
+  },
+  "negative_prompt_atoms": [
+    "generic skyline logo",
+    "random landmark stacking",
+    "tourist icon collage",
+    "copied official city mark",
+    "fake municipal text",
+    "unrelated color variants",
+    "overly complex small-size logo",
+    "decorative map pins without system logic",
+    "uncontrolled gradients",
+    "illegible bilingual lockup"
+  ]
+}

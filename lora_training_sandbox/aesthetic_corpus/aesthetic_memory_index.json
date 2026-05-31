@@ -4,34 +4,34 @@
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
     "schema_version": "1.6.0",
-    "caption_item_count": 38,
-    "batch_count": 5,
+    "caption_item_count": 46,
+    "batch_count": 6,
     "domain_distribution": {
       "exhibition-board": 8,
-      "vi-brand": 30
+      "vi-brand": 38
     },
     "project_context_distribution": {
       "academic-discipline-competition": 8,
       "commercial-project": 18,
       "cultural-china-research": 15,
-      "public-cultural-communication": 20
+      "public-cultural-communication": 28
     },
     "style_axis_distribution": {
       "commercial-product": 18,
-      "cultural-contemporary": 26,
-      "editorial-grid": 22,
+      "cultural-contemporary": 34,
+      "editorial-grid": 30,
       "environmental-competition": 8,
-      "experimental-typography": 13,
-      "infographic-technical": 9,
-      "minimal-premium": 11,
+      "experimental-typography": 21,
+      "infographic-technical": 17,
+      "minimal-premium": 19,
       "soft-luxury": 7,
-      "swiss-modern": 12
+      "swiss-modern": 20
     },
     "rights_distribution": {
-      "public_reference_only": 38
+      "public_reference_only": 46
     },
     "project_context_coverage": {
-      "with_context": 38,
+      "with_context": 46,
       "missing_context": 0
     },
     "missing_project_context": [],
@@ -75,6 +75,78 @@
         "do not train third-party luxury brand names as reusable text",
         "avoid making the bag surface muddy or underexposed",
         "do not add extra props or retail clutter"
+      ]
+    },
+    {
+      "batch_id": "city-identity-logo-systems-2026",
+      "primary_domain_ids": [
+        "vi-brand"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "infovis",
+        "poster",
+        "typography"
+      ],
+      "style_axis_ids": [
+        "cultural-contemporary",
+        "editorial-grid",
+        "experimental-typography",
+        "infographic-technical",
+        "minimal-premium",
+        "swiss-modern"
+      ],
+      "project_context_ids": [
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "bilingual-city-logo",
+        "colorway-testing",
+        "commune-identity-system",
+        "creative-center-identity",
+        "digital-city-logo",
+        "dynamic-city-logo",
+        "dynamic-identity",
+        "faceted-lettermark",
+        "friendly-place-brand",
+        "grid-construction",
+        "grid-icon-design",
+        "horizon-line-identity",
+        "image-strip-wordmark",
+        "lettermark-variants",
+        "minimal-logo-study",
+        "modular-wordmark",
+        "monogram-system",
+        "motion-blur-mark",
+        "municipal-subbrand-system",
+        "network-logo",
+        "parent-child-brand",
+        "pattern-extension",
+        "pixel-identity",
+        "place-feature-abstraction",
+        "public-campaign-logo",
+        "rounded-block-identity",
+        "territorial-sublogos",
+        "township-logo-family",
+        "typographic-logo-system",
+        "urban-identity-system",
+        "urban-tech-wordmark",
+        "variant-grid"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 8,
+      "sample_caption": "City or regional identity logo reference with a compact modular wordmark made from rounded square blocks, bright blue, green, orange, yellow and pink color units, simple geometric cutouts, bilingual Chinese and romanized naming, and generous white negative space. Shows horizontal and stacked logo lockups for a friendly public-place brand system.",
+      "sample_positive_notes": [
+        "rounded modular blocks create a soft civic identity without decorative clutter",
+        "color units are bright but separated by a stable geometric grid",
+        "two lockup formats show scalable identity behavior"
+      ],
+      "sample_negative_notes": [
+        "do not copy the exact wordmark or city name",
+        "avoid candy-color chaos without block logic",
+        "do not add mascot illustrations or extra landmark icons"
       ]
     },
     {

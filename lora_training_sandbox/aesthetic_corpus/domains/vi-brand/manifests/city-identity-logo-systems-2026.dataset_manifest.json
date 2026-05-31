@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.6.0",
+  "batch_id": "city-identity-logo-systems-2026",
+  "title_zh": "\u57ce\u5e02\u6807\u8bc6\u7cfb\u7edf Logo \u8bad\u7ec3\u96c6",
+  "title_en": "City Identity Logo System Training Set",
+  "source_collection": "\u7528\u6237\u63d0\u4f9b\u7684\u57ce\u5e02\u6807\u8bc6\u7cfb\u7edf Logo \u8bad\u7ec3\u96c6",
+  "source_original_dir_label": "\u8bad\u7ec3\u96c6/\u57ce\u5e02\u6807\u8bc6\u8bad\u7ec3\u96c6",
+  "source_type": "case_image",
+  "primary_domain_id": "vi-brand",
+  "secondary_domain_ids": [
+    "typography",
+    "infovis",
+    "environmental-art",
+    "poster"
+  ],
+  "style_axis_ids": [
+    "swiss-modern",
+    "editorial-grid",
+    "cultural-contemporary",
+    "experimental-typography",
+    "infographic-technical",
+    "minimal-premium"
+  ],
+  "project_context_ids": [
+    "public-cultural-communication"
+  ],
+  "visual_genre_tags": [
+    "city-identity-system",
+    "municipal-logo-system",
+    "dynamic-identity",
+    "place-branding",
+    "modular-lettermark",
+    "sublogo-family",
+    "grid-construction"
+  ],
+  "commercial_separation_rule": "Treat this batch as public city, territorial, and civic identity system reference. Use it for place-brand logic, sublogo families, dynamic identity and construction methods; do not treat it as commercial retail branding unless deliberately adapting the grammar.",
+  "quality_labels_positive": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "layout_ordered",
+    "color_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "text_error",
+    "generic_style",
+    "overdecorated",
+    "layout_disorder"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User provided these files as a city identity logo system training set. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 8,
+  "unique_primary_image_count": 8,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/city-identity-logo-systems-2026",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/city-identity-logo-systems-2026.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/quality_reviews/city-identity-logo-systems-2026.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/typography/manifests/city-identity-logo-systems-2026.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/infovis/manifests/city-identity-logo-systems-2026.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/environmental-art/manifests/city-identity-logo-systems-2026.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/poster/manifests/city-identity-logo-systems-2026.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "public city and territorial identity systems built from modular lettermarks, dynamic logo families, place-feature abstraction, construction grids, and sublogo systems",
+    "context_difference_from_commercial_work": [
+      "goal is public recognition, place identity and system consistency rather than retail conversion",
+      "marks should scale from master city identity to sub-district or township sublogos",
+      "local cultural or geographic features must be abstracted through a shared visual grammar",
+      "official reference marks and exact names are not reusable design targets"
+    ],
+    "composition_system": "white or light gray presentation boards, master mark plus variant grid, construction guides, parent-child lockups, bilingual or multilingual naming, and application proof where available",
+    "symbol_system": [
+      "modular square blocks",
+      "letter skeletons",
+      "faceted polygons",
+      "pixel motion marks",
+      "line-network nodes",
+      "grid-derived local icons",
+      "typographic horizon rules"
+    ],
+    "color_system": [
+      "green and purple dynamic identity palette",
+      "bright civic blue, orange, yellow and pink block palette",
+      "green-to-lime network palette",
+      "red and tan township icon palette",
+      "black typography on white or light gray fields"
+    ],
+    "typography_system": "bold sans or condensed sans wordmarks, bilingual city names, master and sublogo lockups, exact-name risk controls, and strict spacing between mark and text",
+    "anti_fragmentation_rules": [
+      "start from one parent mark skeleton before generating variants",
+      "derive sublogos from a shared grid, node map, letter skeleton or local-feature abstraction rule",
+      "do not stack landmarks, bridges, mountains and local icons without a system grammar",
+      "do not copy official city marks or exact public names unless supplied and permitted",
+      "keep color variants subordinate to recognizability and small-size legibility",
+      "separate construction diagrams from final logo lockups"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "city_identity_01",
+      "file_name": "city_identity_01_meihongguoguo_modular_wordmark.jpg",
+      "original_file_name": "7bd29007f27496650b0046e99aeba8ff.jpg",
+      "sha256": "761d22dea195a2a6d80856f33f2c90e5f4e70a088194336a977fbcea946732b2",
+      "width": 736,
+      "height": 1041,
+      "view_type": "modular place brand wordmark lockup",
+      "training_weight_hint": 0.82
+    },
+    {
+      "image_id": "city_identity_02",
+      "file_name": "city_identity_02_taiwan_forward_dynamic_grid.jpg",
+      "original_file_name": "53d87de83b3b830a62e7c794f0140c49.jpg",
+      "sha256": "cc415222f13da5f779b2095249166467570b329ad5b5fac7f67e23cad451d548",
+      "width": 736,
+      "height": 1012,
+      "view_type": "dynamic grid identity with applications",
+      "training_weight_hint": 0.92
+    },
+    {
+      "image_id": "city_identity_03",
+      "file_name": "city_identity_03_melbourne_dynamic_m_system.jpg",
+      "original_file_name": "67f91af061f005854698faccd3b86d1c.jpg",
+      "sha256": "67c00ff0e918f9746497d3add62bcd8ecb2794499a66a48bd0b5e7642729eb1b",
+      "width": 500,
+      "height": 716,
+      "view_type": "dynamic city M logo family",
+      "training_weight_hint": 0.88
+    },
+    {
+      "image_id": "city_identity_04",
+      "file_name": "city_identity_04_y_letter_color_variants.jpg",
+      "original_file_name": "76a325daae0a63c4fd28073c9a45f3df.jpg",
+      "sha256": "4bc5a2d113dbedee36a1b9d42d5b9aa5f43ac65840c0fa9186eec7984c67fdab",
+      "width": 600,
+      "height": 400,
+      "view_type": "lettermark color variant exploration",
+      "training_weight_hint": 0.72
+    },
+    {
+      "image_id": "city_identity_05",
+      "file_name": "city_identity_05_township_icon_grid_system.jpg",
+      "original_file_name": "69a10b884ff4cd892247f05f80fcc17e.jpg",
+      "sha256": "9c3709421d56be85a213c3e81f2ccf1cace52c2982f3e29b4f39da1dee9558de",
+      "width": 1200,
+      "height": 1400,
+      "view_type": "township sublogo icon system board",
+      "training_weight_hint": 0.96
+    },
+    {
+      "image_id": "city_identity_06",
+      "file_name": "city_identity_06_medoc_commune_sublogos.jpg",
+      "original_file_name": "0a918b4ada424da736af111327d43334.jpg",
+      "sha256": "42e8245facd3e13488a934434a8d2b2577decef5273b24cc5b99da4f0030dcf7",
+      "width": 1018,
+      "height": 1743,
+      "view_type": "commune identity master logo and sublogos",
+      "training_weight_hint": 0.94
+    },
+    {
+      "image_id": "city_identity_07",
+      "file_name": "city_identity_07_taipei_pixel_motion_logo.jpg",
+      "original_file_name": "2e4cfa2a8ceb699b12c217d46673fde0.jpg",
+      "sha256": "4ec1391b0c1837b95b2686e975bcc3bab84fc19ec7e00bf0934ee4ea72f6f87e",
+      "width": 999,
+      "height": 657,
+      "view_type": "pixel motion city logo exploration",
+      "training_weight_hint": 0.86
+    },
+    {
+      "image_id": "city_identity_08",
+      "file_name": "city_identity_08_tnhcc_horizon_identity_system.jpg",
+      "original_file_name": "6b5f9fb02dd8509d749064140ac63f32.jpg",
+      "sha256": "6af6221295649b8c7148adc3481cb7a2094ef66916fd026b927231896b8a3552",
+      "width": 960,
+      "height": 640,
+      "view_type": "creative center identity lockup system",
+      "training_weight_hint": 0.84
+    }
+  ]
+}

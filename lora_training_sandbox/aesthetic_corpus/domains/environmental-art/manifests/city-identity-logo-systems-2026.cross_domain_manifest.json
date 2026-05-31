@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.6.0",
+  "batch_id": "city-identity-logo-systems-2026",
+  "primary_domain_id": "vi-brand",
+  "cross_domain_id": "environmental-art",
+  "project_context_ids": [
+    "public-cultural-communication"
+  ],
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/manifests/city-identity-logo-systems-2026.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/city-identity-logo-systems-2026.caption.jsonl",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "cross_domain_use": "Use for future wayfinding and place identity applications, not as spatial-design proof by itself.",
+  "exclusion_rule": "Do not copy official marks or names. Use the batch for system grammar, grid construction and public identity logic only."
+}
