@@ -1,0 +1,173 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "chijing-vintage-identity-2025",
+  "title_zh": "赤境",
+  "title_en": "Chi Vintage",
+  "source_collection": "Hiiibrand Awards 2025 reference case",
+  "source_original_dir_label": "训练集/赤境 - Hiiibrand Awards 2025",
+  "source_type": "case_image",
+  "primary_domain_id": "vi-brand",
+  "secondary_domain_ids": [
+    "packaging",
+    "environmental-art",
+    "typography"
+  ],
+  "style_axis_ids": [
+    "commercial-product",
+    "experimental-typography",
+    "cultural-contemporary",
+    "editorial-grid",
+    "minimal-premium",
+    "soft-luxury",
+    "infographic-technical"
+  ],
+  "visual_genre_tags": [
+    "saturated-retail-identity",
+    "purple-yellow-color-system",
+    "vintage-fashion-resale",
+    "dark-boutique-signage",
+    "kraft-logistics-packaging",
+    "triangle-logo-system"
+  ],
+  "quality_labels_positive": [
+    "strong_focal_anchor",
+    "layout_ordered",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "text_error",
+    "dirty_texture_noise",
+    "overdecorated",
+    "generic_style"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User provided these files as training images. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 11,
+  "unique_primary_image_count": 11,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/chijing-vintage-identity-2025",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/chijing-vintage-identity-2025.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/quality_reviews/chijing-vintage-identity-2025.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/packaging/manifests/chijing-vintage-identity-2025.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/environmental-art/manifests/chijing-vintage-identity-2025.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "high-saturation vintage fashion resale identity with bold packaging, tactile logistics materials, and dark boutique signage",
+    "symbol_system": "triangle outline, C letterform, hi wordmark, small triangular accent, repeated black woven strap text, and simple white logo decals",
+    "composition_system": "layered product still life, tight product macro crops, split color panels, open packaging reveals, dark storefront signage, and window identity applications",
+    "color_system": [
+      "saturated purple",
+      "bright yellow",
+      "neon green",
+      "vivid red",
+      "kraft brown",
+      "black",
+      "white logo print"
+    ],
+    "material_system": [
+      "coated purple shopping bag paper",
+      "kraft corrugated cardboard",
+      "black woven handles and straps",
+      "metal eyelets and hooks",
+      "translucent tissue paper",
+      "fabric pouch",
+      "textured dark exterior wall",
+      "window decal vinyl"
+    ],
+    "typography_system": "bold sans Chi Vintage and 赤境 lockups, oversized hi wordmark, vertical side-panel lists, bilingual service signage, and strap-scale repeated brand text",
+    "trademark_text_policy": {
+      "risk": "Some packaging side panels contain third-party luxury fashion brand names.",
+      "rule": "Do not train those names as reusable exact text. Caption them only as third-party fashion-brand list placement and exclude them from generated prompt targets."
+    },
+    "anti_fragmentation_rules": [
+      "separate packaging still life from dark storefront signage",
+      "keep one dominant object group per composition",
+      "use purple-yellow as the main identity pair and reserve green/red for interiors or split panels",
+      "do not add random fashion props beyond straps, boxes, tissue, and bags",
+      "treat third-party brand lists as text-risk zones",
+      "keep triangle logo geometry clean and centered on product planes"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "chijing_vintage_01",
+      "file_name": "chijing_vintage_01_tall_purple_bag_side_text.jpg",
+      "original_file_name": "imgi_9_9bbb20eca51e42e6916ddb8e274adc7b_1766223135735.jpg",
+      "view_type": "tall purple shopping bag side typography",
+      "training_weight_hint": 0.8
+    },
+    {
+      "image_id": "chijing_vintage_02",
+      "file_name": "chijing_vintage_02_packaging_system_group.jpg",
+      "original_file_name": "imgi_10_3f557170ecad431cb25b0004335a190e_1766223135735.jpg",
+      "view_type": "full packaging system group",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "chijing_vintage_03",
+      "file_name": "chijing_vintage_03_split_red_green_bag_and_pouch.jpg",
+      "original_file_name": "imgi_14_f9a88a9f5fb34430be4cfc5d239fc2ac_1766223135736.jpg",
+      "view_type": "split color packaging detail",
+      "training_weight_hint": 0.75
+    },
+    {
+      "image_id": "chijing_vintage_04",
+      "file_name": "chijing_vintage_04_material_tissue_and_black_pouch.jpg",
+      "original_file_name": "imgi_15_4f67e7776efd48809f0f1a79b9863e63_1766223135736.jpg",
+      "view_type": "packaging material and tissue detail",
+      "training_weight_hint": 0.65
+    },
+    {
+      "image_id": "chijing_vintage_05",
+      "file_name": "chijing_vintage_05_dark_store_signage_logo.jpg",
+      "original_file_name": "imgi_16_2003d0d284c04c7eb6f9ff1fd82df31e_1766223135736.jpg",
+      "view_type": "dark retail storefront signage detail",
+      "training_weight_hint": 0.9
+    },
+    {
+      "image_id": "chijing_vintage_06",
+      "file_name": "chijing_vintage_06_night_store_wayfinding.jpg",
+      "original_file_name": "imgi_17_baf4997d45e246bda45c31ab9aaa0646_1766223135736.jpg",
+      "view_type": "night store awning and wayfinding signage",
+      "training_weight_hint": 0.85
+    },
+    {
+      "image_id": "chijing_vintage_07",
+      "file_name": "chijing_vintage_07_window_graphic_collage.jpg",
+      "original_file_name": "imgi_18_2b77a5c72566413291b0c6a1bba93b28_1766223135736.jpg",
+      "view_type": "store window identity and image collage",
+      "training_weight_hint": 0.8
+    },
+    {
+      "image_id": "chijing_vintage_08",
+      "file_name": "chijing_vintage_08_open_bag_color_interiors.jpg",
+      "original_file_name": "imgi_5_a2a53bd32a2544ecabfcef585019242b_1766223131194.jpg",
+      "view_type": "open shopping bags with colored interiors",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "chijing_vintage_09",
+      "file_name": "chijing_vintage_09_handheld_tall_bag.jpg",
+      "original_file_name": "imgi_6_f18bc36e003346e6972a191c24b77466_1766223135734.jpg",
+      "view_type": "handheld tall shopping bag interaction",
+      "training_weight_hint": 0.75
+    },
+    {
+      "image_id": "chijing_vintage_10",
+      "file_name": "chijing_vintage_10_kraft_boxes_stack.jpg",
+      "original_file_name": "imgi_7_bad8369639064592b6af2309f3192713_1766223135734.jpg",
+      "view_type": "kraft cardboard box stack with logo",
+      "training_weight_hint": 0.75
+    },
+    {
+      "image_id": "chijing_vintage_11",
+      "file_name": "chijing_vintage_11_open_kraft_mailer_set.jpg",
+      "original_file_name": "imgi_8_e53b880d5362445bb404d9eefec91575_1766223135734.jpg",
+      "view_type": "open kraft mailer and inner packaging set",
+      "training_weight_hint": 0.8
+    }
+  ]
+}

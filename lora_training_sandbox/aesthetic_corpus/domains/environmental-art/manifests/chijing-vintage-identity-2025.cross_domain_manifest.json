@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "chijing-vintage-identity-2025",
+  "title_zh": "赤境",
+  "primary_domain_id": "vi-brand",
+  "cross_domain_id": "environmental-art",
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/manifests/chijing-vintage-identity-2025.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/captions/chijing-vintage-identity-2025.caption.jsonl",
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/vi-brand/case_images/chijing-vintage-identity-2025",
+  "environmental_training_value": [
+    "dark boutique storefront atmosphere",
+    "spotlit triangular identity plaque",
+    "window decal logo application",
+    "stacked bilingual service signage",
+    "fashion-image wall collage as spatial brand graphic"
+  ],
+  "environmental_risk_controls": [
+    "keep dark signage readable",
+    "avoid overfitting photo collage faces or fashion imagery",
+    "separate environmental signage from packaging object still life",
+    "use exact service labels only when source copy is provided"
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+}

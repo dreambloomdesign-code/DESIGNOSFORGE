@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "chijing-vintage-identity-2025",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.5.1",
+  "overall_score": 8.4,
+  "domain_fit": {
+    "vi-brand": 0.94,
+    "packaging": 0.95,
+    "environmental-art": 0.78,
+    "typography": 0.76
+  },
+  "style_axis_fit": {
+    "commercial-product": 0.92,
+    "experimental-typography": 0.84,
+    "cultural-contemporary": 0.78,
+    "editorial-grid": 0.62,
+    "minimal-premium": 0.58,
+    "soft-luxury": 0.52,
+    "infographic-technical": 0.44
+  },
+  "quality_scores": {
+    "strong_focal_anchor": 8.5,
+    "layout_ordered": 7.8,
+    "material_credible": 8.9,
+    "color_controlled": 8.7,
+    "reference_fidelity": 8.8,
+    "text_precision_risk_control": 6.2,
+    "anti_fragmentation_value": 7.6
+  },
+  "core_aesthetic_takeaways": [
+    "This batch is strongest for high-saturation retail packaging and fashion-resale identity systems.",
+    "The transferable visual DNA is purple-yellow identity contrast, kraft logistics material, triangular logo grammar, and dark boutique signage.",
+    "It adds a louder and more experimental retail direction to the existing quiet luxury and civic VI training sets.",
+    "The strongest images for future generation are the grouped packaging system and the open-bag interior color views.",
+    "The dark storefront images are useful for atmosphere but should be separated from packaging still-life prompts."
+  ],
+  "prompt_structure_lessons": [
+    "Name the medium first: shopping bag, kraft mailer, tissue, strap, storefront sign, or window decal.",
+    "Lock the color hierarchy: purple exterior, yellow logo, green or red interior accent, kraft brown logistics support.",
+    "Describe the triangle logo as a clean geometric identity mark, not as a generic warning sign.",
+    "Separate exact project text from third-party fashion-brand names.",
+    "For dark retail scenes, specify readable signage and one spotlight focal zone."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "赤境",
+      "Chi VINTAGE",
+      "VINTAGE",
+      "RECOVERY",
+      "APPRAISE"
+    ],
+    "blocked_text_targets": [
+      "third-party luxury fashion brand names visible on side panels"
+    ],
+    "requires_source_confirmation": [
+      "small pouch and tissue marks",
+      "strap-scale repeated text",
+      "small Chinese plaque copy",
+      "bilingual service labels"
+    ],
+    "training_rule": "Use third-party brand lists only as side-panel placement risk, not exact text."
+  },
+  "risk_controls": [
+    {
+      "risk": "third-party trademark text",
+      "severity": "high",
+      "mitigation": "Exclude visible luxury-brand lists from generation targets and captions that request exact text."
+    },
+    {
+      "risk": "high saturation overfit",
+      "severity": "medium",
+      "mitigation": "Use purple-yellow as a domain-specific retail style, not as a universal palette for all brands."
+    },
+    {
+      "risk": "visual clutter in packaging still life",
+      "severity": "medium",
+      "mitigation": "Separate bag, box, strap, tissue, and storefront prompts by view_type."
+    },
+    {
+      "risk": "dark signage underexposure",
+      "severity": "medium",
+      "mitigation": "Keep dark-scene prompts focused on one lit plaque or window logo, with readable contrast."
+    },
+    {
+      "risk": "triangle mark becoming generic warning signage",
+      "severity": "medium",
+      "mitigation": "Caption triangle as a fashion-retail identity mark with C-hi geometry and controlled brand placement."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as a high-value positive VI and packaging case after rights review",
+    "stage_2_caption_tuning": "teach saturated retail packaging, material hierarchy, and trademark text exclusion",
+    "stage_3_lora_training": "train as a fashion-retail packaging/signage subset rather than mixing directly with civic VI",
+    "suggested_weighting": {
+      "packaging_system_views": 1.0,
+      "open_color_interior_views": 1.0,
+      "dark_storefront_signage": 0.85,
+      "material_detail_views": 0.65,
+      "handheld_interaction_views": 0.75
+    }
+  },
+  "negative_prompt_atoms": [
+    "third-party luxury brand names",
+    "random fashion brand lists",
+    "muddy purple surfaces",
+    "overcrowded retail props",
+    "generic warning triangle logo",
+    "illegible side-panel text",
+    "dirty kraft texture as main style",
+    "underexposed storefront",
+    "uncontrolled neon colors",
+    "random shopping bags without identity system"
+  ]
+}
