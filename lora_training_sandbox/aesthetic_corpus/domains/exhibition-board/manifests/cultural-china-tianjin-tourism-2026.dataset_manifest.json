@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.1.0",
+  "batch_id": "cultural-china-tianjin-tourism-2026",
+  "title_zh": "数智技术赋能天津城市“文化旅游”共情体验设计研究",
+  "title_en": "Empathic Experience Design for Cultural Tourism in Tianjin City Empowered by Digital-Intelligent Technologies",
+  "source_collection": "用户提供的文化中国高校学科竞赛作品",
+  "source_original_dir_label": "C:/Users/taojian/Desktop/文化中国作品样本",
+  "source_type": "case_image",
+  "primary_domain_id": "exhibition-board",
+  "secondary_domain_ids": [
+    "infovis",
+    "ui",
+    "web",
+    "poster"
+  ],
+  "style_axis_ids": [
+    "environmental-competition",
+    "infographic-technical",
+    "editorial-grid",
+    "cultural-contemporary"
+  ],
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "cultural-china-research",
+    "public-cultural-communication"
+  ],
+  "visual_genre_tags": [
+    "culture-china-competition",
+    "academic-discipline-board",
+    "cultural-tourism-infovis",
+    "tianjin-city-culture",
+    "research-led-ui-web-display",
+    "public-cultural-communication"
+  ],
+  "commercial_separation_rule": "Treat this batch as academic competition and public culture research material. Do not merge its goals with commercial VI, packaging, retail, or conversion-driven brand cases during prompt construction.",
+  "quality_labels_positive": [
+    "layout_ordered",
+    "color_controlled",
+    "research_logic_clear",
+    "academic_narrative_coherent",
+    "information_density_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "watermark_contamination",
+    "overdense_information",
+    "text_error",
+    "layout_disorder"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User identified these images as Culture China works with a unique university discipline competition aesthetic and logic distinct from commercial projects. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 3,
+  "unique_primary_image_count": 3,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/case_images/cultural-china-tianjin-tourism-2026",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/cultural-china-tianjin-tourism-2026.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/quality_reviews/cultural-china-tianjin-tourism-2026.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/infovis/manifests/cultural-china-tianjin-tourism-2026.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/ui/manifests/cultural-china-tianjin-tourism-2026.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/web/manifests/cultural-china-tianjin-tourism-2026.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "research-led Culture China university competition board system for Tianjin cultural tourism, combining cultural interpretation, information visualization, web interaction proof, and public application display",
+    "context_difference_from_commercial_work": [
+      "goal is academic argument and cultural communication rather than sales conversion",
+      "boards must show research background, design practice, visualized evidence, interaction proof, and application validation",
+      "high information density is acceptable only when grouped into explicit modules",
+      "visual style may be warmer and more illustrative than commercial minimal branding, but must preserve section hierarchy"
+    ],
+    "board_sequence": [
+      "research overview and color extraction",
+      "project practice and information visualization outputs",
+      "web interaction process and application flow",
+      "detailed cultural tourism maps and category modules",
+      "application display across phone cases, books, transit media and exhibition panels"
+    ],
+    "composition_system": "teal academic header, rounded white main containers, ship-shaped section markers, modular grids, dashed boxes, inset boards with drop shadows, and bottom application proof strips",
+    "color_system": [
+      "teal green academic field",
+      "warm cream board background",
+      "dark red website navigation accent",
+      "river blue and muted green illustration palette",
+      "yellow and red cultural highlight colors",
+      "gray watermark overlay to be excluded from target generation"
+    ],
+    "typography_system": "large bold Chinese academic title, compact English subtitle, rounded section labels, dense Chinese explanatory copy, infographic micro-labels, and UI screenshot navigation text",
+    "infographic_system": [
+      "cultural tourism maps",
+      "river and canal routes",
+      "timeline logic",
+      "icon inventories",
+      "food and landmark check-in modules",
+      "website screenshot sequences",
+      "application mockup proof"
+    ],
+    "anti_fragmentation_rules": [
+      "state the project context before style: academic competition, Culture China, public cultural tourism research",
+      "separate research overview, infovis outputs, UI interaction proof, and application display",
+      "use repeated section tags to create a reading path",
+      "keep dense illustrated maps inside framed modules",
+      "treat watermark and long body copy as non-training contamination unless source text is provided",
+      "do not mix with commercial product lighting, retail packaging, or brand conversion prompts"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "cultural_china_tianjin_01",
+      "file_name": "cultural_china_tianjin_01_overview_research_board.png",
+      "original_file_name": "微信图片_2026-05-30_190705_250.png",
+      "sha256": "52b91e33d1d3193aaa9c2fd28b7756e3e37256e328c5e59b274a15aceca2c61e",
+      "width": 905,
+      "height": 1280,
+      "view_type": "overview research board with applied display strip",
+      "training_weight_hint": 0.92
+    },
+    {
+      "image_id": "cultural_china_tianjin_02",
+      "file_name": "cultural_china_tianjin_02_web_interaction_board.png",
+      "original_file_name": "微信图片_2026-05-30_190726_259.png",
+      "sha256": "118b28f525fee5cac1d6dd5335d78afba904f727f6e8231d8d3d86ed06a42b20",
+      "width": 905,
+      "height": 1280,
+      "view_type": "web interaction and application flow board",
+      "training_weight_hint": 0.84
+    },
+    {
+      "image_id": "cultural_china_tianjin_03",
+      "file_name": "cultural_china_tianjin_03_infovis_detail_board.png",
+      "original_file_name": "微信图片_2026-05-30_190715_388.png",
+      "sha256": "b3fac847499fa8394e391e89489b854a65d9249715c4049d36888ec5a0a6b29e",
+      "width": 905,
+      "height": 1280,
+      "view_type": "detailed cultural tourism infovis board",
+      "training_weight_hint": 0.95
+    }
+  ]
+}

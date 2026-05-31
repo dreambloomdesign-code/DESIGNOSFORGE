@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.1.0",
+  "batch_id": "cultural-china-tianjin-tourism-2026",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.5.1",
+  "overall_score": 8.4,
+  "project_context_fit": {
+    "academic-discipline-competition": 0.96,
+    "cultural-china-research": 0.95,
+    "public-cultural-communication": 0.88,
+    "commercial-project": 0.22
+  },
+  "domain_fit": {
+    "exhibition-board": 0.96,
+    "infovis": 0.91,
+    "ui": 0.72,
+    "web": 0.74,
+    "poster": 0.58
+  },
+  "style_axis_fit": {
+    "environmental-competition": 0.82,
+    "infographic-technical": 0.92,
+    "editorial-grid": 0.86,
+    "cultural-contemporary": 0.91,
+    "commercial-product": 0.12
+  },
+  "quality_scores": {
+    "research_logic_clear": 8.8,
+    "academic_narrative_coherent": 8.6,
+    "information_density_controlled": 8.1,
+    "layout_ordered": 8.3,
+    "color_controlled": 8.4,
+    "reference_fidelity": 8.7,
+    "text_precision_risk_control": 6.4,
+    "watermark_contamination_risk": 7.8
+  },
+  "core_aesthetic_takeaways": [
+    "The batch is valuable because it carries the unique logic of Chinese university design competitions: topic research, methodology, cultural evidence, design practice, UI proof, and application scenarios in one board system.",
+    "Unlike commercial brand work, the visual goal is not immediate purchase or brand memorability; it is to prove a research proposition through organized evidence and cultural storytelling.",
+    "Teal academic framing, rounded white containers, dashed modules, illustrated maps, and repeated ship markers form a stable Culture China board grammar.",
+    "High density can be acceptable when section tags, module borders, and inset hierarchy preserve reading order.",
+    "The web board is useful for teaching how to present UI interaction inside a competition deliverable rather than designing a standalone commercial website."
+  ],
+  "prompt_structure_lessons": [
+    "Start with project context: university discipline competition, Culture China, cultural tourism research, public cultural communication.",
+    "Name the board role before visual style: research overview board, web interaction board, detailed infovis board.",
+    "Separate title/header, project explanation, visualized evidence, interaction proof, and application display.",
+    "Describe illustrated maps and cultural icons by function, not as loose decoration.",
+    "For dense Chinese body copy, request verified source text or use clean placeholder text blocks."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "数智技术赋能天津城市“文化旅游”共情体验设计研究",
+      "Empathic Experience Design for Cultural Tourism in Tianjin City Empowered by Digital-Intelligent Technologies",
+      "项目说明",
+      "项目实践",
+      "应用展示"
+    ],
+    "requires_source_confirmation": [
+      "long Chinese project description paragraphs",
+      "small infographic labels",
+      "website screenshot copy",
+      "route names and map labels",
+      "food and landmark names",
+      "all watermark text"
+    ],
+    "training_rule": "Use the batch for academic board logic, cultural tourism infovis, and UI proof hierarchy. Do not train watermark text or dense copy as exact typography targets."
+  },
+  "risk_controls": [
+    {
+      "risk": "mixing academic competition boards with commercial brand prompts",
+      "severity": "high",
+      "mitigation": "Require project_context_ids and keep commercial-project fit low unless the user explicitly asks for commercial adaptation."
+    },
+    {
+      "risk": "watermark contamination",
+      "severity": "high",
+      "mitigation": "Mark watermark_contamination in captions; exclude diagonal gray watermark from positive prompt atoms."
+    },
+    {
+      "risk": "dense Chinese label hallucination",
+      "severity": "high",
+      "mitigation": "Treat micro-labels and long body copy as placeholder blocks unless source text is provided."
+    },
+    {
+      "risk": "information overload",
+      "severity": "medium",
+      "mitigation": "Keep large boards, screenshot grids, and illustration clusters inside named modules with visible margins."
+    },
+    {
+      "risk": "generic cultural collage",
+      "severity": "medium",
+      "mitigation": "Tie each cultural symbol to route, timeline, food, landmark, river, web interaction, or application proof."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as a Culture China / academic competition exhibition-board positive case after rights review",
+    "stage_2_caption_tuning": "use captions to teach research-led board sequence, cultural tourism infovis, and UI interaction proof",
+    "stage_3_lora_training": "train as a separate academic-discipline-competition subset before mixing with commercial VI or packaging cases",
+    "suggested_weighting": {
+      "overview_research_board": 0.92,
+      "web_interaction_board": 0.84,
+      "infovis_detail_board": 0.95
+    }
+  },
+  "negative_prompt_atoms": [
+    "commercial ad layout",
+    "retail product photography lighting",
+    "diagonal watermark text",
+    "garbled Chinese micro-labels",
+    "uncontrolled screenshot collage",
+    "random cultural icons without research logic",
+    "overdense board without module borders",
+    "fake map labels",
+    "UI copy hallucination",
+    "decorative teal background without academic hierarchy"
+  ]
+}

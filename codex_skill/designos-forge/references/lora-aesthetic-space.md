@@ -46,6 +46,17 @@ Images are ignored by git. Track only taxonomy, captions, manifests, quality rev
 - `experimental-typography`
 - `infographic-technical`
 
+## Project Contexts
+
+Use project context tags to separate business deliverables from competition and research works:
+
+- `commercial-project`: market-facing brand, packaging, product, service, or client-delivery work
+- `academic-discipline-competition`: university discipline competition work with research framing, methodology, evidence chains, and board logic
+- `cultural-china-research`: Culture China, Chinese cultural tourism, heritage communication, illustrated infovis, and interaction research
+- `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
+
+For `academic-discipline-competition`, describe research logic, information hierarchy, visual analysis, and application validation. Avoid treating dense boards as commercial ads.
+
 ## Curation Rules
 
 Separate `reference_images`, `case_images`, `rejected_images`, and `comparison_sets`.

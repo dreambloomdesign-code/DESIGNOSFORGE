@@ -50,6 +50,17 @@ Use these as multi-label aesthetic axes:
 - `experimental-typography`: expressive letterform, exact text, controlled distortion
 - `infographic-technical`: label accuracy, diagram clarity, thin-line discipline
 
+## Project Context Classes
+
+Use project context as a second layer after domain and style axis. This prevents commercial cases and university competition cases from being mixed into one aesthetic prompt.
+
+- `commercial-project`: market-facing brand, packaging, product, service, or client-delivery work
+- `academic-discipline-competition`: university discipline competition boards with research framing, methodology, evidence chains, and proposal logic
+- `cultural-china-research`: Culture China, regional culture, cultural tourism, heritage communication, illustrated infovis, and interaction research works
+- `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
+
+When a case is `academic-discipline-competition`, prefer captions that describe research structure, section hierarchy, evidence display, information visualization, and application proof. Do not let it inherit commercial conversion language unless the case is explicitly commercial.
+
 ## Directory Contract
 
 Each domain contains:

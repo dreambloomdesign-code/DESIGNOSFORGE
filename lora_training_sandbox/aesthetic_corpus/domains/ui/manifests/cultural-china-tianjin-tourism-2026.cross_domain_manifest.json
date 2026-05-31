@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.1.0",
+  "batch_id": "cultural-china-tianjin-tourism-2026",
+  "primary_domain_id": "exhibition-board",
+  "cross_domain_id": "ui",
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "cultural-china-research",
+    "public-cultural-communication"
+  ],
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/manifests/cultural-china-tianjin-tourism-2026.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/cultural-china-tianjin-tourism-2026.caption.jsonl",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "cross_domain_use": "Use for competition-board presentation of website/application flows, device proof, and task-based screen grouping.",
+  "exclusion_rule": "Do not train the watermark or dense exact text. Keep this case separated from commercial-project samples unless adapting deliberately."
+}
