@@ -1,8 +1,8 @@
 # Aesthetic And Prompt Governance
 
-## v1.5 Quality Thesis
+## v1.6 Quality Thesis
 
-The design must be inspectable before it is spectacular. Prevent dirty, fragmented, overfilled visuals by forcing a clear focal anchor, controlled density, exact text, and explicit negative constraints before generation.
+The design must be context-aware before it is spectacular. Prevent dirty, fragmented, overfilled visuals by locking project context, selecting relevant memory cases, forcing a clear focal anchor, controlled density, exact text, and explicit negative constraints before generation.
 
 ## Root Causes To Catch
 
@@ -12,20 +12,22 @@ The design must be inspectable before it is spectacular. Prevent dirty, fragment
 - Text failures: long in-image copy, pseudo-text, misspelling, warped letters, mixed language without hierarchy, and mojibake.
 - Layout disorder: no grid, no margin system, no reading path, too many modules, no density ceiling, and overlapping text.
 - Redundant mechanisms: multiple agents owning the same decision, repeated QA sections, repeated negative prompts, and unclear handoff owner.
+- Context mixing: commercial conversion logic applied to academic competition boards, or research-board density applied to premium packaging/product visuals.
 
 ## Hard Gates
 
 Before image generation or final delivery, require:
 
 - One dominant visual anchor and no more than two secondary supports.
+- One explicit project context and 1-3 relevant memory cases, or a statement that no suitable memory case exists.
 - Explicit grid, margin, alignment, reading path, and negative space.
 - Density ceiling: name what stays empty, quiet, or visually subordinate.
 - Exact visible text: spelling, language, hierarchy, max lines, and no pseudo-text.
 - UTF-8/no-mojibake check when Chinese or mixed-language text is present.
 - Anti-fragmentation negative prompt: no scattered tiny decorations, no dirty texture noise, no random icons, no warped type, no fake logos, no unresolved placeholders.
-- One owner each for routing, QA, and delivery; remove duplicated mechanisms.
+- One owner each for context routing, case-memory selection, QA, and delivery; remove duplicated mechanisms.
 
-## PromptPacket v1.5 Sections
+## PromptPacket v1.6 Sections
 
 Use all sections in order:
 
@@ -33,18 +35,21 @@ Use all sections in order:
 01_TASK_BRIEF
 02_DESIGN_INTENT
 03_AUDIENCE_CONTEXT
-04_REFERENCE_LOCK
-05_AESTHETIC_THESIS
-06_COMPOSITION_HIERARCHY
-07_LAYOUT_GRID_DENSITY
-08_STYLE_DNA_MATERIAL
-09_COLOR_LIGHT_TYPOGRAPHY
-10_TEXT_ACCURACY
-11_MODEL_RENDER_RULES
-12_ANTI_FRAGMENTATION_NEGATIVE_PROMPT
-13_QA_GATES
-14_DELIVERY_SPEC
-15_REVISION_PROTOCOL
+04_PROJECT_CONTEXT_LOCK
+05_CASE_MEMORY_SELECTION
+06_REFERENCE_LOCK
+07_AESTHETIC_THESIS
+08_COMPOSITION_HIERARCHY
+09_LAYOUT_GRID_DENSITY
+10_STYLE_DNA_MATERIAL
+11_COLOR_LIGHT_TYPOGRAPHY
+12_TEXT_ACCURACY
+13_MODEL_RENDER_RULES
+14_ANTI_FRAGMENTATION_NEGATIVE_PROMPT
+15_FAILURE_MEMORY
+16_QA_GATES
+17_DELIVERY_SPEC
+18_REVISION_PROTOCOL
 ```
 
 ## Rewrite Pattern

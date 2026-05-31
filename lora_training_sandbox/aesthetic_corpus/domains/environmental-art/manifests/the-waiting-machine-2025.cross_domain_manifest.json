@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "the-waiting-machine-2025",
   "title_zh": "露骨的期待",
   "primary_domain_id": "exhibition-board",
@@ -21,5 +21,10 @@
     "keep orange accents functional"
   ],
   "rights_status": "public_reference_only",
-  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "public-cultural-communication"
+  ],
+  "commercial_separation_rule": "Treat this batch as academic/environmental-art competition board logic for a public installation. Do not mix it with commercial product or brand conversion prompts."
 }

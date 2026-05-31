@@ -7,12 +7,12 @@ AGENTS = (
     "PatchApplier", "RewardModel", "TrajectoryLogger", "AgentTrainingEngine",
     "DeliveryAgent", "LoRAStyleTrainingLibrary", "LoRAAestheticSpace",
     "DesignInferenceProtocol", "GitOpsManager", "GitHubManager", "AestheticQualityGate", "PromptPrecisionCompiler",
-    "TextEncodingGuard", "RedundancyReducer",
+    "TextEncodingGuard", "RedundancyReducer", "AestheticMemoryIndex", "ProjectContextRouter",
 )
 
 def capability_report():
     registry = SkillRegistry()
-    lines = ["DESIGNOSFORGE v1.5.1", f"Agent Count: {len(AGENTS)}", f"Registered Skills: {len(registry.list())}", "", "Agents:"]
+    lines = ["DESIGNOSFORGE v1.6.0", f"Agent Count: {len(AGENTS)}", f"Registered Skills: {len(registry.list())}", "", "Agents:"]
     lines.extend(f"- {agent}" for agent in AGENTS)
     lines.append("")
     lines.append("Skills:")

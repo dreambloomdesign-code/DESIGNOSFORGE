@@ -1,8 +1,9 @@
 {
   "root": "lora_training_sandbox\\aesthetic_corpus",
-  "taxonomy_version": "1.0.0",
+  "taxonomy_version": "1.6.0",
   "domain_count": 10,
   "style_axis_count": 10,
+  "project_context_count": 4,
   "domains": [
     "ui",
     "poster",

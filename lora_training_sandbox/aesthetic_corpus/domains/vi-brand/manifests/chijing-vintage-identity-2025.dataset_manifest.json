@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "chijing-vintage-identity-2025",
   "title_zh": "赤境",
   "title_en": "Chi Vintage",
@@ -169,5 +169,9 @@
       "view_type": "open kraft mailer and inner packaging set",
       "training_weight_hint": 0.8
     }
-  ]
+  ],
+  "project_context_ids": [
+    "commercial-project"
+  ],
+  "commercial_separation_rule": "Treat this batch as commercial retail/fashion resale identity and packaging. Do not use it as an academic competition board reference."
 }

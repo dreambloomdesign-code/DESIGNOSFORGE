@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
   "review_date": "2026-05-31",
   "reviewer": "DESIGNOSFORGE v1.5.1",
@@ -93,5 +93,11 @@
     "overdecorated cultural motifs",
     "warped cylinder geometry",
     "uncontrolled gold glare"
-  ]
+  ],
+  "project_context_fit": {
+    "commercial-project": 0.94,
+    "academic-discipline-competition": 0.08,
+    "public-cultural-communication": 0.18
+  },
+  "context_routing_rule": "Treat this batch as premium commercial packaging and brand identity. Do not mix it with university research-board logic unless explicitly adapting it for presentation boards."
 }

@@ -1,12 +1,17 @@
 import argparse
+import json
 from app.core.aesthetic_quality import AestheticQualityGate
 from app.core.capabilities import capability_report
 from app.core.orchestrator import MasterOrchestrator
+from app.lora_training.aesthetic_memory import AestheticMemoryIndex
 from app.lora_training.aesthetic_space import LoRAAestheticSpace
 from app.lora_training.service import LoRAStyleTrainingLibrary
 from app.management.git_ops_manager import GitOpsManager
 from app.management.github_manager import GitHubManager
 from app.management.skill_registry_sync import SkillRegistrySyncAgent
+
+def json_dumps(payload):
+    return json.dumps(payload, ensure_ascii=False, indent=2)
 
 def main():
     parser = argparse.ArgumentParser(prog="designosforge")
@@ -17,18 +22,22 @@ def main():
     run_parser.add_argument("--confirm-image-generation", action="store_true")
     run_parser.add_argument("--prompt-packet", action="store_true")
     lora_parser = sub.add_parser("lora")
-    lora_parser.add_argument("action", choices=("status", "init", "init-aesthetic-space"))
+    lora_parser.add_argument("action", choices=("status", "init", "init-aesthetic-space", "audit-corpus", "build-memory-index", "recommend"))
     lora_parser.add_argument("--name", default="default-style-library")
     lora_parser.add_argument("--style-token", default="<designosforge_style>")
     lora_parser.add_argument("--root", default="lora_training_sandbox/aesthetic_corpus")
     lora_parser.add_argument("--taxonomy", default="config/lora_training/aesthetic_taxonomy.json")
+    lora_parser.add_argument("--domain", default="")
+    lora_parser.add_argument("--context", default="")
+    lora_parser.add_argument("--style-axis", default="")
+    lora_parser.add_argument("--limit", type=int, default=5)
     gitops_parser = sub.add_parser("gitops")
     gitops_parser.add_argument("action", choices=("status", "diff", "sync-registry"))
     gitops_parser.add_argument("--repo", default=".")
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v1.5.1")
+    github_parser.add_argument("--version", default="v1.6.0")
     quality_parser = sub.add_parser("quality")
     quality_parser.add_argument("action", choices=("audit", "guardrails"))
     quality_parser.add_argument("text")
@@ -40,6 +49,13 @@ def main():
     elif args.command == "lora":
         if args.action == "init-aesthetic-space":
             print(LoRAAestheticSpace(args.root, args.taxonomy).init_space())
+        elif args.action == "audit-corpus":
+            print(json_dumps(AestheticMemoryIndex(args.root).audit()))
+        elif args.action == "build-memory-index":
+            print(json_dumps(AestheticMemoryIndex(args.root).build_index()))
+        elif args.action == "recommend":
+            memory = AestheticMemoryIndex(args.root)
+            print(json_dumps(memory.recommend(args.domain, args.context, args.style_axis, args.limit)))
         else:
             service = LoRAStyleTrainingLibrary()
             print(service.status() if args.action == "status" else service.init_library(args.name, args.style_token))

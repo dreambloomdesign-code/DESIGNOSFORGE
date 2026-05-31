@@ -16,9 +16,11 @@ Initialize:
 
 ```bash
 PYTHONPATH=. python -m app.cli lora init-aesthetic-space
+PYTHONPATH=. python -m app.cli lora audit-corpus
+PYTHONPATH=. python -m app.cli lora build-memory-index
 ```
 
-Actual image files are ignored by git by default. Keep only `.gitkeep`, manifests, captions, taxonomy snapshots, and quality reviews in the repository.
+Actual image files are ignored by git by default. Keep only `.gitkeep`, manifests, captions, taxonomy snapshots, quality reviews, and the generated `aesthetic_memory_index.json` in the repository.
 
 ## Design Domain Classes
 
@@ -60,6 +62,17 @@ Use project context as a second layer after domain and style axis. This prevents
 - `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
 
 When a case is `academic-discipline-competition`, prefer captions that describe research structure, section hierarchy, evidence display, information visualization, and application proof. Do not let it inherit commercial conversion language unless the case is explicitly commercial.
+
+## Aesthetic Memory Index
+
+DESIGNOSFORGE v1.6 uses `aesthetic_memory_index.json` as the bridge between curated training cases and runtime prompt decisions.
+
+The index supports:
+
+- corpus audits for missing `project_context_ids` and missing quality reviews
+- batch-level summaries of domains, style axes, contexts, rights status, positive notes, and failure notes
+- recommendation queries such as `--domain exhibition-board --context academic-discipline-competition`
+- explicit separation between commercial work, university competition work, Culture China research, and public cultural communication
 
 ## Directory Contract
 

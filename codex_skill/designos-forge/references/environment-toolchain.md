@@ -35,7 +35,7 @@ The script returns JSON with detected skill folders, source package locations, P
 - Image prompts and visual prompt engineering: use `image-prompt-crafter`, `gpt-image-2-style-library`, `prompt-engineering`, or `zh-prompt-library`.
 - Real bitmap generation or editing: use image generation/editing only after DESIGNOSFORGE's confirmation gate passes.
 - PPT/decks, documents, and spreadsheets: use Presentations, Documents, or Spreadsheets capabilities and render/verify outputs before delivery.
-- GitHub, GitOps, registry sync, and source publishing: use GitHub skills, `references/github-management.md`, the v1.5.0 `github` CLI, or the `gitops` CLI only when code/source state is part of the request.
+- GitHub, GitOps, registry sync, and source publishing: use GitHub skills, `references/github-management.md`, the v1.6.0 `github` CLI, or the `gitops` CLI only when code/source state is part of the request.
 - Supabase-backed apps: use Supabase capabilities for schema, auth, storage, vectors, and SSR integration tasks.
 
 ## Runtime Validation

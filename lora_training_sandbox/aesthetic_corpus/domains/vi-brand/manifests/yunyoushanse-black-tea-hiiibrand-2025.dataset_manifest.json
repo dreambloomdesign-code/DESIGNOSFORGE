@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
   "title_zh": "云悠山色高端红茶",
   "title_en": "Yunyoushanse Premium Black Tea",
@@ -112,5 +112,9 @@
       "original_file_name": "imgi_11_6af87d28870e4cbfa76587b8884031fa_1766458148645.jpg",
       "view_type": "white box gold foil typography macro"
     }
-  ]
+  ],
+  "project_context_ids": [
+    "commercial-project"
+  ],
+  "commercial_separation_rule": "Treat this batch as premium commercial packaging and brand identity. Do not mix it with university research-board logic unless explicitly adapting it for presentation boards."
 }

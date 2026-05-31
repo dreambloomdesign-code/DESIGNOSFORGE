@@ -8,8 +8,9 @@ from app.management.skill_registry_sync import SkillRegistrySyncAgent
 
 def test_capabilities_include_core_agents():
     report = capability_report()
-    assert "DESIGNOSFORGE v1.5.1" in report
+    assert "DESIGNOSFORGE v1.6.0" in report
     assert "AestheticQualityGate" in report
+    assert "AestheticMemoryIndex" in report
     assert "GitOpsManager" in report
     assert "GitHubManager" in report
     assert "LoRAStyleTrainingLibrary" in report
@@ -33,7 +34,9 @@ def test_prompt_packet_contains_required_sections():
     packet = PromptPacketBuilder().build("test", "logo")
     for section in PROMPT_PACKET_SECTIONS:
         assert section in packet
-    assert "PromptPacket v1.5" in packet
+    assert "PromptPacket v1.6" in packet
+    assert "CASE_MEMORY_SELECTION" in packet
+    assert "PROJECT_CONTEXT_LOCK" in packet
     assert "ANTI_FRAGMENTATION" in packet
     assert "TEXT_ACCURACY" in packet
 

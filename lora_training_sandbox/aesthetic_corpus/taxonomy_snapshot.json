@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "purpose": "Reserved taxonomy for future LoRA aesthetic tuning from real case images and reference images.",
+  "version": "1.6.0",
+  "purpose": "Reserved taxonomy and project-context vocabulary for LoRA aesthetic tuning, training-aware case memory, and DESIGNOSFORGE v1.6 prompt routing.",
   "dataset_root": "lora_training_sandbox/aesthetic_corpus",
   "track_images_in_git": false,
   "image_groups": [
@@ -128,6 +128,32 @@
       "control_goal": "label accuracy, diagram clarity, visual grouping, thin-line discipline"
     }
   ],
+  "project_contexts": [
+    {
+      "id": "commercial-project",
+      "name_zh": "商业项目",
+      "description": "Market-facing brand, packaging, retail, product, service, or client-delivery design references.",
+      "control_goal": "conversion, brand recognition, production polish, commercial clarity"
+    },
+    {
+      "id": "academic-discipline-competition",
+      "name_zh": "高校学科竞赛",
+      "description": "University design competition, discipline research, course, and proposal boards with research logic and academic storytelling.",
+      "control_goal": "research framing, evidence chain, methodology, visual analysis, coherent board logic"
+    },
+    {
+      "id": "cultural-china-research",
+      "name_zh": "文化中国研究型作品",
+      "description": "Culture China, Chinese cultural tourism, heritage communication, and regional culture works that combine research, infographics, narrative illustration, interaction, and applied displays.",
+      "control_goal": "cultural interpretation, regional knowledge, information visualization, illustrated storytelling, non-commercial civic or academic tone"
+    },
+    {
+      "id": "public-cultural-communication",
+      "name_zh": "公共文化传播",
+      "description": "Public culture, museum, tourism, education, and city communication projects with civic or educational value.",
+      "control_goal": "accessibility, cultural clarity, public readability, respectful visual language"
+    }
+  ],
   "quality_labels": [
     "clean_composition",
     "strong_focal_anchor",
@@ -137,13 +163,18 @@
     "material_credible",
     "color_controlled",
     "reference_fidelity",
+    "research_logic_clear",
+    "academic_narrative_coherent",
+    "information_density_controlled",
     "fragmented_visual",
     "dirty_texture_noise",
     "layout_disorder",
     "text_error",
     "mojibake",
     "generic_style",
-    "overdecorated"
+    "overdecorated",
+    "overdense_information",
+    "watermark_contamination"
   ],
   "caption_schema": {
     "required_fields": [
@@ -156,6 +187,11 @@
       "text_accuracy_notes",
       "layout_notes",
       "rights_status"
+    ],
+    "recommended_fields": [
+      "project_context_ids",
+      "visual_genre_tags",
+      "training_weight_hint"
     ],
     "source_types": [
       "reference_image",

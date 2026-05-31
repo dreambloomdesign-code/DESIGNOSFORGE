@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "the-waiting-machine-2025",
   "title_zh": "露骨的期待",
   "title_en": "The Waiting Machine",
@@ -132,5 +132,10 @@
       "view_type": "final rendering board",
       "training_weight_hint": 0.95
     }
-  ]
+  ],
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "public-cultural-communication"
+  ],
+  "commercial_separation_rule": "Treat this batch as academic/environmental-art competition board logic for a public installation. Do not mix it with commercial product or brand conversion prompts."
 }

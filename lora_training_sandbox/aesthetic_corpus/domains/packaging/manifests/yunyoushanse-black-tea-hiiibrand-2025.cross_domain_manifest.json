@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
   "title_zh": "云悠山色高端红茶",
   "primary_domain_id": "vi-brand",
@@ -21,5 +21,9 @@
     "keep product object count controlled for clean packaging renders"
   ],
   "rights_status": "public_reference_only",
-  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "project_context_ids": [
+    "commercial-project"
+  ],
+  "commercial_separation_rule": "Treat this batch as premium commercial packaging and brand identity. Do not mix it with university research-board logic unless explicitly adapting it for presentation boards."
 }

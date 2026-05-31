@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.6.0",
   "batch_id": "cultural-china-tianjin-tourism-2026",
   "primary_domain_id": "exhibition-board",
   "cross_domain_id": "infovis",
@@ -13,5 +13,6 @@
   "rights_status": "public_reference_only",
   "training_readiness": "metadata_ready_image_weights_pending_rights_review",
   "cross_domain_use": "Use for cultural tourism maps, route diagrams, timeline modules, icon inventories, and dense but ordered information design.",
-  "exclusion_rule": "Do not train the watermark or dense exact text. Keep this case separated from commercial-project samples unless adapting deliberately."
+  "exclusion_rule": "Do not train the watermark or dense exact text. Keep this case separated from commercial-project samples unless adapting deliberately.",
+  "commercial_separation_rule": "Treat this batch as academic competition and public culture research material. Do not merge its goals with commercial VI, packaging, retail, or conversion-driven brand cases during prompt construction."
 }

@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from app.lora_training.aesthetic_memory import AestheticMemoryIndex
 from app.lora_training.aesthetic_space import LoRAAestheticSpace
 from app.lora_training.service import LoRAStyleTrainingLibrary
 from app.management.git_ops_manager import GitOpsManager
@@ -23,6 +24,16 @@ def test_lora_aesthetic_space_init(tmp_path: Path):
     manifest = json.loads((root / "domains" / "ui" / "domain_manifest.json").read_text(encoding="utf-8"))
     assert "minimal-premium" in manifest["allowed_style_axis_ids"]
     assert "fragmented_visual" in manifest["allowed_quality_labels"]
+    assert "project_contexts" in manifest
+
+def test_aesthetic_memory_audit_and_recommendation():
+    memory = AestheticMemoryIndex()
+    audit = memory.audit()
+    assert audit["caption_item_count"] >= 38
+    assert "commercial-project" in audit["project_context_distribution"]
+    recommendation = memory.recommend(domain="exhibition-board", context="academic-discipline-competition")
+    assert recommendation["results"]
+    assert recommendation["results"][0]["score"] > 0
 
 def test_gitops_status_runs_in_repo():
     assert isinstance(GitOpsManager(".").status(), str)
@@ -37,5 +48,5 @@ def test_github_release_plan_mentions_version():
     assert "v9.9.9" in plan
     assert "draft PR" in plan
 
-def test_github_default_release_plan_targets_v1_5_1():
-    assert "v1.5.1" in GitHubManager(".").release_plan()
+def test_github_default_release_plan_targets_v1_6_0():
+    assert "v1.6.0" in GitHubManager(".").release_plan()

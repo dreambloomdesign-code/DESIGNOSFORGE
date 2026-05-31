@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "milan-chinese-cultural-center-identity-2025",
   "review_date": "2026-05-31",
   "reviewer": "DESIGNOSFORGE v1.5.1",
@@ -119,5 +119,11 @@
     "warped facade signage",
     "low-resolution compression softness",
     "overlapping unreadable multilingual copy"
-  ]
+  ],
+  "project_context_fit": {
+    "public-cultural-communication": 0.9,
+    "cultural-china-research": 0.78,
+    "commercial-project": 0.28
+  },
+  "context_routing_rule": "Treat this batch as civic cultural identity and public cultural communication. It can inform Culture China systems, but it is not a retail conversion project."
 }

@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.6.0",
+  "purpose": "Aesthetic memory index for training-aware DESIGNOSFORGE routing and PromptPacket v1.6 case selection.",
+  "root": "lora_training_sandbox/aesthetic_corpus",
+  "audit": {
+    "schema_version": "1.6.0",
+    "caption_item_count": 38,
+    "batch_count": 5,
+    "domain_distribution": {
+      "exhibition-board": 8,
+      "vi-brand": 30
+    },
+    "project_context_distribution": {
+      "academic-discipline-competition": 8,
+      "commercial-project": 18,
+      "cultural-china-research": 15,
+      "public-cultural-communication": 20
+    },
+    "style_axis_distribution": {
+      "commercial-product": 18,
+      "cultural-contemporary": 26,
+      "editorial-grid": 22,
+      "environmental-competition": 8,
+      "experimental-typography": 13,
+      "infographic-technical": 9,
+      "minimal-premium": 11,
+      "soft-luxury": 7,
+      "swiss-modern": 12
+    },
+    "rights_distribution": {
+      "public_reference_only": 38
+    },
+    "project_context_coverage": {
+      "with_context": 38,
+      "missing_context": 0
+    },
+    "missing_project_context": [],
+    "missing_quality_review_batches": []
+  },
+  "batches": [
+    {
+      "batch_id": "chijing-vintage-identity-2025",
+      "primary_domain_ids": [
+        "vi-brand"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "packaging",
+        "typography"
+      ],
+      "style_axis_ids": [
+        "commercial-product",
+        "cultural-contemporary",
+        "editorial-grid",
+        "experimental-typography",
+        "infographic-technical",
+        "minimal-premium",
+        "soft-luxury"
+      ],
+      "project_context_ids": [
+        "commercial-project"
+      ],
+      "visual_genre_tags": [],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 11,
+      "sample_caption": "Close frontal product photo of a tall saturated purple retail shopping bag on a warm kraft paper background, black fabric handles, centered black vertical typography list on the side panel, lower text reading Chi VINTAGE, crisp folded paper base and strong shadowed side seam, fashion resale packaging mood.",
+      "sample_positive_notes": [
+        "deep purple bag surface becomes the single anchor",
+        "vertical type column gives rhythm to the tall side panel",
+        "kraft background warms the saturated purple"
+      ],
+      "sample_negative_notes": [
+        "do not train third-party luxury brand names as reusable text",
+        "avoid making the bag surface muddy or underexposed",
+        "do not add extra props or retail clutter"
+      ]
+    },
+    {
+      "batch_id": "cultural-china-tianjin-tourism-2026",
+      "primary_domain_ids": [
+        "exhibition-board"
+      ],
+      "secondary_domain_ids": [
+        "infovis",
+        "poster",
+        "ui",
+        "web"
+      ],
+      "style_axis_ids": [
+        "cultural-contemporary",
+        "editorial-grid",
+        "environmental-competition",
+        "infographic-technical"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "cultural-china-research",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "academic-research-board",
+        "academic-ui-board",
+        "application-proof-strip",
+        "cultural-tourism-infovis",
+        "cultural-tourism-website",
+        "culture-china-competition",
+        "dashed-module-board",
+        "illustrated-infovis-panel",
+        "illustrated-map-system",
+        "regional-knowledge-visualization",
+        "screenshot-system-display",
+        "tianjin-cultural-tourism",
+        "web-interaction-proof"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 3,
+      "sample_caption": "University discipline competition board for Culture China cultural tourism research, teal header with large Chinese research title, subtle illustrated Tianjin city background, project explanation block, extracted color palette swatches, four modular illustrated information-visualization panels about river transport, culture, city aesthetics and value analysis, plus a bottom application display strip with phone cases, booklets, posters, transit media and exhibition scenarios.",
+      "sample_positive_notes": [
+        "strong separation between research title, project explanation, infovis panels and application display",
+        "teal academic header creates a consistent non-commercial competition identity",
+        "hand-drawn cultural tourism illustrations give regional warmth without losing board order"
+      ],
+      "sample_negative_notes": [
+        "do not copy or generate the large diagonal watermark as a design element",
+        "avoid turning dense illustrated sub-panels into uncontrolled clutter",
+        "do not treat this as a commercial campaign poster or product advertisement"
+      ]
+    },
+    {
+      "batch_id": "milan-chinese-cultural-center-identity-2025",
+      "primary_domain_ids": [
+        "vi-brand"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "poster",
+        "typography"
+      ],
+      "style_axis_ids": [
+        "cultural-contemporary",
+        "editorial-grid",
+        "experimental-typography",
+        "infographic-technical",
+        "minimal-premium",
+        "swiss-modern"
+      ],
+      "project_context_ids": [
+        "cultural-china-research",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 12,
+      "sample_caption": "Three-poster identity system for the Chinese Cultural Center of Milan, cream poster fields on a deep oxblood-brown presentation board, modular circular C-like symbols in cyan, orange-red, and pale yellow, bold stacked sans typography, Italian and English cultural-center naming, geometric grid composition, strong negative space, disciplined institutional visual identity.",
+      "sample_positive_notes": [
+        "clear modular logo language across three poster variants",
+        "limited civic palette creates strong recognition",
+        "cream and oxblood fields keep contrast warm and cultural"
+      ],
+      "sample_negative_notes": [
+        "do not copy the exact institutional logo as a universal symbol",
+        "avoid adding decorative Chinese motifs or random brush textures",
+        "do not turn small footer text into pseudo-language blocks"
+      ]
+    },
+    {
+      "batch_id": "the-waiting-machine-2025",
+      "primary_domain_ids": [
+        "exhibition-board"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "infovis",
+        "typography"
+      ],
+      "style_axis_ids": [
+        "cultural-contemporary",
+        "editorial-grid",
+        "environmental-competition",
+        "infographic-technical",
+        "minimal-premium"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 5,
+      "sample_caption": "Competition exhibition board for The Waiting Machine, showing a public spatial installation render with light wood mechanical waterwheel-like structure, gray architectural interior, dark lattice ceiling, wood wall panel, human scale cutout figures, bold Chinese title 露骨的期待, English title The Waiting Machine, and a lower design concept text strip in a clean white board layout.",
+      "sample_positive_notes": [
+        "strong opening board that combines project title, spatial render, and concept paragraph",
+        "installation is readable as a wood mechanical public device",
+        "human figures provide scale without dominating the scene"
+      ],
+      "sample_negative_notes": [
+        "do not overtrain cutout people style as required for all boards",
+        "avoid turning the dark lattice ceiling into random dirty visual noise",
+        "do not generate dense Chinese concept copy without verified text"
+      ]
+    },
+    {
+      "batch_id": "yunyoushanse-black-tea-hiiibrand-2025",
+      "primary_domain_ids": [
+        "vi-brand"
+      ],
+      "secondary_domain_ids": [
+        "packaging",
+        "typography"
+      ],
+      "style_axis_ids": [
+        "commercial-product",
+        "cultural-contemporary",
+        "editorial-grid",
+        "minimal-premium",
+        "soft-luxury"
+      ],
+      "project_context_ids": [
+        "commercial-project"
+      ],
+      "visual_genre_tags": [],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 7,
+      "sample_caption": "High-end Chinese black tea packaging, a single white cylindrical tea container with a warm bamboo lid, vertical red textured paper or fabric seal label, abstract black brand mark, dense small Chinese body text on the lower label, centered on a clean pale gray studio background with soft grounding shadow and restrained negative space.",
+      "sample_positive_notes": [
+        "single dominant product anchor",
+        "large quiet background with controlled grain",
+        "red vertical label creates a clear hierarchy against white ceramic surface"
+      ],
+      "sample_negative_notes": [
+        "do not over-train the gray background grain as intentional decoration",
+        "do not invent extra seals, ornaments, tea leaves, or random cultural motifs",
+        "avoid pseudo-Chinese text; treat dense small copy as high-risk unless exact source text is supplied"
+      ]
+    }
+  ]
+}

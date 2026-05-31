@@ -22,6 +22,7 @@ class LoRAAestheticSpace:
             "taxonomy_version": taxonomy["version"],
             "domain_count": len(taxonomy["design_domains"]),
             "style_axis_count": len(taxonomy["style_axes"]),
+            "project_context_count": len(taxonomy.get("project_contexts", [])),
             "domains": [],
         }
 
@@ -40,6 +41,7 @@ class LoRAAestheticSpace:
             manifest = {
                 "domain": domain,
                 "allowed_style_axis_ids": [item["id"] for item in taxonomy["style_axes"]],
+                "project_contexts": taxonomy.get("project_contexts", []),
                 "allowed_quality_labels": taxonomy["quality_labels"],
                 "caption_schema": taxonomy["caption_schema"],
                 "notes": "Store images outside git by default; track captions, manifests, and quality reviews.",

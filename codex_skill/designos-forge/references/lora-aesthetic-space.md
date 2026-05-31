@@ -10,6 +10,9 @@ From the source root:
 $env:PYTHONPATH='.'
 $env:PYTHONUTF8='1'
 py -3 -m app.cli lora init-aesthetic-space
+py -3 -m app.cli lora audit-corpus
+py -3 -m app.cli lora build-memory-index
+py -3 -m app.cli lora recommend --domain exhibition-board --context academic-discipline-competition
 ```
 
 ## Dataset Root
@@ -19,6 +22,7 @@ lora_training_sandbox/aesthetic_corpus
 ```
 
 Images are ignored by git. Track only taxonomy, captions, manifests, quality reviews, and `.gitkeep` placeholders.
+DESIGNOSFORGE v1.6 also tracks `aesthetic_memory_index.json`, which summarizes captions into case-memory batches for routing and PromptPacket v1.6 case selection.
 
 ## Domain Classes
 
@@ -56,6 +60,23 @@ Use project context tags to separate business deliverables from competition and 
 - `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
 
 For `academic-discipline-competition`, describe research logic, information hierarchy, visual analysis, and application validation. Avoid treating dense boards as commercial ads.
+
+## Aesthetic Memory Index
+
+Run `lora build-memory-index` after adding or updating captions. The index is used to:
+
+- audit missing `project_context_ids`
+- summarize batch-level style DNA and risks
+- recommend cases by domain, project context, and style axis
+- prevent commercial, academic, public-culture, and Culture China samples from being mixed accidentally
+
+Recommended queries:
+
+```powershell
+py -3 -m app.cli lora recommend --domain vi-brand --context commercial-project
+py -3 -m app.cli lora recommend --domain exhibition-board --context academic-discipline-competition
+py -3 -m app.cli lora recommend --domain infovis --context cultural-china-research
+```
 
 ## Curation Rules
 

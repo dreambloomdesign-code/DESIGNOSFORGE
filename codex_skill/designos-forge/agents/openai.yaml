@@ -1,7 +1,7 @@
 interface:
   display_name: "DesignOS Forge"
-  short_description: "DesignOS Forge v1.5.1 design, LoRA, and GitHub orchestration"
-  default_prompt: "Use $designos-forge to route this design request through v1.5.1 inference, aesthetic quality gates, LoRA aesthetic corpus planning, prompt precision, text/encoding health, environment-aware tool selection, GitHub/GitOps management, and final delivery."
+  short_description: "DesignOS Forge v1.6.0 training-aware design, LoRA, and GitHub orchestration"
+  default_prompt: "Use $designos-forge to route this design request through v1.6.0 inference, aesthetic quality gates, project-context routing, aesthetic memory case selection, LoRA corpus planning, prompt precision, text/encoding health, environment-aware tool selection, GitHub/GitOps management, and final delivery."
 
 policy:
   allow_implicit_invocation: true

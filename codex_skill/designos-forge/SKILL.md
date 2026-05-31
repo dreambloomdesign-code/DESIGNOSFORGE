@@ -1,9 +1,9 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v1.5.1. Use when Codex needs to act as the user's design assistant for brand VI, logo, posters, typography, PPT/decks, Web/UI/Figma, infovis, environmental/spatial/exhibition boards, packaging, short-video AIGC prompts, reference recreation, layered PSD/PDF/PNG/PPTX/ZIP delivery, PromptPacket generation, aesthetic quality gates, anti-fragmentation/clean-visual control, text precision, UTF-8/mojibake checks, layout order, redundancy reduction, image-generation planning with confirmation gates, environment-aware routing, LoRA aesthetic corpus planning, LoRA style-training planning, GitOps/skill-registry management, GitHub repository/branch/PR/release planning, or when the user says DesignOS, Forge, DESIGNOSFORGE, 调用DesignForge, 终极助手, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, 冗余机制, LoRA训练, 参考图分类, 案例图分类, GitHub管理, 版本升级.
+description: End-to-end local design-agent orchestration for DesignOS Forge v1.6.0. Use when Codex needs to act as the user's design assistant for brand VI, logo, posters, typography, PPT/decks, Web/UI/Figma, infovis, environmental/spatial/exhibition boards, packaging, short-video AIGC prompts, reference recreation, layered PSD/PDF/PNG/PPTX/ZIP delivery, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation/clean-visual control, text precision, UTF-8/mojibake checks, layout order, redundancy reduction, image-generation planning with confirmation gates, environment-aware routing, LoRA aesthetic corpus planning, LoRA style-training planning, GitOps/skill-registry management, GitHub repository/branch/PR/release planning, or when the user says DesignOS, Forge, DESIGNOSFORGE, 调用DesignForge, 终极助手, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, 冗余机制, LoRA训练, 参考图分类, 案例图分类, 高校竞赛, 文化中国, GitHub管理, 版本升级.
 ---
 
-# DesignOS Forge v1.5.1
+# DesignOS Forge v1.6.0
 
 ## Core Rule
 
@@ -15,7 +15,7 @@ When triggered, explicitly state:
 
 Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes design work, guide the user through briefing, strategy, exploration, refinement, validation, and only then delivery. Use one-shot packaging only when the user explicitly gives a complete brief or asks to export.
 
-Use the v1.5.0 environment layer before execution: identify which local skills, plugins, runtimes, source packages, Git/GitHub state, and asset tools are available, then route work to the strongest available capability. Read `references/environment-toolchain.md` when the task mentions upgrades, environment checks, Figma, browser QA, image generation, CAD, documents, presentations, spreadsheets, or local source/package health. Read `references/github-management.md` when the task mentions Git, GitHub, branches, tags, releases, PRs, CI, or version upgrade direction. Read `references/aesthetic-prompt-governance.md` when the task mentions aesthetics, dirty/fragmented visuals, prompt richness, text precision, garbled text, layout order, or redundant mechanisms. Read `references/lora-aesthetic-space.md` when the task mentions LoRA training, case images, reference images, aesthetic corpus, style classification, or domain classification.
+Use the v1.6.0 environment and memory layer before execution: identify which local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, project contexts, and aesthetic-memory cases are available, then route work to the strongest capability. Read `references/environment-toolchain.md` when the task mentions upgrades, environment checks, Figma, browser QA, image generation, CAD, documents, presentations, spreadsheets, or local source/package health. Read `references/github-management.md` when the task mentions Git, GitHub, branches, tags, releases, PRs, CI, or version upgrade direction. Read `references/aesthetic-prompt-governance.md` when the task mentions aesthetics, dirty/fragmented visuals, prompt richness, text precision, garbled text, layout order, or redundant mechanisms. Read `references/lora-aesthetic-space.md` when the task mentions LoRA training, case images, reference images, aesthetic corpus, style classification, project context, academic competition, Culture China, or domain classification.
 
 Official wake command:
 
@@ -31,17 +31,17 @@ Project path:
 C:\Users\taojian\Documents\超级设计智能体\DesignOS_Forge_Algorithmic_Edition
 ```
 
-## v1.5 Inference Protocol
+## v1.6 Inference Protocol
 
 Use three-step inference before final visual generation or delivery:
 
 1. `Step 1｜需求边界推演`: lock task type, audience, platform specs, delivery format, reference constraints, and whether image generation or final visual output is involved; flag text, encoding, layout, and clutter risks.
-2. `Step 2｜设计策略推演`: define style DNA, one dominant visual anchor, composition hierarchy, grid/density system, color/typography, material/light, reference-image locks, negative constraints, and allowed creative variance.
-3. `Step 3｜生成准备推演`: prepare the v1.5 PromptPacket or delivery checklist; pass aesthetic cohesion, layout order, text precision, encoding health, prompt specificity, and redundancy gates before recommending generation or delivery.
+2. `Step 2｜设计策略推演`: define project context, style DNA, memory-case selection, one dominant visual anchor, composition hierarchy, grid/density system, color/typography, material/light, reference-image locks, negative constraints, and allowed creative variance.
+3. `Step 3｜生成准备推演`: prepare the v1.6 PromptPacket or delivery checklist; pass project-context lock, case-memory fit, aesthetic cohesion, layout order, text precision, encoding health, prompt specificity, failure-memory, and redundancy gates before recommending generation or delivery.
 
 Do not generate images, edit images, render final visuals, or claim final delivery unless the user explicitly confirms. If the user asks to "生图", "生成图片", "出图", "render", or similar without confirmation, block the generation and ask for confirmation. Confirmation phrases include "确认生图", "确认出图", "可以生图", "可以出图", "确认生成", and "approve image".
 
-When generating prompts, output one complete directly copyable PromptPacket v1.5 with sections `01_TASK_BRIEF` through `15_REVISION_PROTOCOL`; do not split it across separate messages unless the user asks.
+When generating prompts, output one complete directly copyable PromptPacket v1.6 with sections `01_TASK_BRIEF` through `18_REVISION_PROTOCOL`; do not split it across separate messages unless the user asks.
 
 ## Execution
 
@@ -113,6 +113,8 @@ Use the closest v1.4 subskill route:
 - `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
 - `LoRAStyleTrainingLibrary`: style dataset and adapter planning.
 - `LoRAAestheticSpace`: reserved corpus taxonomy for real case images, reference images, rejected examples, captions, manifests, and quality reviews across design domains and style axes.
+- `AestheticMemoryIndex`: v1.6 case-memory index, corpus audit, project-context coverage, and case recommendation.
+- `ProjectContextRouter`: separate commercial projects, academic discipline competitions, Culture China research, and public cultural communication before prompt construction.
 - `AestheticQualityGate`: visual cleanliness, layout order, exact text, encoding health, prompt specificity, and redundancy QA.
 - `GitOpsManager` and `GitHubManager`: local version state, branch/tag/PR/release planning, registry sync, and GitHub handoff.
 - `GeneralDesignOS`: fallback design coordination and general GitOps registry work.
@@ -124,7 +126,7 @@ Use the closest v1.4 subskill route:
 - Use Browser for localhost or file-based frontend QA, and Chrome only when the user's real browser profile, login state, cookies, or extensions matter.
 - Use Documents, Presentations, and Spreadsheets capabilities for `.docx`, `.pptx`, `.xlsx`, rendered review, and polished handoff assets.
 - Use image generation/editing only after the confirmation gate passes. When no image tool is available, deliver a PromptPacket and mark rendering as pending.
-- Before any visual generation or final delivery, apply v1.5 quality gates: one dominant focal anchor, explicit grid, density ceiling, short exact text, UTF-8/no mojibake, and anti-fragmentation negative prompt.
+- Before any visual generation or final delivery, apply v1.6 quality gates: project-context lock, memory-case selection, one dominant focal anchor, explicit grid, density ceiling, short exact text, UTF-8/no mojibake, failure-memory check, and anti-fragmentation negative prompt.
 - Use the bundled workspace Python and Node runtimes for document, slide, spreadsheet, PDF, and browser automation work when the system paths are available.
 - Use GitHub or GitOps paths only after the requested source scope is clear; never treat registry sync as visual delivery. Prefer the GitHub plugin for PR/issue/release context and connector-backed writes; use local `git`, `gh`, or the source package `github` CLI for branch, tag, status, and publish gaps.
 

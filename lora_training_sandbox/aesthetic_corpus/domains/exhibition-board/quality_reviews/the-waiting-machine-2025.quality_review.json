@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "the-waiting-machine-2025",
   "review_date": "2026-05-31",
   "reviewer": "DESIGNOSFORGE v1.5.1",
@@ -111,5 +111,11 @@
     "orange decoration without function",
     "mixed concept map logic render on one uncontrolled page",
     "unreadable technical paragraphs"
-  ]
+  ],
+  "project_context_fit": {
+    "academic-discipline-competition": 0.92,
+    "public-cultural-communication": 0.72,
+    "commercial-project": 0.1
+  },
+  "context_routing_rule": "Treat this batch as academic/environmental-art competition board logic for a public installation. Do not mix it with commercial product or brand conversion prompts."
 }

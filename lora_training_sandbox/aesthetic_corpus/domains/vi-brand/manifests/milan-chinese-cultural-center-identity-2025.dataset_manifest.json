@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "milan-chinese-cultural-center-identity-2025",
   "title_zh": "米兰中国文化交流中心标识系统再设计",
   "title_en": "Chinese Cultural Center of Milan Identity System Redesign",
@@ -174,5 +174,10 @@
       "view_type": "social media post grid applications",
       "training_weight_hint": 0.75
     }
-  ]
+  ],
+  "project_context_ids": [
+    "public-cultural-communication",
+    "cultural-china-research"
+  ],
+  "commercial_separation_rule": "Treat this batch as civic cultural identity and public cultural communication. It can inform Culture China systems, but it is not a retail conversion project."
 }

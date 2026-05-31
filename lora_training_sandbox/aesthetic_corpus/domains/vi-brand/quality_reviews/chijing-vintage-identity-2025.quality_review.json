@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.6.0",
   "batch_id": "chijing-vintage-identity-2025",
   "review_date": "2026-05-31",
   "reviewer": "DESIGNOSFORGE v1.5.1",
@@ -111,5 +111,11 @@
     "underexposed storefront",
     "uncontrolled neon colors",
     "random shopping bags without identity system"
-  ]
+  ],
+  "project_context_fit": {
+    "commercial-project": 0.96,
+    "academic-discipline-competition": 0.05,
+    "public-cultural-communication": 0.12
+  },
+  "context_routing_rule": "Treat this batch as commercial retail/fashion resale identity and packaging. Do not use it as an academic competition board reference."
 }
