@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "the-waiting-machine-2025",
+  "title_zh": "露骨的期待",
+  "primary_domain_id": "exhibition-board",
+  "cross_domain_id": "infovis",
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/manifests/the-waiting-machine-2025.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/the-waiting-machine-2025.caption.jsonl",
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/case_images/the-waiting-machine-2025",
+  "infovis_training_value": [
+    "grayscale map with orange site highlight",
+    "right-side fact callout column",
+    "plus/equal design logic diagram chain",
+    "orange motion arrows on mechanism rendering",
+    "component illustration with explanatory markers"
+  ],
+  "infovis_risk_controls": [
+    "do not generate false coordinates or labels",
+    "use arrows only for meaningful motion or transmission logic",
+    "keep callout boxes aligned and sparse",
+    "separate dense narrative text from visual diagrams"
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review"
+}

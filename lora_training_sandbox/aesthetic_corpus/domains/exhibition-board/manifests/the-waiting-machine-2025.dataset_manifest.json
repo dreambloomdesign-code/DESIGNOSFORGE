@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "the-waiting-machine-2025",
+  "title_zh": "露骨的期待",
+  "title_en": "The Waiting Machine",
+  "source_collection": "Hiiibrand Awards 2025 reference case",
+  "source_original_dir_label": "训练集/露骨的期待 - Hiiibrand Awards 2025",
+  "source_type": "case_image",
+  "primary_domain_id": "exhibition-board",
+  "secondary_domain_ids": [
+    "environmental-art",
+    "infovis",
+    "typography"
+  ],
+  "style_axis_ids": [
+    "environmental-competition",
+    "infographic-technical",
+    "editorial-grid",
+    "cultural-contemporary",
+    "minimal-premium"
+  ],
+  "visual_genre_tags": [
+    "environmental-art-board",
+    "public-installation-render",
+    "mechanism-diagram",
+    "location-analysis-map",
+    "competition-presentation-board",
+    "orange-annotation-system"
+  ],
+  "quality_labels_positive": [
+    "strong_focal_anchor",
+    "good_negative_space",
+    "layout_ordered",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity"
+  ],
+  "quality_risk_labels": [
+    "text_error",
+    "layout_disorder",
+    "dirty_texture_noise"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User provided these files as training images. The open-source repository stores metadata only; image files remain local and ignored by git until rights and training permissions are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 5,
+  "unique_primary_image_count": 5,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/case_images/the-waiting-machine-2025",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/the-waiting-machine-2025.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/quality_reviews/the-waiting-machine-2025.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/environmental-art/manifests/the-waiting-machine-2025.cross_domain_manifest.json",
+    "lora_training_sandbox/aesthetic_corpus/domains/infovis/manifests/the-waiting-machine-2025.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "environmental art competition board system for a public mechanical waiting installation, combining spatial render, site analysis, design logic, mechanism annotation, and final rendering",
+    "board_sequence": [
+      "design concept board",
+      "location analysis board",
+      "design logic board",
+      "mechanism illustration board",
+      "final rendering board"
+    ],
+    "composition_system": "large image-first panels, white technical pages, bilingual section headings, orange marker bullets, grayscale diagrams, pale title watermarks, and bottom explanatory text bands",
+    "color_system": [
+      "white board background",
+      "black heading text",
+      "light gray watermark title",
+      "grayscale map and mechanism lines",
+      "orange accent markers and arrows",
+      "light wood installation material"
+    ],
+    "material_system": [
+      "light wood mechanical structure",
+      "gray metal shafts",
+      "architectural interior surfaces",
+      "dark lattice ceiling",
+      "wood wall panel",
+      "grayscale map layers"
+    ],
+    "typography_system": "bold Chinese section headers, slab-like English headings, large project title, pale monospaced English watermark, and dense Chinese body copy",
+    "infographic_system": [
+      "site map highlight",
+      "right-side callout cards",
+      "plus/equal process diagrams",
+      "orange directional arrows",
+      "component detail drawings",
+      "render scale comparison"
+    ],
+    "anti_fragmentation_rules": [
+      "separate concept, location, logic, mechanism, and rendering boards",
+      "use orange only for markers, highlights, arrows, and final accents",
+      "do not scatter diagrams without a reading path",
+      "treat dense Chinese paragraphs and map labels as text-risk zones",
+      "keep mechanism arrows tied to actual motion logic",
+      "avoid overfitting cutout people and dark ceiling texture as required elements"
+    ]
+  },
+  "images": [
+    {
+      "image_id": "waiting_machine_01",
+      "file_name": "waiting_machine_01_design_concept_board.jpg",
+      "original_file_name": "imgi_5_71967400025d4913b04dbc17a0675bbd_1763099656923.jpg",
+      "view_type": "design concept board with installation rendering",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "waiting_machine_02",
+      "file_name": "waiting_machine_02_location_analysis_board.jpg",
+      "original_file_name": "imgi_6_13d0d7c450194720989c1b306eca8651_1763099656924.jpg",
+      "view_type": "location analysis map board",
+      "training_weight_hint": 0.95
+    },
+    {
+      "image_id": "waiting_machine_03",
+      "file_name": "waiting_machine_03_design_logic_board.jpg",
+      "original_file_name": "imgi_7_c1b5f66bc8984246aef0c164504a8f3f_1763099696358.jpg",
+      "view_type": "design logic process board",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "waiting_machine_04",
+      "file_name": "waiting_machine_04_mechanism_illustration_board.jpg",
+      "original_file_name": "imgi_8_50769b204c204d29be4abcba2557ec2f_1763099696359.jpg",
+      "view_type": "mechanism illustration board",
+      "training_weight_hint": 1.0
+    },
+    {
+      "image_id": "waiting_machine_05",
+      "file_name": "waiting_machine_05_rendering_board.jpg",
+      "original_file_name": "imgi_9_14b7cead2fac47969b529e830794a0f3_1763099696360.jpg",
+      "view_type": "final rendering board",
+      "training_weight_hint": 0.95
+    }
+  ]
+}

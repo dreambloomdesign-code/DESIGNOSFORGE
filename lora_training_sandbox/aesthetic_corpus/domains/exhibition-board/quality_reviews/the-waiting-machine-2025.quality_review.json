@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "batch_id": "the-waiting-machine-2025",
+  "review_date": "2026-05-31",
+  "reviewer": "DESIGNOSFORGE v1.5.1",
+  "overall_score": 8.2,
+  "domain_fit": {
+    "exhibition-board": 0.97,
+    "environmental-art": 0.9,
+    "infovis": 0.82,
+    "typography": 0.68
+  },
+  "style_axis_fit": {
+    "environmental-competition": 0.94,
+    "infographic-technical": 0.86,
+    "editorial-grid": 0.8,
+    "cultural-contemporary": 0.64,
+    "minimal-premium": 0.55
+  },
+  "quality_scores": {
+    "strong_focal_anchor": 8.2,
+    "good_negative_space": 7.8,
+    "layout_ordered": 8.5,
+    "material_credible": 8.0,
+    "color_controlled": 8.3,
+    "reference_fidelity": 8.6,
+    "text_precision_risk_control": 6.5,
+    "anti_fragmentation_value": 8.4
+  },
+  "core_aesthetic_takeaways": [
+    "This batch is valuable for environmental-art competition boards that need clear sequence and diagram logic.",
+    "The strongest transferable structure is the five-board chain: concept, location, logic, mechanism, rendering.",
+    "Orange is used effectively as an annotation system rather than decoration.",
+    "The mechanism illustration board is especially useful for teaching arrows, component diagrams, and motion logic.",
+    "The batch helps avoid clutter by separating map analysis, text reasoning, and rendering views into distinct board types."
+  ],
+  "prompt_structure_lessons": [
+    "Start prompts by naming the board type before adding content.",
+    "Separate project title, section heading, main figure, annotations, and explanatory text band.",
+    "Use orange only for functional markers, arrows, site highlights, and accent blocks.",
+    "For location boards, describe map hierarchy and callout placement without inventing exact coordinates.",
+    "For mechanism boards, describe arrow purpose and component relations rather than adding arbitrary arrows."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "露骨的期待",
+      "The Waiting Machine",
+      "Design Concept",
+      "Location",
+      "Design Logic",
+      "Illustration",
+      "Rendering"
+    ],
+    "requires_source_confirmation": [
+      "dense Chinese concept paragraphs",
+      "map labels",
+      "coordinates",
+      "right-side callout copy",
+      "numbered design logic steps",
+      "technical mechanism notes"
+    ],
+    "training_rule": "Use the batch for board hierarchy and diagram logic. Do not train dense Chinese paragraphs or map text as exact copy without source text."
+  },
+  "risk_controls": [
+    {
+      "risk": "dense Chinese text hallucination",
+      "severity": "high",
+      "mitigation": "Keep long paragraphs as placeholder layout unless exact source text is provided."
+    },
+    {
+      "risk": "map label hallucination",
+      "severity": "high",
+      "mitigation": "Use map boards for grayscale hierarchy and orange site highlights, not exact GIS labels or coordinates."
+    },
+    {
+      "risk": "random mechanism arrows",
+      "severity": "medium",
+      "mitigation": "Require each arrow to describe motion direction, rotation, or transmission relation."
+    },
+    {
+      "risk": "render-and-diagram mixing clutter",
+      "severity": "medium",
+      "mitigation": "Preserve view_type separation between concept render, map, logic, mechanism, and final rendering boards."
+    },
+    {
+      "risk": "cutout people overfit",
+      "severity": "low",
+      "mitigation": "Treat human figures as scale references only, not required style assets."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "include as an environmental-art and exhibition-board positive case after rights review",
+    "stage_2_caption_tuning": "use captions to teach board sequencing, map analysis, diagram logic, and orange annotation discipline",
+    "stage_3_lora_training": "train as an environmental-competition board subset before mixing with brand VI or packaging cases",
+    "suggested_weighting": {
+      "concept_board": 1.0,
+      "location_analysis": 0.95,
+      "design_logic": 1.0,
+      "mechanism_illustration": 1.0,
+      "final_rendering": 0.95
+    }
+  },
+  "negative_prompt_atoms": [
+    "random dense Chinese text",
+    "fake map labels and coordinates",
+    "arbitrary arrows without motion logic",
+    "overcrowded board layout",
+    "unrelated diagram icons",
+    "dirty gray map texture",
+    "cutout people dominating the board",
+    "orange decoration without function",
+    "mixed concept map logic render on one uncontrolled page",
+    "unreadable technical paragraphs"
+  ]
+}
