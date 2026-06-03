@@ -74,6 +74,12 @@
       "name_zh": "短剧/AIGC 视频",
       "name_en": "Short Video AIGC",
       "description": "Storyboard, shot board, scene style, character continuity, and video prompt references."
+    },
+    {
+      "id": "photography",
+      "name_zh": "摄影/后期",
+      "name_en": "Photography and Retouching",
+      "description": "Portrait photography, portrait retouching, product photography, composition optimization, Hanfu portrait shooting, lighting schemes, and photo post-production references."
     }
   ],
   "style_axes": [
@@ -126,6 +132,26 @@
       "id": "infographic-technical",
       "name_zh": "技术图解",
       "control_goal": "label accuracy, diagram clarity, visual grouping, thin-line discipline"
+    },
+    {
+      "id": "natural-portrait-retouch",
+      "name_zh": "自然人像精修",
+      "control_goal": "preserve skin texture, facial anatomy, catchlights, natural color, and believable local corrections"
+    },
+    {
+      "id": "studio-product-lighting",
+      "name_zh": "棚拍产品用光",
+      "control_goal": "controlled highlight, readable edge contour, clean background, credible material and reflection"
+    },
+    {
+      "id": "composition-optimization",
+      "name_zh": "构图裁切优化",
+      "control_goal": "balanced crop, perspective correction, subject breathing room, leading lines, and strong focal hierarchy"
+    },
+    {
+      "id": "hanfu-cultural-portrait",
+      "name_zh": "汉服古风人像",
+      "control_goal": "coherent costume, hair, makeup, prop, architecture or landscape scene, soft cultural atmosphere, and respectful styling"
     }
   ],
   "project_contexts": [
@@ -152,6 +178,18 @@
       "name_zh": "公共文化传播",
       "description": "Public culture, museum, tourism, education, and city communication projects with civic or educational value.",
       "control_goal": "accessibility, cultural clarity, public readability, respectful visual language"
+    },
+    {
+      "id": "portrait-session",
+      "name_zh": "人像拍摄项目",
+      "description": "Personal, editorial, fashion, Hanfu, cultural portrait, and portrait-retouching sessions that require subject dignity, natural anatomy, and controlled mood.",
+      "control_goal": "flattering but believable portrait, coherent scene, natural skin, stable pose, and respectful styling"
+    },
+    {
+      "id": "product-photo-production",
+      "name_zh": "产品摄影制作",
+      "description": "Product photography generation, post-production, e-commerce hero shots, still life, and material/lighting correction references.",
+      "control_goal": "inspectable product, accurate material, clean edges, credible reflection, and conversion-ready polish"
     }
   ],
   "quality_labels": [
@@ -174,7 +212,20 @@
     "generic_style",
     "overdecorated",
     "overdense_information",
-    "watermark_contamination"
+    "watermark_contamination",
+    "skin_texture_preserved",
+    "light_direction_consistent",
+    "pose_natural",
+    "product_edges_clean",
+    "reflection_controlled",
+    "composition_balanced",
+    "cultural_styling_coherent",
+    "plastic_skin",
+    "over_smoothed_face",
+    "wrong_light_direction",
+    "product_glare",
+    "warped_body_face",
+    "costume_culture_mismatch"
   ],
   "caption_schema": {
     "required_fields": [
@@ -197,7 +248,10 @@
       "reference_image",
       "case_image",
       "rejected_image",
-      "comparison_set"
+      "comparison_set",
+      "tutorial_reference",
+      "shooting_recipe",
+      "retouching_recipe"
     ],
     "rights_status": [
       "owned",

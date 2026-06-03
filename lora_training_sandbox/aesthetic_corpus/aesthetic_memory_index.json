@@ -4,34 +4,41 @@
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
     "schema_version": "1.6.0",
-    "caption_item_count": 46,
-    "batch_count": 6,
+    "caption_item_count": 54,
+    "batch_count": 7,
     "domain_distribution": {
       "exhibition-board": 8,
+      "photography": 8,
       "vi-brand": 38
     },
     "project_context_distribution": {
       "academic-discipline-competition": 8,
-      "commercial-project": 18,
+      "commercial-project": 21,
       "cultural-china-research": 15,
-      "public-cultural-communication": 28
+      "portrait-session": 6,
+      "product-photo-production": 4,
+      "public-cultural-communication": 29
     },
     "style_axis_distribution": {
-      "commercial-product": 18,
-      "cultural-contemporary": 34,
-      "editorial-grid": 30,
+      "commercial-product": 20,
+      "composition-optimization": 5,
+      "cultural-contemporary": 35,
+      "editorial-grid": 31,
       "environmental-competition": 8,
       "experimental-typography": 21,
+      "hanfu-cultural-portrait": 1,
       "infographic-technical": 17,
-      "minimal-premium": 19,
-      "soft-luxury": 7,
+      "minimal-premium": 21,
+      "natural-portrait-retouch": 4,
+      "soft-luxury": 9,
+      "studio-product-lighting": 3,
       "swiss-modern": 20
     },
     "rights_distribution": {
-      "public_reference_only": 46
+      "public_reference_only": 54
     },
     "project_context_coverage": {
-      "with_context": 46,
+      "with_context": 54,
       "missing_context": 0
     },
     "missing_project_context": [],
@@ -239,6 +246,86 @@
         "do not copy the exact institutional logo as a universal symbol",
         "avoid adding decorative Chinese motifs or random brush textures",
         "do not turn small footer text into pseudo-language blocks"
+      ]
+    },
+    {
+      "batch_id": "photography-foundation-web-sources-2026",
+      "primary_domain_ids": [
+        "photography"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "packaging",
+        "poster",
+        "ui",
+        "vi-brand",
+        "web"
+      ],
+      "style_axis_ids": [
+        "commercial-product",
+        "composition-optimization",
+        "cultural-contemporary",
+        "editorial-grid",
+        "hanfu-cultural-portrait",
+        "minimal-premium",
+        "natural-portrait-retouch",
+        "soft-luxury",
+        "studio-product-lighting"
+      ],
+      "project_context_ids": [
+        "commercial-project",
+        "portrait-session",
+        "product-photo-production",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "ai-retouching",
+        "ancient-style-portrait",
+        "background-separation",
+        "before-after",
+        "blemish-removal",
+        "composition",
+        "crop",
+        "cultural-costume",
+        "ecommerce-photo",
+        "eye-focus",
+        "garden-portrait",
+        "hanfu-portrait",
+        "headroom",
+        "label-readability",
+        "leading-lines",
+        "lens-choice",
+        "local-mask",
+        "material-accuracy",
+        "perspective-correction",
+        "portrait-lighting",
+        "portrait-photography",
+        "portrait-pose",
+        "portrait-retouching",
+        "pose-planning",
+        "product-photography",
+        "product-retouching",
+        "quality-governance",
+        "reflection-control",
+        "region-mask",
+        "skin-texture",
+        "studio-lighting",
+        "white-background"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 8,
+      "sample_caption": "Portrait photography tutorial memory for planning expression, lighting, pose, lens choice and background separation before post-production. Use diffused or golden-hour light for gentle portraits, short-telephoto or shallow-depth setups when flattering facial proportion is important, and test lighting before the subject enters the scene.",
+      "sample_positive_notes": [
+        "portrait quality starts before retouching: light, pose, expression and background must be coherent",
+        "soft or diffused light protects skin texture and lowers retouching burden",
+        "background separation supports a clear subject anchor"
+      ],
+      "sample_negative_notes": [
+        "do not rely on heavy retouching to repair bad light or confused pose",
+        "avoid harsh mixed lighting that makes skin color inconsistent",
+        "do not blur the background so much that scene identity disappears when context matters"
       ]
     },
     {

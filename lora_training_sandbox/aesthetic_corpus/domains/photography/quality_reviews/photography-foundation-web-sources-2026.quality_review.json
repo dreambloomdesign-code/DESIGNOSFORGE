@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.7.0-preview",
+  "batch_id": "photography-foundation-web-sources-2026",
+  "review_date": "2026-06-01",
+  "reviewer": "DESIGNOSFORGE v1.7-preview",
+  "overall_score": 8.6,
+  "project_context_fit": {
+    "portrait-session": 0.94,
+    "product-photo-production": 0.92,
+    "commercial-project": 0.74,
+    "public-cultural-communication": 0.66,
+    "academic-discipline-competition": 0.28
+  },
+  "domain_fit": {
+    "photography": 0.98,
+    "packaging": 0.58,
+    "poster": 0.46,
+    "vi-brand": 0.42,
+    "environmental-art": 0.34,
+    "ui": 0.22
+  },
+  "style_axis_fit": {
+    "natural-portrait-retouch": 0.95,
+    "studio-product-lighting": 0.9,
+    "composition-optimization": 0.92,
+    "hanfu-cultural-portrait": 0.86,
+    "commercial-product": 0.74,
+    "soft-luxury": 0.68,
+    "cultural-contemporary": 0.62
+  },
+  "quality_scores": {
+    "source_authority": 8.7,
+    "retouching_safety": 8.9,
+    "lighting_logic": 8.8,
+    "composition_transferability": 8.6,
+    "product_photo_value": 8.7,
+    "hanfu_specialty_value": 8.2,
+    "rights_safety": 9.2
+  },
+  "core_takeaways": [
+    "Photography quality must start from capture logic: light, lens, pose, crop, background and product placement before retouching.",
+    "Portrait retouching should preserve skin texture, identity and light direction; plastic smoothing is a failure pattern.",
+    "Product photography depends on controlled background, readable edge contour, label accuracy, material texture and reflection management.",
+    "Composition optimization is a correction layer with geometry constraints, not a license to stretch bodies, products or architecture.",
+    "Hanfu portraits need costume, hair, makeup, prop, scene, posture and light coherence as a full cultural styling system."
+  ],
+  "prompt_structure_lessons": [
+    "Photography prompts must specify capture conditions before post-production edits.",
+    "Separate global color grade from local retouching instructions.",
+    "List exact retouch operations: blemish removal, skin texture, hair cleanup, clothing wrinkle, background cleanup, product edge, reflection, crop.",
+    "For Hanfu, lock dynasty/garment mood, location type, prop, pose and light before describing atmosphere.",
+    "For product images, lock label/source assets and forbid pseudo text."
+  ],
+  "risk_controls": [
+    {
+      "risk": "plastic or identity-erasing portrait retouch",
+      "severity": "high",
+      "mitigation": "Use skin_texture_preserved and local-mask notes as mandatory quality gates."
+    },
+    {
+      "risk": "fake or warped product text",
+      "severity": "high",
+      "mitigation": "Require supplied label assets or placeholders; treat pseudo-labels as failures."
+    },
+    {
+      "risk": "wrong light direction after background replacement",
+      "severity": "high",
+      "mitigation": "Check subject shadow, catchlights, product contact shadow and background lighting as one system."
+    },
+    {
+      "risk": "Hanfu cultural mismatch",
+      "severity": "medium",
+      "mitigation": "Lock costume-scene-prop-hair-makeup coherence before style language."
+    },
+    {
+      "risk": "over-cropping or geometry distortion",
+      "severity": "medium",
+      "mitigation": "Use composition gates for eye line, hands, sleeves, product edge, horizon and verticals."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_source_digest": "use tutorial_reference rows as knowledge memory for prompt and QA behavior",
+    "stage_2_private_images": "add owned before/after portrait, product and Hanfu photo pairs to comparison_sets",
+    "stage_3_rejected_examples": "add over-smoothed skin, glare, wrong crop, warped product label and mismatched Hanfu examples",
+    "stage_4_lora_training": "train photography adapters by subdomain before mixing portrait and product datasets"
+  },
+  "negative_prompt_atoms": [
+    "plastic skin",
+    "erased pores",
+    "over-smoothed face",
+    "warped eyes",
+    "wrong light direction",
+    "fake product label",
+    "distorted logo text",
+    "uncontrolled glare",
+    "floating product without contact shadow",
+    "awkward crop through fingers or sleeves",
+    "mismatched Hanfu costume and modern prop",
+    "random ancient architecture background",
+    "overdone beauty filter"
+  ]
+}
+

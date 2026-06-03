@@ -108,13 +108,20 @@ class AestheticMemoryIndex:
             "batches": sorted(normalized, key=lambda item: item["batch_id"]),
         }
         output = self.root / "aesthetic_memory_index.json"
-        output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        output.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+            newline="\n",
+        )
         return payload
 
     def recommend(self, domain="", context="", style_axis="", limit=5):
         domain = domain.strip()
         context = context.strip()
         style_axis = style_axis.strip()
+        items_by_batch = defaultdict(list)
+        for item in self.caption_items():
+            items_by_batch[item.get("batch_id", "")].append(item)
         index_path = self.root / "aesthetic_memory_index.json"
         if index_path.exists():
             batches = json.loads(index_path.read_text(encoding="utf-8")).get("batches", [])
@@ -138,6 +145,13 @@ class AestheticMemoryIndex:
                 score = batch.get("image_count", 0)
                 reasons.append("general_memory")
             if score > 0:
+                sample = self._best_sample_for_query(
+                    items_by_batch.get(batch.get("batch_id"), []),
+                    domain=domain,
+                    context=context,
+                    style_axis=style_axis,
+                    fallback=batch,
+                )
                 ranked.append({
                     "batch_id": batch.get("batch_id"),
                     "score": score,
@@ -146,9 +160,9 @@ class AestheticMemoryIndex:
                     "secondary_domain_ids": batch.get("secondary_domain_ids", []),
                     "project_context_ids": batch.get("project_context_ids", []),
                     "style_axis_ids": batch.get("style_axis_ids", []),
-                    "sample_caption": batch.get("sample_caption", ""),
-                    "sample_positive_notes": batch.get("sample_positive_notes", []),
-                    "sample_negative_notes": batch.get("sample_negative_notes", []),
+                    "sample_caption": sample.get("caption", batch.get("sample_caption", "")),
+                    "sample_positive_notes": sample.get("positive_aesthetic_notes", batch.get("sample_positive_notes", []))[:3],
+                    "sample_negative_notes": sample.get("negative_failure_notes", batch.get("sample_negative_notes", []))[:3],
                 })
 
         ranked.sort(key=lambda item: (-item["score"], item["batch_id"]))
@@ -162,3 +176,25 @@ class AestheticMemoryIndex:
             },
             "results": ranked[:limit],
         }
+
+    def _best_sample_for_query(self, items, domain="", context="", style_axis="", fallback=None):
+        fallback = fallback or {}
+        if not items:
+            return {
+                "caption": fallback.get("sample_caption", ""),
+                "positive_aesthetic_notes": fallback.get("sample_positive_notes", []),
+                "negative_failure_notes": fallback.get("sample_negative_notes", []),
+            }
+
+        scored = []
+        for item in items:
+            score = 0
+            if domain and (domain == item.get("domain_id") or domain in item.get("secondary_domain_ids", [])):
+                score += 4
+            if context and context in item.get("project_context_ids", []):
+                score += 5
+            if style_axis and style_axis in item.get("style_axis_ids", []):
+                score += 3
+            scored.append((score, item))
+        scored.sort(key=lambda pair: -pair[0])
+        return scored[0][1] if scored else items[0]

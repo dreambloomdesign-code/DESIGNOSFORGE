@@ -36,6 +36,7 @@ DESIGNOSFORGE v1.6 also tracks `aesthetic_memory_index.json`, which summarizes c
 - `infovis`: diagram, map, flowchart, data narrative
 - `web`: landing page, product site, editorial web, docs
 - `short-video-aigc`: storyboard, shot board, scene/character continuity
+- `photography`: portrait photography, portrait retouching, product photography, composition optimization, Hanfu portrait shooting, and post-production references
 
 ## Style Axes
 
@@ -49,6 +50,10 @@ DESIGNOSFORGE v1.6 also tracks `aesthetic_memory_index.json`, which summarizes c
 - `environmental-competition`
 - `experimental-typography`
 - `infographic-technical`
+- `natural-portrait-retouch`
+- `studio-product-lighting`
+- `composition-optimization`
+- `hanfu-cultural-portrait`
 
 ## Project Contexts
 
@@ -58,6 +63,8 @@ Use project context tags to separate business deliverables from competition and 
 - `academic-discipline-competition`: university discipline competition work with research framing, methodology, evidence chains, and board logic
 - `cultural-china-research`: Culture China, Chinese cultural tourism, heritage communication, illustrated infovis, and interaction research
 - `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
+- `portrait-session`: portrait photography, editorial portrait, Hanfu and cultural portrait, and portrait-retouching work
+- `product-photo-production`: product photography generation, product retouching, e-commerce hero shots, still life, material and lighting correction
 
 For `academic-discipline-competition`, describe research logic, information hierarchy, visual analysis, and application validation. Avoid treating dense boards as commercial ads.
 
@@ -76,7 +83,29 @@ Recommended queries:
 py -3 -m app.cli lora recommend --domain vi-brand --context commercial-project
 py -3 -m app.cli lora recommend --domain exhibition-board --context academic-discipline-competition
 py -3 -m app.cli lora recommend --domain infovis --context cultural-china-research
+py -3 -m app.cli lora recommend --domain photography --context portrait-session
+py -3 -m app.cli lora recommend --domain photography --context product-photo-production
 ```
+
+## Photography Specialty Rules
+
+The `photography` domain accepts `tutorial_reference`, `shooting_recipe`, and `retouching_recipe` rows in addition to image metadata rows. These teach workflow and QA logic only; do not scrape tutorial images or copy full article text into the public repository.
+
+Use photography metadata for:
+
+- portrait retouching: preserve skin texture, identity, hair detail, and original light direction
+- product photography: keep product edges, labels, material texture, reflections, and contact shadows credible
+- composition optimization: improve crop, perspective, focal hierarchy, and negative space without geometry distortion
+- Hanfu portraits: match costume, hair, makeup, prop, scene, posture, garment silhouette, and light into one coherent cultural styling system
+
+Failure labels to record aggressively:
+
+- `plastic_skin`
+- `over_smoothed_face`
+- `wrong_light_direction`
+- `product_glare`
+- `warped_body_face`
+- `costume_culture_mismatch`
 
 ## Curation Rules
 

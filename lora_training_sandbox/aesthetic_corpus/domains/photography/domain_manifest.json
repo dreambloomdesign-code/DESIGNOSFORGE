@@ -1,0 +1,65 @@
+{
+  "domain": {
+    "id": "photography",
+    "name_zh": "摄影/后期",
+    "name_en": "Photography and Retouching",
+    "description": "Portrait photography, portrait retouching, product photography, composition optimization, Hanfu portrait shooting, lighting schemes, and photo post-production references."
+  },
+  "allowed_style_axis_ids": [
+    "minimal-premium",
+    "editorial-grid",
+    "commercial-product",
+    "soft-luxury",
+    "cultural-contemporary",
+    "natural-portrait-retouch",
+    "studio-product-lighting",
+    "composition-optimization",
+    "hanfu-cultural-portrait"
+  ],
+  "project_contexts": [
+    "commercial-project",
+    "public-cultural-communication",
+    "portrait-session",
+    "product-photo-production"
+  ],
+  "specialty_subdomains": [
+    "portrait-scene-retouching",
+    "natural-portrait-retouch",
+    "product-photography-generation",
+    "product-photo-retouching",
+    "composition-crop-perspective",
+    "hanfu-cultural-portrait"
+  ],
+  "allowed_quality_labels": [
+    "clean_composition",
+    "strong_focal_anchor",
+    "good_negative_space",
+    "material_credible",
+    "color_controlled",
+    "reference_fidelity",
+    "skin_texture_preserved",
+    "light_direction_consistent",
+    "pose_natural",
+    "product_edges_clean",
+    "reflection_controlled",
+    "composition_balanced",
+    "cultural_styling_coherent",
+    "plastic_skin",
+    "over_smoothed_face",
+    "wrong_light_direction",
+    "product_glare",
+    "warped_body_face",
+    "costume_culture_mismatch"
+  ],
+  "caption_schema_notes": "Photography domain accepts tutorial_reference, shooting_recipe, retouching_recipe, reference_image, case_image, rejected_image, and comparison_set rows. Web tutorial rows are metadata-only and must not include scraped tutorial images or full article text.",
+  "rights_notes": "Raw reference images remain outside git. Store source links, summaries, date accessed, training use, and rights status only.",
+  "negative_training_boundary": [
+    "do not train plastic skin as beauty",
+    "do not erase skin pores or facial identity",
+    "do not change body or face anatomy unless explicitly requested and ethically acceptable",
+    "do not generate fake product labels or warped brand text",
+    "do not mix studio light direction with outdoor background shadows",
+    "do not use Hanfu or cultural styling as generic costume decoration without scene and etiquette coherence"
+  ]
+}
+

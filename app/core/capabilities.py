@@ -8,6 +8,7 @@ AGENTS = (
     "DeliveryAgent", "LoRAStyleTrainingLibrary", "LoRAAestheticSpace",
     "DesignInferenceProtocol", "GitOpsManager", "GitHubManager", "AestheticQualityGate", "PromptPrecisionCompiler",
     "TextEncodingGuard", "RedundancyReducer", "AestheticMemoryIndex", "ProjectContextRouter",
+    "PhotographyOS", "PhotoRetouchingQualityGate",
 )
 
 def capability_report():

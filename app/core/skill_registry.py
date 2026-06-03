@@ -16,6 +16,7 @@ SKILLS = (
     SkillDefinition("PosterDesignOS", "poster", "海报主视觉、系列海报、活动视觉和视觉冲击力优化", ("海报", "主视觉", "poster")),
     SkillDefinition("ShortDramaAIGC_OS", "video", "短剧 AIGC、视频分镜、Seedance/即梦/TapNow 提示词", ("短剧", "视频", "分镜", "Seedance")),
     SkillDefinition("GeneralDesignOS", "general", "通用设计任务协调和兜底策略", ("设计", "方案")),
+    SkillDefinition("PhotographyOS", "photography", "Photography and retouching module for portraits, product photography, composition optimization, Hanfu shoots, lighting schemes, and post-production QA.", ("photography", "photo", "retouch", "portrait", "product photo", "hanfu", "摄影", "修图", "人像", "产品摄影", "精修", "汉服", "构图")),
     SkillDefinition("LoRAStyleTrainingLibrary", "lora", "独立沙箱内的风格数据集、LoRA 训练计划和 adapter manifest", ("LoRA", "训练库", "风格训练")),
 )
 

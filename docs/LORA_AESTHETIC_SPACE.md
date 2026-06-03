@@ -36,6 +36,7 @@ Use these as the first-level classification for real case images and reference i
 - `infovis`: diagram, map, flowchart, timeline, data narrative
 - `web`: landing page, editorial web, product site, docs, responsive web
 - `short-video-aigc`: storyboard, shot board, scene style, character continuity
+- `photography`: portrait photography, portrait retouching, product photography, composition optimization, Hanfu portrait shooting, and photo post-production references
 
 ## Style Axis Classes
 
@@ -51,6 +52,10 @@ Use these as multi-label aesthetic axes:
 - `environmental-competition`: plan fidelity, spatial hierarchy, board-level readability
 - `experimental-typography`: expressive letterform, exact text, controlled distortion
 - `infographic-technical`: label accuracy, diagram clarity, thin-line discipline
+- `natural-portrait-retouch`: preserved skin texture, believable facial anatomy, natural color, and local non-destructive retouching
+- `studio-product-lighting`: clean product edge contour, controlled reflections, accurate material, and inspectable studio lighting
+- `composition-optimization`: balanced crop, perspective correction, subject breathing room, leading lines, and clear focal hierarchy
+- `hanfu-cultural-portrait`: coherent costume, hair, makeup, prop, architecture or landscape scene, and respectful cultural styling
 
 ## Project Context Classes
 
@@ -60,6 +65,22 @@ Use project context as a second layer after domain and style axis. This prevents
 - `academic-discipline-competition`: university discipline competition boards with research framing, methodology, evidence chains, and proposal logic
 - `cultural-china-research`: Culture China, regional culture, cultural tourism, heritage communication, illustrated infovis, and interaction research works
 - `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
+- `portrait-session`: personal, editorial, fashion, Hanfu, and cultural portrait sessions with natural anatomy, stable pose, coherent scene, and subject dignity
+- `product-photo-production`: product photography generation, post-production, e-commerce hero shots, still life, and material/lighting correction references
+
+## Photography Specialty Module
+
+The `photography` domain is a v1.7-ready specialty space for:
+
+- portrait scene retouching and background cleanup
+- natural portrait retouching, skin texture preservation, face/hair/clothing refinement
+- product photography generation, product cutout, reflection/highlight control, white-background and hero-scene polish
+- composition optimization, crop, straightening, perspective correction, and focal hierarchy
+- Hanfu and cultural portrait shooting, including costume/scene/makeup/prop coherence
+
+Photography tutorial pages, shooting plans, and retouching recipes may be stored as `tutorial_reference`, `shooting_recipe`, or `retouching_recipe` caption rows. These rows teach workflow logic and quality gates only. They are not raw image training samples.
+
+Do not store scraped tutorial images or full article text in the public repository. Keep links, summaries, source date, rights notes, and transferable design/photography lessons.
 
 When a case is `academic-discipline-competition`, prefer captions that describe research structure, section hierarchy, evidence display, information visualization, and application proof. Do not let it inherit commercial conversion language unless the case is explicitly commercial.
 
@@ -104,6 +125,14 @@ Every image should have metadata before it is used for training:
 - rights status
 
 Do not train on images marked `unknown_do_not_train`.
+
+For photography references:
+
+- preserve human anatomy and skin texture; avoid plastic skin and face warping
+- preserve light direction and shadow logic across subject, background, and product
+- separate local retouching from global color grading
+- keep product edges, labels, material texture, and reflections credible
+- for Hanfu, check costume, hair, makeup, prop, posture, architecture/landscape scene, and cultural atmosphere as one system
 
 ## Quality Labels
 

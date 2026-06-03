@@ -6,6 +6,8 @@ It focuses on the problems that make AI visuals feel unusable: fragmented compos
 
 At its core are PromptPacket v1.6, aesthetic quality gates, training-aware case memory, project-context routing, corpus audit tools, anti-fragmentation controls, text/encoding health checks, layout-order rules, and GitHub-ready release workflows.
 
+The current development branch also adds a photography specialty module for portrait retouching, product photography generation and post-production, composition optimization, and Hanfu cultural portrait planning. See `docs/PHOTOGRAPHY_AESTHETIC_SPACE.md`.
+
 ## Open Source
 
 DESIGNOSFORGE is released under the MIT License as an open-source Codex agent/skill system.
@@ -17,6 +19,7 @@ Use it to study, adapt, and extend:
 - visual prompt governance
 - aesthetic quality gates
 - LoRA aesthetic corpus planning
+- photography and retouching aesthetic-memory planning
 - training-aware aesthetic memory indexing
 - project-context routing for commercial, academic competition, and public cultural work
 - GitHub-ready release workflows

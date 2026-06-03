@@ -10,6 +10,7 @@ ROUTES = (
     ("envart_board", "EnvArtBoardOS", ("环艺", "展板", "空间", "cad", "景观")),
     ("short_video", "ShortDramaAIGC_OS", ("短剧", "视频", "分镜", "seedance", "即梦", "tapnow")),
     ("layered_psd", "LayeredBoardComposer", ("分层", "psd", "zip", "交付包", "manifest")),
+    ("photography", "PhotographyOS", ("摄影", "修图", "人像", "产品摄影", "精修", "汉服", "构图", "photo", "retouch", "portrait", "product photo", "hanfu")),
     ("lora_training", "LoRAStyleTrainingLibrary", ("lora", "风格训练", "训练库", "adapter")),
     ("gitops", "GeneralDesignOS", ("git", "版本", "分支", "提交", "回滚")),
 )

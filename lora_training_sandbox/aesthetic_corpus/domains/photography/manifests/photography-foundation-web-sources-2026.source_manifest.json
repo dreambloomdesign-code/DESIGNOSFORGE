@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.7.0-preview",
+  "batch_id": "photography-foundation-web-sources-2026",
+  "title_zh": "摄影专项教程与参考方案训练源",
+  "title_en": "Photography Specialty Tutorial and Reference Source Set",
+  "source_type": "tutorial_reference",
+  "primary_domain_id": "photography",
+  "secondary_domain_ids": [
+    "packaging",
+    "vi-brand",
+    "poster",
+    "environmental-art"
+  ],
+  "style_axis_ids": [
+    "natural-portrait-retouch",
+    "studio-product-lighting",
+    "composition-optimization",
+    "hanfu-cultural-portrait",
+    "commercial-product",
+    "soft-luxury",
+    "cultural-contemporary"
+  ],
+  "project_context_ids": [
+    "portrait-session",
+    "product-photo-production",
+    "commercial-project",
+    "public-cultural-communication"
+  ],
+  "visual_genre_tags": [
+    "portrait-retouching",
+    "product-photography",
+    "composition-crop",
+    "perspective-correction",
+    "hanfu-portrait",
+    "studio-lighting",
+    "skin-texture-preservation",
+    "product-edge-control"
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_reference_images_pending_rights_review",
+  "web_crawl_policy": "Store URLs, summaries, transfer lessons, and rights notes only. Do not scrape tutorial images or reproduce full tutorial text.",
+  "source_selection_date": "2026-06-01",
+  "sources": [
+    {
+      "source_id": "adobe-composition-basics",
+      "title": "The basics of photography composition",
+      "publisher": "Adobe",
+      "url": "https://www.adobe.com/creativecloud/photography/technique/composition",
+      "use_for": [
+        "rule-of-thirds framing",
+        "leading lines",
+        "focus and depth-of-field hierarchy",
+        "composition optimization"
+      ]
+    },
+    {
+      "source_id": "adobe-product-photography",
+      "title": "Product photography: Tips and techniques",
+      "publisher": "Adobe",
+      "url": "https://www.adobe.com/creativecloud/photography/type/product-photography.html",
+      "use_for": [
+        "clean product-only photos",
+        "controlled studio lighting",
+        "solid background discipline",
+        "label and detail readability"
+      ]
+    },
+    {
+      "source_id": "shopify-product-photographs",
+      "title": "Taking product photographs",
+      "publisher": "Shopify Help Center",
+      "url": "https://help.shopify.com/en/manual/products/product-media/product-photography",
+      "use_for": [
+        "e-commerce setup",
+        "white background",
+        "tripod consistency",
+        "reflector card and shadow control"
+      ]
+    },
+    {
+      "source_id": "adobe-portrait-photography",
+      "title": "Portrait photography tips and ideas",
+      "publisher": "Adobe",
+      "url": "https://www.adobe.com/creativecloud/photography/discover/portrait-photography.html",
+      "use_for": [
+        "portrait lighting and posing",
+        "professional headshot mood",
+        "black-and-white emphasis",
+        "subject-expression planning"
+      ]
+    },
+    {
+      "source_id": "adobe-portrait-lighting",
+      "title": "Portrait lighting",
+      "publisher": "Adobe",
+      "url": "https://www.adobe.com/creativecloud/photography/discover/portrait-lighting.html",
+      "use_for": [
+        "natural light",
+        "diffused light",
+        "post-production lighting correction",
+        "portrait mood control"
+      ]
+    },
+    {
+      "source_id": "nikon-better-portraits",
+      "title": "Quick Tips for Taking Better Portraits",
+      "publisher": "Nikon USA",
+      "url": "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/quick-tips-for-taking-better-portraits",
+      "use_for": [
+        "portrait lens range",
+        "aperture priority",
+        "background sharpness control",
+        "pre-tested lighting"
+      ]
+    },
+    {
+      "source_id": "canon-portrait-tips",
+      "title": "Mastering Portrait Photography with Canon",
+      "publisher": "Canon Canada",
+      "url": "https://www.canon.ca/en/Articles/2024/portrait-photography-tips-and-techniques",
+      "use_for": [
+        "golden-hour portrait mood",
+        "lens selection",
+        "posing",
+        "lighting technique"
+      ]
+    },
+    {
+      "source_id": "canon-posing",
+      "title": "Posing Tips for Successful Portraits",
+      "publisher": "Canon USA",
+      "url": "https://www.usa.canon.com/learning/training-articles/training-articles-list/posing-tips-for-successful-portraits",
+      "use_for": [
+        "shoulder angle",
+        "head crop discipline",
+        "clothing tone risks",
+        "pose balance"
+      ]
+    },
+    {
+      "source_id": "sony-eye-af",
+      "title": "Focusing on a person's face or eyes",
+      "publisher": "Sony",
+      "url": "https://support.d-imaging.sony.co.jp/support/ilc/autofocus/ilce7m4/en/03.php",
+      "use_for": [
+        "eye focus priority",
+        "moving portrait focus",
+        "portrait sharpness gate"
+      ]
+    },
+    {
+      "source_id": "adobe-lightroom-blemish",
+      "title": "Remove blemishes with one tap in Lightroom on mobile",
+      "publisher": "Adobe Learn",
+      "url": "https://www.adobe.com/uk/learn/lightroom-cc/web/ai-blemish-removal",
+      "use_for": [
+        "blemish removal",
+        "skin texture refinement",
+        "local portrait retouching"
+      ]
+    },
+    {
+      "source_id": "adobe-smooth-skin",
+      "title": "Retouch a photo using Smooth Skin",
+      "publisher": "Adobe HelpX",
+      "url": "https://helpx.adobe.com/in/photoshop-express/using/apply-smooth-skin.html",
+      "use_for": [
+        "natural skin smoothing",
+        "over-smoothing risk control",
+        "close-up portrait retouch"
+      ]
+    },
+    {
+      "source_id": "adobe-spot-heal",
+      "title": "Spot Healing Brush tool: remove blemishes online",
+      "publisher": "Adobe",
+      "url": "https://www.adobe.com/in/products/photoshop/spot-heal.html",
+      "use_for": [
+        "blemish cleanup",
+        "hair texture preservation",
+        "portrait and product distraction removal"
+      ]
+    },
+    {
+      "source_id": "adobe-lightroom-perspective",
+      "title": "Adjust perspective and image geometry",
+      "publisher": "Adobe Learn",
+      "url": "https://www.adobe.com/learn/lightroom-cc/web/perspective-correction",
+      "use_for": [
+        "Upright correction",
+        "guided perspective correction",
+        "manual transform",
+        "crop after perspective"
+      ]
+    },
+    {
+      "source_id": "adobe-content-aware-crop",
+      "title": "Crop and straighten with content-aware fill",
+      "publisher": "Adobe Learn",
+      "url": "https://www.adobe.com/learn/photoshop/web/content-aware-crop-fill",
+      "use_for": [
+        "straighten",
+        "recompose",
+        "fill crop edges",
+        "aspect-ratio conversion"
+      ]
+    },
+    {
+      "source_id": "designkit-hanfu",
+      "title": "汉服怎么拍好看？一篇汉服拍摄技巧指南",
+      "publisher": "美图设计室",
+      "url": "https://www.designkit.com/article/27/hanfu.html",
+      "use_for": [
+        "Hanfu scene selection",
+        "traditional props",
+        "classical pose",
+        "cultural mood"
+      ]
+    },
+    {
+      "source_id": "foto-hanfu",
+      "title": "新手入门汉服摄影的八个拍摄技巧",
+      "publisher": "摄影世界FOTO / 文小白镜像",
+      "url": "https://www.wenxiaobai.com/api/expends/detail?article=917985f6-cdd1-4871-b613-1b98ee41e77c",
+      "use_for": [
+        "Hanfu era-scene match",
+        "soft indoor/window light",
+        "symmetry and rule-of-thirds",
+        "classical gesture references"
+      ]
+    },
+    {
+      "source_id": "ppr10k-portrait-retouching",
+      "title": "PPR10K: A Large-Scale Portrait Photo Retouching Dataset with Human-Region Mask and Group-Level Consistency",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2105.09180",
+      "use_for": [
+        "human-region mask awareness",
+        "portrait batch consistency",
+        "retouching dataset structure"
+      ]
+    },
+    {
+      "source_id": "cgfr-blemish-retouching",
+      "title": "Controllable and Gradual Facial Blemishes Retouching via Physics-Based Modelling",
+      "publisher": "arXiv",
+      "url": "https://arxiv.org/abs/2406.13227",
+      "use_for": [
+        "gradual blemish retouching",
+        "fine-grain skin texture preservation",
+        "physics-aware skin color control"
+      ]
+    }
+  ]
+}
+

@@ -8,6 +8,7 @@ CLUTTER_MARKERS = ("细碎", "脏乱", "凌乱", "杂乱", "信息爆炸", "元�
 GENERIC_STYLE_MARKERS = ("高级", "好看", "大气", "丰富", "酷", "有质感", "震撼")
 LAYOUT_TERMS = ("网格", "层级", "留白", "主次", "对齐", "版心", "节奏", "负空间", "grid", "hierarchy", "negative space")
 TEXT_TERMS = ("准确", "可读", "拼写", "不乱码", "标题", "字距", "行距", "legible", "spelled exactly")
+PHOTO_RETOUCH_RISK_TERMS = ("plastic skin", "over smoothed", "over-smoothed", "fake label", "warped face", "warped body", "glare", "wrong light direction", "塑料皮肤", "过度磨皮", "假标签", "脸变形", "身体变形", "眩光", "光向错误")
 
 
 @dataclass(frozen=True)
@@ -72,6 +73,11 @@ class AestheticQualityGate:
         if repeated:
             risks.append(f"redundancy_risk:{','.join(repeated[:5])}")
             guardrails.append("Deduplicate repeated mechanisms; keep one owner for routing, one for QA, and one for delivery.")
+
+        photo_risk_hits = self._hits(normalized, PHOTO_RETOUCH_RISK_TERMS)
+        if photo_risk_hits:
+            risks.append(f"photo_retouch_risk:{','.join(photo_risk_hits)}")
+            guardrails.append("For photography work, preserve skin texture, identity, product geometry, label accuracy, light direction, and credible contact shadows.")
 
         return QualityReport(
             aesthetic_cohesion=self._score(92, 14 * len(clutter_hits) + 6 * len(generic_hits)),

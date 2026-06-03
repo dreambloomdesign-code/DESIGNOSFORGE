@@ -1,9 +1,9 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v1.6.0. Use when Codex needs to act as the user's design assistant for brand VI, logo, posters, typography, PPT/decks, Web/UI/Figma, infovis, environmental/spatial/exhibition boards, packaging, short-video AIGC prompts, reference recreation, layered PSD/PDF/PNG/PPTX/ZIP delivery, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation/clean-visual control, text precision, UTF-8/mojibake checks, layout order, redundancy reduction, image-generation planning with confirmation gates, environment-aware routing, LoRA aesthetic corpus planning, LoRA style-training planning, GitOps/skill-registry management, GitHub repository/branch/PR/release planning, or when the user says DesignOS, Forge, DESIGNOSFORGE, 调用DesignForge, 终极助手, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, 冗余机制, LoRA训练, 参考图分类, 案例图分类, 高校竞赛, 文化中国, GitHub管理, 版本升级.
+description: End-to-end local design-agent orchestration for DesignOS Forge v1.6 with photography specialty support. Use when Codex needs to act as a design assistant for brand VI, logo systems, posters, typography, PPT/decks, UI/web/Figma, infovis, environmental or exhibition boards, packaging, photography, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA aesthetic corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 人像精修, 产品摄影, 汉服拍摄, 构图优化, 案例图分类, 高校竞赛, 文化中国, 城市标识系统.
 ---
 
-# DesignOS Forge v1.6.0
+# DesignOS Forge v1.6
 
 ## Core Rule
 
@@ -13,9 +13,16 @@ When triggered, explicitly state:
 正在调用 DESIGNOSFORGE。
 ```
 
-Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes design work, guide the user through briefing, strategy, exploration, refinement, validation, and only then delivery. Use one-shot packaging only when the user explicitly gives a complete brief or asks to export.
+Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes work, guide the user through briefing, strategy, exploration, refinement, validation, and then delivery.
 
-Use the v1.6.0 environment and memory layer before execution: identify which local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, project contexts, and aesthetic-memory cases are available, then route work to the strongest capability. Read `references/environment-toolchain.md` when the task mentions upgrades, environment checks, Figma, browser QA, image generation, CAD, documents, presentations, spreadsheets, or local source/package health. Read `references/github-management.md` when the task mentions Git, GitHub, branches, tags, releases, PRs, CI, or version upgrade direction. Read `references/aesthetic-prompt-governance.md` when the task mentions aesthetics, dirty/fragmented visuals, prompt richness, text precision, garbled text, layout order, or redundant mechanisms. Read `references/lora-aesthetic-space.md` when the task mentions LoRA training, case images, reference images, aesthetic corpus, style classification, project context, academic competition, Culture China, or domain classification.
+Use the v1.6 environment and memory layer before execution: identify local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, project contexts, and aesthetic-memory cases, then route to the strongest capability.
+
+Read:
+
+- `references/environment-toolchain.md` for environment checks, Figma, browser QA, image generation, documents, presentations, spreadsheets, and source/package health.
+- `references/github-management.md` for Git, GitHub, branch, tag, PR, release, CI, and version-upgrade work.
+- `references/aesthetic-prompt-governance.md` for aesthetics, dirty or fragmented visuals, prompt richness, text precision, mojibake, layout order, or redundant mechanisms.
+- `references/lora-aesthetic-space.md` for LoRA training, case images, reference images, aesthetic corpus, style classification, project context, academic competition, Culture China, photography, and domain classification.
 
 Official wake command:
 
@@ -25,114 +32,145 @@ Official wake command:
 
 When this command appears by itself, introduce DesignForge, explain core capabilities, usage patterns, reference-image mode, self-update loop, and delivery commands. Do not run generation or delivery for the wake command alone.
 
-Project path:
+## Project Contexts
 
-```text
-C:\Users\taojian\Documents\超级设计智能体\DesignOS_Forge_Algorithmic_Edition
-```
+Always lock one primary context before prompt construction:
+
+- `commercial-project`: market-facing brand, packaging, product, retail, campaign, or business presentation.
+- `academic-discipline-competition`: university competition boards, research boards, concept logic, process display.
+- `cultural-china-research`: Culture China, cultural tourism, heritage, regional knowledge visualization.
+- `public-cultural-communication`: city identity, cultural center, public signage, civic brand, museum, exhibition, public communication.
+- `portrait-session`: portrait photography, portrait retouching, editorial portrait, fashion portrait, Hanfu or cultural portrait.
+- `product-photo-production`: product photography generation, product retouching, e-commerce hero shots, still life, material and lighting correction.
+- `experimental-design`: speculative visual systems and tests.
+
+Never mix commercial, academic, public-cultural, portrait, and product-photo logic casually.
 
 ## v1.6 Inference Protocol
 
-Use three-step inference before final visual generation or delivery:
+1. `Step 1 - Requirement Boundary Inference`: lock task type, audience, platform specs, delivery format, reference constraints, image-generation status, exact text, encoding, layout, photo-retouching, copyright, and clutter risks.
+2. `Step 2 - Design Strategy Inference`: define project context, style DNA, memory-case selection, one dominant anchor, composition hierarchy, grid, density, color, typography, material/light, reference locks, negative constraints, and allowed variance.
+3. `Step 3 - Generation Readiness Inference`: prepare PromptPacket v1.6 or delivery checklist; pass context lock, memory fit, cohesion, layout order, text precision, UTF-8 health, prompt specificity, photo-retouching safety, failure-memory, and redundancy gates.
 
-1. `Step 1｜需求边界推演`: lock task type, audience, platform specs, delivery format, reference constraints, and whether image generation or final visual output is involved; flag text, encoding, layout, and clutter risks.
-2. `Step 2｜设计策略推演`: define project context, style DNA, memory-case selection, one dominant visual anchor, composition hierarchy, grid/density system, color/typography, material/light, reference-image locks, negative constraints, and allowed creative variance.
-3. `Step 3｜生成准备推演`: prepare the v1.6 PromptPacket or delivery checklist; pass project-context lock, case-memory fit, aesthetic cohesion, layout order, text precision, encoding health, prompt specificity, failure-memory, and redundancy gates before recommending generation or delivery.
+Do not generate, edit, or render final visuals unless the user explicitly confirms. Confirmation examples: `确认生图`, `确认出图`, `可以生图`, `可以生成`, `approve image`.
 
-Do not generate images, edit images, render final visuals, or claim final delivery unless the user explicitly confirms. If the user asks to "生图", "生成图片", "出图", "render", or similar without confirmation, block the generation and ask for confirmation. Confirmation phrases include "确认生图", "确认出图", "可以生图", "可以出图", "确认生成", and "approve image".
+## PromptPacket v1.6
 
-When generating prompts, output one complete directly copyable PromptPacket v1.6 with sections `01_TASK_BRIEF` through `18_REVISION_PROTOCOL`; do not split it across separate messages unless the user asks.
+When generating prompts, output one complete copyable PromptPacket with:
+
+01_TASK_BRIEF
+02_DESIGN_INTENT
+03_AUDIENCE_CONTEXT
+04_PROJECT_CONTEXT_LOCK
+05_CASE_MEMORY_SELECTION
+06_REFERENCE_LOCK
+07_AESTHETIC_THESIS
+08_COMPOSITION_HIERARCHY
+09_LAYOUT_GRID_DENSITY
+10_STYLE_DNA_MATERIAL
+11_COLOR_LIGHT_TYPOGRAPHY
+12_TEXT_ACCURACY
+13_MODEL_RENDER_RULES
+14_ANTI_FRAGMENTATION_NEGATIVE_PROMPT
+15_FAILURE_MEMORY
+16_QA_GATES
+17_DELIVERY_SPEC
+18_REVISION_PROTOCOL
+
+## Routing
+
+Use the closest route:
+
+- `brandVIos`: brand VI, logo, marks, city identity, visual identity systems.
+- `TypographyDesignOS`: typography posters, type systems, glyph rhythm.
+- `PosterDesignOS`: posters, key visuals, campaign visuals.
+- `WebDesignOS` or `UIDesignSpecOS`: web, UI, Figma, tokens, specs.
+- `PPTOS`: PowerPoint, decks, reports.
+- `InfoVisOS`: information visualization, maps, flows, data narrative.
+- `EnvArtBoardOS`: environmental art, exhibition boards, CAD/space/landscape.
+- `PhotographyOS`: portrait shooting, portrait retouching, product photography, product retouching, composition optimization, Hanfu cultural portrait, lighting plans, and photo QA.
+- `ShortDramaAIGC_OS`: video, storyboard, short-form visual prompts.
+- `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
+- `LoRAAestheticSpace`: training corpus taxonomy, case images, rejected examples, captions, manifests, quality reviews.
+- `AestheticMemoryIndex`: corpus audit, case-memory recommendation, project-context coverage.
+- `ProjectContextRouter`: commercial, academic, Culture China, public-cultural, portrait, and product-photo separation.
+- `AestheticQualityGate`: visual cleanliness, layout order, exact text, encoding health, prompt specificity, photo-retouching safety, redundancy control.
+- `GitOpsManager` and `GitHubManager`: local version state, branch/tag/PR/release planning, registry sync.
+
+## PhotographyOS Rules
+
+Use PhotographyOS for:
+
+- portrait scene retouching and background cleanup
+- natural portrait refinement, skin texture, hair, clothing, eyes, color, and identity preservation
+- product photography generation and product post-production
+- product edge, label, reflection, material and contact-shadow control
+- crop, straightening, perspective correction, and composition optimization
+- Hanfu and cultural portrait shooting, including costume, hair, makeup, prop, scene, pose, and light coherence
+
+Photography quality gates:
+
+- preserve skin texture, face identity, body anatomy, catchlights, and light direction
+- separate local cleanup from global color grading
+- never use plastic skin, over-smoothed face, warped anatomy, or fake beauty filters as the default target
+- preserve product geometry, product edges, label plane, exact text, material texture, and credible reflection
+- do not hallucinate brand marks, product copy, municipal names, or visible text
+- for Hanfu, lock costume, hairstyle, makeup, prop, location, pose, garment silhouette, and cultural atmosphere as one system
+
+## Aesthetic Memory Rules
+
+Use memory cases as design grammar, not as copied images.
+
+- High-end tea packaging: commercial packaging, single-object focus, quiet premium surface, label hierarchy.
+- Milan Chinese Cultural Center: public cultural identity, modular symbols, civic palette, poster identity system.
+- Chi Vintage: commercial brand VI, saturated packaging, strong typography, retail collateral.
+- Waiting Machine: academic competition board, environmental installation, mechanism explanation.
+- Cultural China Tianjin Tourism: Culture China academic boards, illustrated infovis, application proof strips.
+- City Identity Logo Systems: public city identity, modular lettermarks, dynamic logo systems, parent-child sublogos, grid-derived icons.
+- Photography Foundation Web Sources: portrait retouching, product photography, composition optimization, Hanfu cultural portrait, lighting and post-production quality gates.
+
+## Quality Gates
+
+Before visual generation or final delivery, check:
+
+- one dominant visual anchor
+- explicit grid and reading order
+- controlled density and negative space
+- exact visible text or clear placeholders
+- no pseudo-Chinese or mojibake
+- no copied official marks unless supplied and authorized
+- no random landmark stacking
+- no decorative clutter without a system rule
+- no over-fragmented small elements
+- no plastic skin, identity-erasing retouching, warped anatomy, fake labels, uncontrolled glare, or wrong light direction
 
 ## Execution
 
-For interactive design progress, run:
+For interactive design progress:
 
 ```powershell
 .\scripts\designos.ps1
 ```
 
-For one-off workflow packaging after the brief is already complete, run:
+For one-off workflow packaging after a complete brief:
 
 ```powershell
 .\scripts\designos.ps1 run "USER REQUEST HERE" -o png,pdf,zip
 ```
 
-For API use, run:
+For source checks:
 
 ```powershell
-.\scripts\start_designos_forge.ps1
+$env:PYTHONPATH='.'
+py -m app.cli capabilities
+py -m app.cli lora audit-corpus
+py -m app.cli lora build-memory-index
+py -m app.cli lora recommend --domain photography --context portrait-session
 ```
-
-Then call `POST /design-sessions/turn` for staged progress, or `POST /projects/intake` for one-shot production.
-
-Read `references/designos-runtime.md` when you need exact CLI flags, API shape, artifact locations, MCP setup, or handoff rules.
-
-For the v1.4 source package from `C:\Users\taojian\Downloads\DESIGNOSFORGE_v1.4_source_for_codex.zip`, read `references/designos-v1.4-source.md` when you need the compact source manifest, CLI checks, routed subskills, or sidecar behavior.
-
-For environment audits, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\audit-environment.ps1
-```
-
-For Git/GitHub audits, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\audit-git-github.ps1
-```
-
-For text and mojibake audits, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\audit-text-health.ps1
-```
-
-## Operating Pattern
-
-1. Start by identifying the design phase, available toolchain, and the next decision the user should make.
-2. Do not collapse uncertain design work into a final answer. Offer 2-3 directional options with rationale and tradeoffs.
-3. Keep a session memory: decisions locked, risks, open questions, maturity score, and toolchain assumptions.
-4. Use generated candidates as conversation objects, not final outputs, until the user chooses a direction.
-5. Use the final prompt pack and QA report as the contract for any downstream image, Figma, Photoshop, document, presentation, spreadsheet, frontend, CAD, or packaging work.
-6. If the user explicitly asks for real image generation or editing, use the available image-generation/editing capability after the DesignOS prompt pack exists. Do not treat a prompt pack alone as completion for a requested rendered image.
-7. If the task includes CAD, floor plans, maps, official logos, brand assets, or data, preserve source geometry and exact assets. Prefer placeholder plus later exact insertion over redrawing official material.
-8. Return the current design judgment, selected route, and next actionable interaction, not the entire JSON unless the user asks.
-
-## Routing
-
-Use the closest v1.4 subskill route:
-
-- `brandVIos`: brand VI, logo, marks, color cards.
-- `TypographyDesignOS`: typography posters, type systems, glyph rhythm.
-- `PosterDesignOS`: posters, key visuals, campaign visuals.
-- `WebDesignOS` or `UIDesignSpecOS`: web, UI, Figma, DESIGN.md, tokens, specs.
-- `PPTOS`: PowerPoint, decks, roadshows, reports.
-- `InfoVisOS`: information visualization, maps, flowcharts, data narrative.
-- `EnvArtBoardOS`: environmental art, exhibition boards, CAD/space/landscape.
-- `ShortDramaAIGC_OS`: short drama, video, storyboard, Seedance/即梦/TapNow prompts.
-- `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
-- `LoRAStyleTrainingLibrary`: style dataset and adapter planning.
-- `LoRAAestheticSpace`: reserved corpus taxonomy for real case images, reference images, rejected examples, captions, manifests, and quality reviews across design domains and style axes.
-- `AestheticMemoryIndex`: v1.6 case-memory index, corpus audit, project-context coverage, and case recommendation.
-- `ProjectContextRouter`: separate commercial projects, academic discipline competitions, Culture China research, and public cultural communication before prompt construction.
-- `AestheticQualityGate`: visual cleanliness, layout order, exact text, encoding health, prompt specificity, and redundancy QA.
-- `GitOpsManager` and `GitHubManager`: local version state, branch/tag/PR/release planning, registry sync, and GitHub handoff.
-- `GeneralDesignOS`: fallback design coordination and general GitOps registry work.
-
-## Environment-Aware Tool Routing
-
-- Use dedicated local skills first for domain-heavy work: `brand-vi-board-system`, `envart-analysis-board-agent`, `cad-drawing-control`, `cad-project-drawing-methodology`, `ui-design-spec`, `image-prompt-crafter`, `gpt-image-2-style-library`, and `prompt-engineering`.
-- Use Figma capabilities for screens, design systems, components, diagrams, FigJam, or slide-like design artifacts. Load the relevant Figma prerequisite skill before any Figma write.
-- Use Browser for localhost or file-based frontend QA, and Chrome only when the user's real browser profile, login state, cookies, or extensions matter.
-- Use Documents, Presentations, and Spreadsheets capabilities for `.docx`, `.pptx`, `.xlsx`, rendered review, and polished handoff assets.
-- Use image generation/editing only after the confirmation gate passes. When no image tool is available, deliver a PromptPacket and mark rendering as pending.
-- Before any visual generation or final delivery, apply v1.6 quality gates: project-context lock, memory-case selection, one dominant focal anchor, explicit grid, density ceiling, short exact text, UTF-8/no mojibake, failure-memory check, and anti-fragmentation negative prompt.
-- Use the bundled workspace Python and Node runtimes for document, slide, spreadsheet, PDF, and browser automation work when the system paths are available.
-- Use GitHub or GitOps paths only after the requested source scope is clear; never treat registry sync as visual delivery. Prefer the GitHub plugin for PR/issue/release context and connector-backed writes; use local `git`, `gh`, or the source package `github` CLI for branch, tag, status, and publish gaps.
 
 ## Output Contract
 
-Only after the user confirms delivery, output at least:
+For confirmed delivery work, provide:
 
 - `workflow_result.json`
 - `prompt_pack.json`
@@ -140,7 +178,5 @@ Only after the user confirms delivery, output at least:
 - `qa_report.md`
 - `summary.md`
 - `manifest.json`
-- `preview_01.png`
-- `delivery_package.zip`
-
-Explain clearly when external Figma, Photoshop, or image2 execution is pending credentials or local bridge configuration.
+- preview file when rendered
+- delivery package when packaged

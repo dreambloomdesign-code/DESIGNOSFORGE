@@ -47,6 +47,10 @@ class PromptPacketBuilder:
 
     def _infer_memory_query(self, task):
         lowered = task.lower()
+        if any(token in lowered for token in ("产品摄影", "产品修图", "棚拍", "电商图", "product photo", "product photography")):
+            return "photography", "product-photo-production"
+        if any(token in lowered for token in ("摄影", "修图", "人像", "精修", "汉服", "portrait", "retouch", "photo edit", "hanfu")):
+            return "photography", "portrait-session"
         if any(token in lowered for token in ("高校", "学科竞赛", "文化中国", "文化旅游", "competition board")):
             return "exhibition-board", "academic-discipline-competition"
         if any(token in lowered for token in ("公共文化", "文化中心", "博物馆", "civic")):
