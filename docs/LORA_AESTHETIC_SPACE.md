@@ -30,7 +30,7 @@ Use these as the first-level classification for real case images and reference i
 - `poster`: key visual, campaign poster, event poster, typography poster, poster series
 - `exhibition-board`: competition board, presentation board, analysis board, multi-panel board
 - `vi-brand`: logo, VI, brand identity, brand board, brand applications
-- `environmental-art`: interior, landscape, exhibition, spatial design, environmental analysis
+- `environmental-art`: interior, landscape, exhibition, spatial design, environmental analysis, CAD/DWG/DXF source-fidelity workflows
 - `packaging`: box, label, bottle, bag, commerce touchpoint, product package
 - `typography`: expressive type, lettering, title systems, typographic rhythm
 - `infovis`: diagram, map, flowchart, timeline, data narrative
@@ -50,6 +50,8 @@ Use these as multi-label aesthetic axes:
 - `tech-futurism`: precise geometry, luminous accents, no random sci-fi clutter
 - `cultural-contemporary`: cultural symbol translation without ornament overload
 - `environmental-competition`: plan fidelity, spatial hierarchy, board-level readability
+- `cad-topology-fidelity`: locked units, scale, north, axes, wall topology, openings, columns, dimensions, title block, and semantic layers before styling
+- `construction-drawing-logic`: editable text, semantic lineweights, hosted door/window openings, construction dimensions, elevations, material notes, and detail indexes
 - `experimental-typography`: expressive letterform, exact text, controlled distortion
 - `infographic-technical`: label accuracy, diagram clarity, thin-line discipline
 - `natural-portrait-retouch`: preserved skin texture, believable facial anatomy, natural color, and local non-destructive retouching
@@ -67,6 +69,7 @@ Use project context as a second layer after domain and style axis. This prevents
 - `public-cultural-communication`: museum, tourism, education, city communication, and civic cultural design
 - `portrait-session`: personal, editorial, fashion, Hanfu, and cultural portrait sessions with natural anatomy, stable pose, coherent scene, and subject dignity
 - `product-photo-production`: product photography generation, post-production, e-commerce hero shots, still life, and material/lighting correction references
+- `spatial-cad-production`: environmental art, architecture, interior, exhibition, landscape, CAD/DWG/DXF, semantic-layer, construction drawing, and source-fidelity workflows
 
 ## Photography Specialty Module
 
@@ -81,6 +84,30 @@ The `photography` domain is a v1.7-ready specialty space for:
 Photography tutorial pages, shooting plans, and retouching recipes may be stored as `tutorial_reference`, `shooting_recipe`, or `retouching_recipe` caption rows. These rows teach workflow logic and quality gates only. They are not raw image training samples.
 
 Do not store scraped tutorial images or full article text in the public repository. Keep links, summaries, source date, rights notes, and transferable design/photography lessons.
+
+## EnvArt CADMCP Specialty Module
+
+The `environmental-art` domain now includes a CAD-aware project context: `spatial-cad-production`.
+
+Use it for:
+
+- CAD/DWG/DXF source inspection and audit
+- AutoCAD Core Console conversion or batch scripts
+- Tianzheng-aware architecture component workflows
+- semantic layer classification
+- construction drawing QA
+- plan, section, elevation, and model screenshot fidelity locks
+- image2 prompts and competition boards that must preserve source geometry
+
+CAD workflow rows may be stored as `cad_reference`, `cad_workflow_recipe`, or `drawing_qa_recipe` caption rows. These rows teach source-fidelity, geometry-lock, semantic-layer, and QA logic. They are not raw CAD training samples.
+
+For CAD or plan-based references:
+
+- preserve units, scale, north arrow, site boundary, axes, walls, columns, openings, dimensions, title block, and semantic layers
+- keep ordinary annotations as editable text, not vector glyph outlines
+- keep wall lines split at openings; do not cover unbroken walls with door/window symbols
+- add analysis overlays above locked base geometry instead of redrawing the base
+- never invent roads, POI, room names, dimensions, north arrows, or site facts
 
 When a case is `academic-discipline-competition`, prefer captions that describe research structure, section hierarchy, evidence display, information visualization, and application proof. Do not let it inherit commercial conversion language unless the case is explicitly commercial.
 
@@ -146,6 +173,13 @@ Positive labels:
 - `material_credible`
 - `color_controlled`
 - `reference_fidelity`
+- `cad_source_fidelity`
+- `semantic_layers`
+- `wall_topology_locked`
+- `opening_accuracy`
+- `dimension_editable`
+- `title_block_preserved`
+- `construction_annotation_complete`
 
 Failure labels:
 
@@ -156,6 +190,10 @@ Failure labels:
 - `mojibake`
 - `generic_style`
 - `overdecorated`
+- `cad_topology_drift`
+- `wall_crosses_opening`
+- `source_layer_zero_copied`
+- `fake_site_geometry`
 
 ## Training Strategy
 

@@ -1,0 +1,25 @@
+{
+  "batch_id": "envart-cadmcp-foundation-2026",
+  "schema_version": "1.6.1",
+  "domain_id": "environmental-art",
+  "source_kind": "workflow_reference",
+  "purpose": "Reserve EnvArt x CADMCP workflow memory for CAD source-fidelity, semantic layers, construction drawing QA, and plan-locked image2/board prompts.",
+  "source_refs": [
+    "C:/Users/taojian/.codex/skills/cad-drawing-control/SKILL.md",
+    "C:/Users/taojian/.codex/skills/cad-project-drawing-methodology/SKILL.md",
+    "C:/Users/taojian/.codex/skills/envart-analysis-board-agent/SKILL.md"
+  ],
+  "cad_channels": [
+    "dxf_deterministic",
+    "dwg_core_console",
+    "autocad_com_live",
+    "tianzheng_architecture"
+  ],
+  "rights_status": "public_reference_only",
+  "git_image_policy": "No raw CAD files or project drawings are committed by default. Store only workflow metadata, captions, manifests, QA notes, and user-approved examples.",
+  "notes": [
+    "Use this batch as workflow memory, not as copied visual material.",
+    "CAD topology and annotation accuracy outrank board style.",
+    "Image-generation prompts must treat CAD as source truth and style as overlay."
+  ]
+}

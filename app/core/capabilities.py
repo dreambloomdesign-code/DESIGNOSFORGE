@@ -1,4 +1,5 @@
 from .skill_registry import SkillRegistry
+from app import __version__
 
 AGENTS = (
     "InputParserAgent", "TaskRouterAgent", "ReferenceModeOS", "ConstraintGraphAgent",
@@ -9,11 +10,12 @@ AGENTS = (
     "DesignInferenceProtocol", "GitOpsManager", "GitHubManager", "AestheticQualityGate", "PromptPrecisionCompiler",
     "TextEncodingGuard", "RedundancyReducer", "AestheticMemoryIndex", "ProjectContextRouter",
     "PhotographyOS", "PhotoRetouchingQualityGate",
+    "EnvArtCADMCPBridge", "CADGeometryLockAgent", "CADLayerSemanticAuditor", "ConstructionDrawingQAGate",
 )
 
 def capability_report():
     registry = SkillRegistry()
-    lines = ["DESIGNOSFORGE v1.6.0", f"Agent Count: {len(AGENTS)}", f"Registered Skills: {len(registry.list())}", "", "Agents:"]
+    lines = [f"DESIGNOSFORGE v{__version__}", f"Agent Count: {len(AGENTS)}", f"Registered Skills: {len(registry.list())}", "", "Agents:"]
     lines.extend(f"- {agent}" for agent in AGENTS)
     lines.append("")
     lines.append("Skills:")

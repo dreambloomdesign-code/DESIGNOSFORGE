@@ -30,7 +30,7 @@ The script returns JSON with detected skill folders, source package locations, P
 ## Toolchain Map
 
 - Brand VI and formal VI boards: use `brand-vi-board-system` when competition-grade boards, manuals, brand strategy, or formal VI output is requested.
-- Environmental art, spatial boards, exhibition boards, maps, and CAD-based visual analysis: use `envart-analysis-board-agent`, `cad-drawing-control`, or `cad-project-drawing-methodology`.
+- Environmental art, spatial boards, exhibition boards, maps, and CAD-based visual analysis: use `envart-analysis-board-agent`, `cad-drawing-control`, and `cad-project-drawing-methodology` as a fused workflow. For CAD/DWG/DXF tasks, run CADMCP readiness first, then preserve source geometry, semantic layers, wall/opening topology, dimensions, title block, and drawing units before board styling or image2 prompt generation.
 - UI/web/product design: use `ui-design-spec`; use Browser for localhost verification and Figma for design files, components, diagrams, libraries, or FigJam.
 - Image prompts and visual prompt engineering: use `image-prompt-crafter`, `gpt-image-2-style-library`, `prompt-engineering`, or `zh-prompt-library`.
 - Real bitmap generation or editing: use image generation/editing only after DESIGNOSFORGE's confirmation gate passes.

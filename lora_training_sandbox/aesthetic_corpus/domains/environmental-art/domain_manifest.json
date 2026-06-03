@@ -3,7 +3,7 @@
     "id": "environmental-art",
     "name_zh": "环艺/空间",
     "name_en": "Environmental Art",
-    "description": "Interior, landscape, exhibition, spatial analysis, and environment-board references."
+    "description": "Interior, landscape, exhibition, spatial analysis, environment-board references, CADMCP-driven DWG/DXF inspection, semantic layers, construction drawing QA, and plan-fidelity prompt workflows."
   },
   "allowed_style_axis_ids": [
     "minimal-premium",
@@ -14,6 +14,8 @@
     "tech-futurism",
     "cultural-contemporary",
     "environmental-competition",
+    "cad-topology-fidelity",
+    "construction-drawing-logic",
     "experimental-typography",
     "infographic-technical"
   ],
@@ -41,6 +43,12 @@
       "name_zh": "公共文化传播",
       "description": "Public culture, museum, tourism, education, and city communication projects with civic or educational value.",
       "control_goal": "accessibility, cultural clarity, public readability, respectful visual language"
+    },
+    {
+      "id": "spatial-cad-production",
+      "name_zh": "空间 CAD 制作",
+      "description": "Environmental art, architecture, interior, exhibition, landscape, and construction-drawing workflows driven by DWG/DXF/CAD MCP inspection, semantic layers, geometry locks, and source-fidelity QA.",
+      "control_goal": "CAD source truth, topology preservation, layer semantics, construction drawing clarity, and accurate analysis overlays"
     }
   ],
   "allowed_quality_labels": [
@@ -63,7 +71,18 @@
     "generic_style",
     "overdecorated",
     "overdense_information",
-    "watermark_contamination"
+    "watermark_contamination",
+    "cad_source_fidelity",
+    "semantic_layers",
+    "wall_topology_locked",
+    "opening_accuracy",
+    "dimension_editable",
+    "title_block_preserved",
+    "construction_annotation_complete",
+    "cad_topology_drift",
+    "wall_crosses_opening",
+    "source_layer_zero_copied",
+    "fake_site_geometry"
   ],
   "caption_schema": {
     "required_fields": [
@@ -86,7 +105,10 @@
       "reference_image",
       "case_image",
       "rejected_image",
-      "comparison_set"
+      "comparison_set",
+      "cad_reference",
+      "cad_workflow_recipe",
+      "drawing_qa_recipe"
     ],
     "rights_status": [
       "owned",

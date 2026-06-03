@@ -1,6 +1,7 @@
 import json
 
 from .aesthetic_quality import AestheticQualityGate
+from .envart_cadmcp import EnvArtCADMCPBridge
 from app.lora_training.aesthetic_memory import AestheticMemoryIndex
 
 
@@ -20,13 +21,14 @@ class PromptPacketBuilder:
         guardrails = "\n".join(f"- {item}" for item in quality.guardrails)
         inferred_domain, inferred_context = self._infer_memory_query(task)
         case_memory_text = case_memory or self._case_memory_text(inferred_domain, inferred_context)
+        envart_cad_text = self._envart_cad_text(task)
         values = {
             "01_TASK_BRIEF": f"ProjectName: {project_name}\nTask: {task}",
             "02_DESIGN_INTENT": "Clarify the communicative goal, audience decision, visual promise, and success metric.",
             "03_AUDIENCE_CONTEXT": "Name the viewer, usage scenario, platform, aspect ratio, viewing distance, and delivery format.",
             "04_PROJECT_CONTEXT_LOCK": "Select one project context before style: commercial-project, academic-discipline-competition, cultural-china-research, public-cultural-communication, or another explicit context. Do not mix commercial conversion logic with academic research boards unless requested.",
             "05_CASE_MEMORY_SELECTION": case_memory_text,
-            "06_REFERENCE_LOCK": "When references exist, lock subject, geometry, proportion, edge contour, material, lighting, and text placement before changing style.",
+            "06_REFERENCE_LOCK": "When references exist, lock subject, geometry, proportion, edge contour, material, lighting, and text placement before changing style." + envart_cad_text,
             "07_AESTHETIC_THESIS": style or "State one precise aesthetic thesis: one dominant mood, one visual metaphor, one material/lighting logic, no generic style labels.",
             "08_COMPOSITION_HIERARCHY": "Define one primary focal anchor, two secondary supports, reading path, scale contrast, and negative space.",
             "09_LAYOUT_GRID_DENSITY": "Define grid, margins, module rhythm, alignment, density ceiling, and what must stay visually quiet.",
@@ -36,7 +38,7 @@ class PromptPacketBuilder:
             "13_MODEL_RENDER_RULES": "Generate only after user confirmation; keep outputs inspectable, clean, and aligned with locked constraints.",
             "14_ANTI_FRAGMENTATION_NEGATIVE_PROMPT": "Avoid: scattered tiny decorations, dirty texture noise, overfilled background, random icons, warped type, fake logos, unresolved placeholders, illegible text, mojibake, low-contrast clutter.",
             "15_FAILURE_MEMORY": "Record rejected attempts as failure modes, not positive references. State what must not repeat: wrong context, generic symbol stacking, unreadable type, dirty texture, or layout disorder.",
-            "16_QA_GATES": f"Scores: {json.dumps(scores, ensure_ascii=False)}\nGuardrails:\n{guardrails}",
+            "16_QA_GATES": f"Scores: {json.dumps(scores, ensure_ascii=False)}\nGuardrails:\n{guardrails}{envart_cad_text}",
             "17_DELIVERY_SPEC": "Return the required artifact format, ratio, file/package expectations, preview needs, and downstream handoff notes.",
             "18_REVISION_PROTOCOL": "Revise by changing one axis at a time: composition, palette, typography, material, text, memory case, or density; preserve locked decisions.",
         }
@@ -51,6 +53,10 @@ class PromptPacketBuilder:
             return "photography", "product-photo-production"
         if any(token in lowered for token in ("摄影", "修图", "人像", "精修", "汉服", "portrait", "retouch", "photo edit", "hanfu")):
             return "photography", "portrait-session"
+        if any(token in lowered for token in ("cadmcp", "dwg", "dxf", "autocad", "天正", "施工图", "墙体", "门窗", "轴网", "cad审图")):
+            return "environmental-art", "spatial-cad-production"
+        if any(token in lowered for token in ("环艺", "空间", "平面图", "立面图", "剖面图", "分析图")):
+            return "environmental-art", "academic-discipline-competition"
         if any(token in lowered for token in ("高校", "学科竞赛", "文化中国", "文化旅游", "competition board")):
             return "exhibition-board", "academic-discipline-competition"
         if any(token in lowered for token in ("公共文化", "文化中心", "博物馆", "civic")):
@@ -59,9 +65,23 @@ class PromptPacketBuilder:
             return "vi-brand", "commercial-project"
         if any(token in lowered for token in ("品牌", "vi", "logo", "标志")):
             return "vi-brand", "commercial-project"
-        if any(token in lowered for token in ("展板", "环艺", "空间")):
+        if any(token in lowered for token in ("展板",)):
             return "exhibition-board", "academic-discipline-competition"
         return "", ""
+
+    def _envart_cad_text(self, task):
+        lowered = str(task or "").lower()
+        if not any(token in lowered for token in ("cadmcp", "dwg", "dxf", "autocad", "天正", "施工图", "墙体", "门窗", "轴网", "cad", "平面图", "剖面图", "立面图")):
+            return ""
+        plan = EnvArtCADMCPBridge().plan(task).to_dict()
+        locks = ", ".join(plan["geometry_locks"])
+        tools = ", ".join(plan["preferred_tools"])
+        outputs = ", ".join(plan["output_modes"])
+        return (
+            "\nEnvArtCADMCPBridge: treat CAD/drawing data as source truth before style. "
+            f"Preferred channel={plan['source_channel']}; tools={tools}; geometry_locks={locks}; output_modes={outputs}. "
+            "For any image2 or board prompt, analysis graphics must overlay the locked base drawing; do not alter walls, openings, columns, axes, dimensions, north arrow, title block, or site boundary."
+        )
 
     def _case_memory_text(self, domain, context):
         try:
@@ -69,6 +89,10 @@ class PromptPacketBuilder:
         except (FileNotFoundError, json.JSONDecodeError):
             recommendation = {"results": []}
         results = recommendation.get("results", [])
+        if context:
+            context_results = [result for result in results if context in result.get("project_context_ids", [])]
+            if context_results:
+                results = context_results
         if not results:
             return "No matching aesthetic-memory case is available. Use taxonomy-level project context and state exclusions explicitly."
         lines = [

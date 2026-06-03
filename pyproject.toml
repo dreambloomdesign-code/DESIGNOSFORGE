@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "designosforge"
-version = "1.6.0"
+version = "1.6.1"
 description = "DESIGNOSFORGE source package for Codex with aesthetic quality, LoRA corpus planning, and GitHub management."
 requires-python = ">=3.10"
 

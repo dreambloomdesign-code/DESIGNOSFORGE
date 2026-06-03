@@ -1,0 +1,29 @@
+{
+  "batch_id": "envart-cadmcp-foundation-2026",
+  "schema_version": "1.6.1",
+  "review_type": "workflow_quality_gate",
+  "scores": {
+    "source_fidelity": 98,
+    "cad_channel_coverage": 95,
+    "semantic_layer_logic": 94,
+    "construction_qa_value": 92,
+    "board_prompt_transfer": 90,
+    "aesthetic_cleanliness": 88
+  },
+  "approved_uses": [
+    "EnvArtCADMCPBridge routing",
+    "CAD/DWG/DXF source audit prompts",
+    "plan-locked image2 prompt construction",
+    "environmental art competition board evidence chains",
+    "construction drawing QA checklists"
+  ],
+  "failure_modes_to_avoid": [
+    "changing CAD topology to make a board prettier",
+    "copying layer 0 or untrusted source layers without semantic remapping",
+    "drawing door/window symbols over unbroken walls",
+    "inventing site roads, POI, dimensions, room names or north arrows",
+    "turning construction notes into decorative texture",
+    "letting renders replace plan logic"
+  ],
+  "review_notes": "This batch strengthens environmental-art intelligence by merging CADMCP channel selection with source-fidelity, semantic layer, construction drawing, and competition-board prompt logic."
+}

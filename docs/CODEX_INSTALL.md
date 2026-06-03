@@ -32,4 +32,4 @@ or ask for a design workflow such as:
 做一个高端品牌 VI 方案，避免画面细碎脏乱，文字必须准确。
 ```
 
-DESIGNOSFORGE v1.6 uses aesthetic quality gates, PromptPacket v1.6, training-aware case memory, project-context routing, image-generation confirmation gates, text/encoding health checks, and GitHub/GitOps release planning.
+DESIGNOSFORGE v1.6.1 uses aesthetic quality gates, PromptPacket v1.6, training-aware case memory, project-context routing, EnvArt CADMCP source-fidelity routing, image-generation confirmation gates, text/encoding health checks, and GitHub/GitOps release planning.

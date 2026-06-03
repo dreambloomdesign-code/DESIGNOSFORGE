@@ -1,9 +1,9 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v1.6 with photography specialty support. Use when Codex needs to act as a design assistant for brand VI, logo systems, posters, typography, PPT/decks, UI/web/Figma, infovis, environmental or exhibition boards, packaging, photography, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA aesthetic corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 人像精修, 产品摄影, 汉服拍摄, 构图优化, 案例图分类, 高校竞赛, 文化中国, 城市标识系统.
+description: End-to-end local design-agent orchestration for DesignOS Forge v1.6.1 with photography and EnvArt CADMCP specialty support. Use when Codex needs to act as a design assistant for brand VI, logo systems, posters, typography, PPT/decks, UI/web/Figma, infovis, environmental or exhibition boards, CAD/DWG/DXF drawing inspection, AutoCAD/Tianzheng routing, construction drawing QA, packaging, photography, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA aesthetic corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 人像精修, 产品摄影, 汉服拍摄, 构图优化, 环艺, CADMCP, DWG, DXF, AutoCAD, 天正, 施工图, 图层语义, 案例图分类, 高校竞赛, 文化中国, 城市标识系统.
 ---
 
-# DesignOS Forge v1.6
+# DesignOS Forge v1.6.1
 
 ## Core Rule
 
@@ -15,7 +15,7 @@ When triggered, explicitly state:
 
 Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes work, guide the user through briefing, strategy, exploration, refinement, validation, and then delivery.
 
-Use the v1.6 environment and memory layer before execution: identify local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, project contexts, and aesthetic-memory cases, then route to the strongest capability.
+Use the v1.6.1 environment and memory layer before execution: identify local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, CADMCP state, project contexts, and aesthetic-memory cases, then route to the strongest capability.
 
 Read:
 
@@ -40,6 +40,7 @@ Always lock one primary context before prompt construction:
 - `academic-discipline-competition`: university competition boards, research boards, concept logic, process display.
 - `cultural-china-research`: Culture China, cultural tourism, heritage, regional knowledge visualization.
 - `public-cultural-communication`: city identity, cultural center, public signage, civic brand, museum, exhibition, public communication.
+- `spatial-cad-production`: environmental art, architecture, interior, exhibition, landscape, CAD/DWG/DXF, construction drawing, semantic-layer, and source-fidelity workflows.
 - `portrait-session`: portrait photography, portrait retouching, editorial portrait, fashion portrait, Hanfu or cultural portrait.
 - `product-photo-production`: product photography generation, product retouching, e-commerce hero shots, still life, material and lighting correction.
 - `experimental-design`: speculative visual systems and tests.
@@ -88,6 +89,7 @@ Use the closest route:
 - `PPTOS`: PowerPoint, decks, reports.
 - `InfoVisOS`: information visualization, maps, flows, data narrative.
 - `EnvArtBoardOS`: environmental art, exhibition boards, CAD/space/landscape.
+- `EnvArtCADMCPBridge`: CADMCP fusion for `cad_health`, DXF inspection/audit, DWG Core Console workflows, AutoCAD COM, Tianzheng Architecture/Structure, semantic layers, geometry locks, and construction drawing QA.
 - `PhotographyOS`: portrait shooting, portrait retouching, product photography, product retouching, composition optimization, Hanfu cultural portrait, lighting plans, and photo QA.
 - `ShortDramaAIGC_OS`: video, storyboard, short-form visual prompts.
 - `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
@@ -117,6 +119,29 @@ Photography quality gates:
 - do not hallucinate brand marks, product copy, municipal names, or visible text
 - for Hanfu, lock costume, hairstyle, makeup, prop, location, pose, garment silhouette, and cultural atmosphere as one system
 
+## EnvArt CADMCP Rules
+
+Use `EnvArtCADMCPBridge` when the task includes environmental art, space, interior, exhibition, landscape, CAD, DWG, DXF, AutoCAD, Tianzheng, construction drawings, plans, sections, elevations, axes, walls, openings, or semantic layers.
+
+Always start CAD-related environmental-art work with CAD channel selection:
+
+- `cad_health`: check CADMCP readiness before CAD file operations.
+- `dxf_inspect` + `dxf_audit`: default deterministic route for DXF layer/entity inspection and QA.
+- `scr_write` + `accoreconsole_run`: preferred for DWG batch conversion, DXFOUT, plotting, and repeatable scripts.
+- `autocad_state`, `autocad_open`, `autocad_send_command`, `autocad_lisp`: use for running AutoCAD document state or live UI control.
+- `tianzheng_launch`: use when Chinese architecture/Tianzheng wall, door/window, column, axis, room, stair, or annotation components are needed.
+
+CAD geometry locks:
+
+- drawing units, scale, north arrow, site boundary, structural axes
+- outer envelope, wall topology, column positions, door/window openings
+- stair/core, circulation paths, room/zone names, dimensions, title block
+- semantic layers and editable text
+
+Never let style or image-generation overwrite CAD truth. For plan-to-board or image2 workflows, add analysis overlays above the locked base drawing; do not stretch, redraw, invent, crop away, or beautify walls, openings, columns, axes, dimensions, north arrows, roads, site boundaries, or title blocks.
+
+For construction-level work, treat wall/opening segmentation, semantic layers, editable `TEXT/MTEXT/DIM`, door/window hosting, lineweight-by-layer, material notes, elevations, detail indexes, and title-block clarity as quality gates before visual polish.
+
 ## Aesthetic Memory Rules
 
 Use memory cases as design grammar, not as copied images.
@@ -128,6 +153,7 @@ Use memory cases as design grammar, not as copied images.
 - Cultural China Tianjin Tourism: Culture China academic boards, illustrated infovis, application proof strips.
 - City Identity Logo Systems: public city identity, modular lettermarks, dynamic logo systems, parent-child sublogos, grid-derived icons.
 - Photography Foundation Web Sources: portrait retouching, product photography, composition optimization, Hanfu cultural portrait, lighting and post-production quality gates.
+- EnvArt CADMCP Foundation: CAD channel selection, geometry locks, semantic layers, construction drawing QA, and plan-fidelity board/image2 prompt rules.
 
 ## Quality Gates
 
@@ -139,6 +165,7 @@ Before visual generation or final delivery, check:
 - exact visible text or clear placeholders
 - no pseudo-Chinese or mojibake
 - no copied official marks unless supplied and authorized
+- no CAD topology drift, fake site geometry, unverified roads/POI, broken wall openings, layer-0 copying, or non-editable construction annotation
 - no random landmark stacking
 - no decorative clutter without a system rule
 - no over-fragmented small elements
@@ -166,6 +193,8 @@ py -m app.cli capabilities
 py -m app.cli lora audit-corpus
 py -m app.cli lora build-memory-index
 py -m app.cli lora recommend --domain photography --context portrait-session
+py -m app.cli envart-cad plan "用 CADMCP 审核环艺 DWG 平面并生成展板分析图提示词"
+py -m app.cli lora recommend --domain environmental-art --context spatial-cad-production
 ```
 
 ## Output Contract

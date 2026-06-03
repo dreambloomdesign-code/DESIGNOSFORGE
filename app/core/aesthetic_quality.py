@@ -9,6 +9,8 @@ GENERIC_STYLE_MARKERS = ("高级", "好看", "大气", "丰富", "酷", "有质�
 LAYOUT_TERMS = ("网格", "层级", "留白", "主次", "对齐", "版心", "节奏", "负空间", "grid", "hierarchy", "negative space")
 TEXT_TERMS = ("准确", "可读", "拼写", "不乱码", "标题", "字距", "行距", "legible", "spelled exactly")
 PHOTO_RETOUCH_RISK_TERMS = ("plastic skin", "over smoothed", "over-smoothed", "fake label", "warped face", "warped body", "glare", "wrong light direction", "塑料皮肤", "过度磨皮", "假标签", "脸变形", "身体变形", "眩光", "光向错误")
+CAD_SOURCE_TERMS = ("cad", "dwg", "dxf", "autocad", "cadmcp", "天正", "施工图", "平面图", "立面图", "剖面图", "墙体", "门窗", "轴网", "图层", "尺寸", "标注")
+CAD_RISK_TERMS = ("改墙", "删墙", "加墙", "墙体变形", "门窗漂移", "轴网错", "比例错", "尺寸乱", "图层0", "layer 0", "fake plan", "wrong scale", "topology chaos")
 
 
 @dataclass(frozen=True)
@@ -78,6 +80,15 @@ class AestheticQualityGate:
         if photo_risk_hits:
             risks.append(f"photo_retouch_risk:{','.join(photo_risk_hits)}")
             guardrails.append("For photography work, preserve skin texture, identity, product geometry, label accuracy, light direction, and credible contact shadows.")
+
+        cad_source_hits = self._hits(normalized, CAD_SOURCE_TERMS)
+        if cad_source_hits:
+            guardrails.append("For EnvArt/CAD work, run CADMCP channel selection first; preserve units, scale, north, axes, walls, columns, openings, dimensions, title block, and semantic layers before style.")
+
+        cad_risk_hits = self._hits(normalized, CAD_RISK_TERMS)
+        if cad_risk_hits:
+            risks.append(f"cad_topology_risk:{','.join(cad_risk_hits)}")
+            guardrails.append("Never repair environmental-art visuals by changing CAD topology. Keep walls split at openings, doors/windows in host walls, and analysis overlays separate from base geometry.")
 
         return QualityReport(
             aesthetic_cohesion=self._score(92, 14 * len(clutter_hits) + 6 * len(generic_hits)),

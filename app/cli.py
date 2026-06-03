@@ -2,6 +2,7 @@ import argparse
 import json
 from app.core.aesthetic_quality import AestheticQualityGate
 from app.core.capabilities import capability_report
+from app.core.envart_cadmcp import EnvArtCADMCPBridge
 from app.core.orchestrator import MasterOrchestrator
 from app.lora_training.aesthetic_memory import AestheticMemoryIndex
 from app.lora_training.aesthetic_space import LoRAAestheticSpace
@@ -37,10 +38,13 @@ def main():
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v1.6.0")
+    github_parser.add_argument("--version", default="v1.6.1")
     quality_parser = sub.add_parser("quality")
     quality_parser.add_argument("action", choices=("audit", "guardrails"))
     quality_parser.add_argument("text")
+    envart_cad_parser = sub.add_parser("envart-cad")
+    envart_cad_parser.add_argument("action", choices=("plan",))
+    envart_cad_parser.add_argument("text")
     args = parser.parse_args()
     if args.command == "capabilities":
         print(capability_report())
@@ -72,6 +76,8 @@ def main():
     elif args.command == "quality":
         gate = AestheticQualityGate()
         print(gate.audit_json(args.text) if args.action == "audit" else gate.guardrail_text(args.text))
+    elif args.command == "envart-cad":
+        print(EnvArtCADMCPBridge().plan(args.text).to_json())
 
 if __name__ == "__main__":
     main()

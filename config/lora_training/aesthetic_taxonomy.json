@@ -1,6 +1,6 @@
 {
-  "version": "1.6.0",
-  "purpose": "Reserved taxonomy and project-context vocabulary for LoRA aesthetic tuning, training-aware case memory, and DESIGNOSFORGE v1.6 prompt routing.",
+  "version": "1.6.1",
+  "purpose": "Reserved taxonomy and project-context vocabulary for LoRA aesthetic tuning, training-aware case memory, EnvArt CADMCP routing, and DESIGNOSFORGE v1.6 prompt routing.",
   "dataset_root": "lora_training_sandbox/aesthetic_corpus",
   "track_images_in_git": false,
   "image_groups": [
@@ -124,6 +124,16 @@
       "control_goal": "clear analysis logic, plan fidelity, spatial hierarchy, board-level readability"
     },
     {
+      "id": "cad-topology-fidelity",
+      "name_zh": "CAD 几何忠实",
+      "control_goal": "locked units, scale, north, axes, wall topology, openings, columns, dimensions, title block, and semantic layers before any visual styling"
+    },
+    {
+      "id": "construction-drawing-logic",
+      "name_zh": "施工图逻辑",
+      "control_goal": "editable text, layer-controlled lineweights, explicit openings, door/window symbols, dimensions, elevations, material notes, detail indexes, and standard drawing order"
+    },
+    {
       "id": "experimental-typography",
       "name_zh": "实验字体",
       "control_goal": "expressive letterform, exact text, legible hierarchy, controlled distortion"
@@ -190,6 +200,12 @@
       "name_zh": "产品摄影制作",
       "description": "Product photography generation, post-production, e-commerce hero shots, still life, and material/lighting correction references.",
       "control_goal": "inspectable product, accurate material, clean edges, credible reflection, and conversion-ready polish"
+    },
+    {
+      "id": "spatial-cad-production",
+      "name_zh": "空间 CAD 制作",
+      "description": "Environmental art, architecture, interior, exhibition, landscape, and construction-drawing workflows driven by DWG/DXF/CAD MCP inspection, semantic layers, geometry locks, and source-fidelity QA.",
+      "control_goal": "CAD source truth, topology preservation, layer semantics, construction drawing clarity, and accurate analysis overlays"
     }
   ],
   "quality_labels": [
@@ -226,6 +242,18 @@
     "product_glare",
     "warped_body_face",
     "costume_culture_mismatch"
+    ,
+    "cad_source_fidelity",
+    "semantic_layers",
+    "wall_topology_locked",
+    "opening_accuracy",
+    "dimension_editable",
+    "title_block_preserved",
+    "construction_annotation_complete",
+    "cad_topology_drift",
+    "wall_crosses_opening",
+    "source_layer_zero_copied",
+    "fake_site_geometry"
   ],
   "caption_schema": {
     "required_fields": [
@@ -252,6 +280,10 @@
       "tutorial_reference",
       "shooting_recipe",
       "retouching_recipe"
+      ,
+      "cad_reference",
+      "cad_workflow_recipe",
+      "drawing_qa_recipe"
     ],
     "rights_status": [
       "owned",

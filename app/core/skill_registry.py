@@ -3,7 +3,8 @@ from .models import SkillDefinition
 SKILLS = (
     SkillDefinition("ReferenceModeOS", "reference", "参考图 Mode 0-4 锁定、DNA、几何/主体/边缘约束", ("参考图", "复刻", "锁定")),
     SkillDefinition("PromptOrchestrationEngine", "prompt", "模型/技能/参考图约束的一体化 Prompt 编排和 QA", ("prompt", "提示词", "PromptPacket")),
-    SkillDefinition("EnvArtBoardOS", "environment", "环艺展板、空间分析图、CAD 比例与动线表达", ("环艺", "展板", "空间", "CAD")),
+    SkillDefinition("EnvArtBoardOS", "environment", "环艺展板、空间分析图、CAD/DWG/DXF 几何锁定、比例、图层语义与动线表达", ("环艺", "展板", "空间", "CAD", "DWG", "DXF")),
+    SkillDefinition("EnvArtCADMCPBridge", "environment_cad", "融合 CADMCP 的环艺图纸通道：cad_health、DXF 审计、DWG Core Console、AutoCAD COM、天正建筑/结构与施工图 QA", ("cadmcp", "CADMCP", "DWG", "DXF", "AutoCAD", "天正", "施工图", "图层", "墙体", "门窗")),
     SkillDefinition("brandVIos", "brand", "品牌 VI、Logo、色彩、字体、视觉系统和品牌交付", ("品牌", "VI", "logo", "标志")),
     SkillDefinition("InfoVisOS", "infovis", "信息可视化、文化图谱、技术流程图与数据叙事", ("信息可视化", "图谱", "流程图")),
     SkillDefinition("PPTOS", "presentation", "PPT、路演 Deck、汇报视觉和页面叙事", ("PPT", "deck", "汇报")),

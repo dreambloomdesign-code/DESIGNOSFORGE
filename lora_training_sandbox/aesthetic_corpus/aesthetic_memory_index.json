@@ -1,33 +1,37 @@
 {
-  "schema_version": "1.6.0",
-  "purpose": "Aesthetic memory index for training-aware DESIGNOSFORGE routing and PromptPacket v1.6 case selection.",
+  "schema_version": "1.6.1",
+  "purpose": "Aesthetic memory index for training-aware DESIGNOSFORGE routing, EnvArt CADMCP routing, and PromptPacket v1.6 case selection.",
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
-    "schema_version": "1.6.0",
-    "caption_item_count": 54,
-    "batch_count": 7,
+    "schema_version": "1.6.1",
+    "caption_item_count": 60,
+    "batch_count": 8,
     "domain_distribution": {
+      "environmental-art": 6,
       "exhibition-board": 8,
       "photography": 8,
       "vi-brand": 38
     },
     "project_context_distribution": {
-      "academic-discipline-competition": 8,
-      "commercial-project": 21,
+      "academic-discipline-competition": 11,
+      "commercial-project": 22,
       "cultural-china-research": 15,
       "portrait-session": 6,
       "product-photo-production": 4,
-      "public-cultural-communication": 29
+      "public-cultural-communication": 30,
+      "spatial-cad-production": 6
     },
     "style_axis_distribution": {
+      "cad-topology-fidelity": 5,
       "commercial-product": 20,
       "composition-optimization": 5,
+      "construction-drawing-logic": 3,
       "cultural-contemporary": 35,
-      "editorial-grid": 31,
-      "environmental-competition": 8,
+      "editorial-grid": 33,
+      "environmental-competition": 11,
       "experimental-typography": 21,
       "hanfu-cultural-portrait": 1,
-      "infographic-technical": 17,
+      "infographic-technical": 19,
       "minimal-premium": 21,
       "natural-portrait-retouch": 4,
       "soft-luxury": 9,
@@ -35,10 +39,10 @@
       "swiss-modern": 20
     },
     "rights_distribution": {
-      "public_reference_only": 54
+      "public_reference_only": 60
     },
     "project_context_coverage": {
-      "with_context": 54,
+      "with_context": 60,
       "missing_context": 0
     },
     "missing_project_context": [],
@@ -207,6 +211,64 @@
         "do not copy or generate the large diagonal watermark as a design element",
         "avoid turning dense illustrated sub-panels into uncontrolled clutter",
         "do not treat this as a commercial campaign poster or product advertisement"
+      ]
+    },
+    {
+      "batch_id": "envart-cadmcp-foundation-2026",
+      "primary_domain_ids": [
+        "environmental-art"
+      ],
+      "secondary_domain_ids": [
+        "exhibition-board",
+        "infovis"
+      ],
+      "style_axis_ids": [
+        "cad-topology-fidelity",
+        "construction-drawing-logic",
+        "editorial-grid",
+        "environmental-competition",
+        "infographic-technical"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "commercial-project",
+        "public-cultural-communication",
+        "spatial-cad-production"
+      ],
+      "visual_genre_tags": [
+        "analysis-board",
+        "analysis-overlay",
+        "architecture-components",
+        "batch-conversion",
+        "competition-board",
+        "construction-drawing",
+        "core-console",
+        "dwg-processing",
+        "dxf-inspection",
+        "evidence-chain",
+        "image2-prompt",
+        "interior-standard",
+        "plan-fidelity",
+        "qa-gate",
+        "semantic-layer-report",
+        "spatial-diagram",
+        "tianzheng",
+        "wall-door-window"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 6,
+      "sample_caption": "EnvArt CADMCP memory for deterministic DXF inspection: run cad_health, inspect layer names and entity counts, audit the DXF, then translate walls, openings, columns, axes, text, dimensions and title block into a source-truth report before any board styling or image2 prompt.",
+      "sample_positive_notes": [
+        "CAD inspection becomes the first design layer, not a back-office afterthought",
+        "semantic layer reports prevent pretty boards from hiding wrong plan topology",
+        "source truth can be converted into clean analysis overlays without redrawing the base plan"
+      ],
+      "sample_negative_notes": [
+        "do not beautify a plan before reading units, scale, walls, openings and dimensions",
+        "avoid copying layer 0 habits into the training target",
+        "do not let diagram arrows cover missing wall/opening errors"
       ]
     },
     {
