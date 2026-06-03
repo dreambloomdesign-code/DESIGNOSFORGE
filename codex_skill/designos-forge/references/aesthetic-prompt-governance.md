@@ -1,8 +1,8 @@
 # Aesthetic And Prompt Governance
 
-## v1.6 Quality Thesis
+## v2.0 Quality Thesis
 
-The design must be context-aware before it is spectacular. Prevent dirty, fragmented, overfilled visuals by locking project context, selecting relevant memory cases, forcing a clear focal anchor, controlled density, exact text, and explicit negative constraints before generation.
+The design must be mathematically inspected before it becomes visually spectacular. Prevent dirty, fragmented, overfilled visuals by locking project context, selecting relevant memory cases, scoring candidate directions, measuring residual risk, and exposing route/candidate decisions through `math_trace`.
 
 ## Root Causes To Catch
 
@@ -13,6 +13,17 @@ The design must be context-aware before it is spectacular. Prevent dirty, fragme
 - Layout disorder: no grid, no margin system, no reading path, too many modules, no density ceiling, and overlapping text.
 - Redundant mechanisms: multiple agents owning the same decision, repeated QA sections, repeated negative prompts, and unclear handoff owner.
 - Context mixing: commercial conversion logic applied to academic competition boards, or research-board density applied to premium packaging/product visuals.
+
+## Mathematical Gates
+
+Before image generation or final delivery, require:
+
+- `route.math`: softmax route probability, entropy, probability margin, and confidence.
+- `memory.math_trace`: cosine, jaccard, taxonomy similarity, taxonomy prior, and top case scores.
+- `constraints.penalty_vector`: risk load, mitigation strength, residual risk, and constraint satisfaction.
+- `candidate_optimization`: Pareto/TOPSIS/weighted-utility ranking.
+- `critic_aggregation`: weighted critic score.
+- `failure_memory`: relevant failed modes and similarity score.
 
 ## Hard Gates
 
@@ -27,29 +38,27 @@ Before image generation or final delivery, require:
 - Anti-fragmentation negative prompt: no scattered tiny decorations, no dirty texture noise, no random icons, no warped type, no fake logos, no unresolved placeholders.
 - One owner each for context routing, case-memory selection, QA, and delivery; remove duplicated mechanisms.
 
-## PromptPacket v1.6 Sections
+## PromptPacketV2 Contract
 
-Use all sections in order:
+PromptPacketV2 must include:
 
 ```text
-01_TASK_BRIEF
-02_DESIGN_INTENT
-03_AUDIENCE_CONTEXT
-04_PROJECT_CONTEXT_LOCK
-05_CASE_MEMORY_SELECTION
-06_REFERENCE_LOCK
-07_AESTHETIC_THESIS
-08_COMPOSITION_HIERARCHY
-09_LAYOUT_GRID_DENSITY
-10_STYLE_DNA_MATERIAL
-11_COLOR_LIGHT_TYPOGRAPHY
-12_TEXT_ACCURACY
-13_MODEL_RENDER_RULES
-14_ANTI_FRAGMENTATION_NEGATIVE_PROMPT
-15_FAILURE_MEMORY
-16_QA_GATES
-17_DELIVERY_SPEC
-18_REVISION_PROTOCOL
+schema_version
+packet_type
+task_brief
+intent
+route
+aesthetic_genome
+memory_selection
+candidate_directions
+critic_scores
+hard_constraints
+soft_goals
+failure_memory
+math_trace
+tool_plan
+revision_protocol
+generation_policy
 ```
 
 ## Rewrite Pattern
@@ -59,4 +68,4 @@ Replace vague visual language with controlled structure:
 - Weak: "高级大气，元素丰富，有冲击力。"
 - Strong: "One oversized matte-black ceramic bottle as the only focal anchor, centered on a 12-column editorial grid; two small secondary proof marks; 60% quiet warm-gray negative space; exact title text only; no scattered decorations or noisy texture."
 
-For typography prompts, require exact text first. For boards, require modules and hierarchy. For UI, require tokens, grid, states, and content-fit QA.
+For typography prompts, require exact text first. For boards, require modules and hierarchy. For UI, require tokens, grid, states, and content-fit QA. For city identity, require grid derivation, scalable lockups, dynamic submarks, and no random landmark stacking.

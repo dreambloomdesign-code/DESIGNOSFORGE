@@ -1,6 +1,7 @@
 import argparse
 import json
 from app.core.aesthetic_quality import AestheticQualityGate
+from app.core.design_kernel import DesignKernel, FailureMemoryBank
 from app.core.capabilities import capability_report
 from app.core.envart_cadmcp import EnvArtCADMCPBridge
 from app.core.orchestrator import MasterOrchestrator
@@ -38,13 +39,19 @@ def main():
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v1.6.1")
+    github_parser.add_argument("--version", default="v2.0.0")
     quality_parser = sub.add_parser("quality")
     quality_parser.add_argument("action", choices=("audit", "guardrails"))
     quality_parser.add_argument("text")
     envart_cad_parser = sub.add_parser("envart-cad")
     envart_cad_parser.add_argument("action", choices=("plan",))
     envart_cad_parser.add_argument("text")
+    kernel_parser = sub.add_parser("kernel")
+    kernel_parser.add_argument("action", choices=("plan", "prompt-packet", "math-audit", "record-failure"))
+    kernel_parser.add_argument("text")
+    kernel_parser.add_argument("--domain", default="general-design")
+    kernel_parser.add_argument("--failure-mode", default="unspecified_failure")
+    kernel_parser.add_argument("--note", default="")
     args = parser.parse_args()
     if args.command == "capabilities":
         print(capability_report())
@@ -78,6 +85,17 @@ def main():
         print(gate.audit_json(args.text) if args.action == "audit" else gate.guardrail_text(args.text))
     elif args.command == "envart-cad":
         print(EnvArtCADMCPBridge().plan(args.text).to_json())
+    elif args.command == "kernel":
+        if args.action == "record-failure":
+            print(json_dumps(FailureMemoryBank().record(args.text, args.domain, args.failure_mode, args.note)))
+        else:
+            plan = DesignKernel().plan(args.text).to_dict()
+            if args.action == "prompt-packet":
+                print(json_dumps(plan["prompt_packet_v2"]))
+            elif args.action == "math-audit":
+                print(json_dumps(plan["math_trace"]))
+            else:
+                print(json_dumps(plan))
 
 if __name__ == "__main__":
     main()

@@ -48,7 +48,7 @@ class AestheticMemoryIndex:
                 missing_quality_review_batches.append(batch_id)
 
         return {
-            "schema_version": "1.6.1",
+            "schema_version": "2.0.0",
             "caption_item_count": len(items),
             "batch_count": len(batches),
             "domain_distribution": dict(sorted(domains.items())),
@@ -101,8 +101,8 @@ class AestheticMemoryIndex:
             })
 
         payload = {
-            "schema_version": "1.6.1",
-            "purpose": "Aesthetic memory index for training-aware DESIGNOSFORGE routing, EnvArt CADMCP routing, and PromptPacket v1.6 case selection.",
+            "schema_version": "2.0.0",
+            "purpose": "Aesthetic memory index for DESIGNOSFORGE v2.0 DesignKernel routing, EnvArt CADMCP routing, FailureMemoryBank, and PromptPacketV2 case selection.",
             "root": self.root.as_posix(),
             "audit": self.audit(),
             "batches": sorted(normalized, key=lambda item: item["batch_id"]),
@@ -171,7 +171,7 @@ class AestheticMemoryIndex:
         if style_axis and any(style_axis in item.get("style_axis_ids", []) for item in ranked):
             ranked = [item for item in ranked if style_axis in item.get("style_axis_ids", [])]
         return {
-            "schema_version": "1.6.1",
+            "schema_version": "2.0.0",
             "query": {
                 "domain": domain,
                 "context": context,

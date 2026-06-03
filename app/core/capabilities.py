@@ -11,6 +11,10 @@ AGENTS = (
     "TextEncodingGuard", "RedundancyReducer", "AestheticMemoryIndex", "ProjectContextRouter",
     "PhotographyOS", "PhotoRetouchingQualityGate",
     "EnvArtCADMCPBridge", "CADGeometryLockAgent", "CADLayerSemanticAuditor", "ConstructionDrawingQAGate",
+    "DesignKernel", "DesignMathEngine", "TextVectorizer", "ScoreNormalizer", "MultiObjectiveRanker",
+    "ConstraintPenaltyModel", "DesignStateGraph", "HybridRouter", "AestheticGenomeExtractor",
+    "DesignMemoryVectorIndex", "FailureMemoryBank", "MultiCandidateGenerator",
+    "CriticEnsemble", "ConstraintSolver", "ToolExecutionPlanner", "PromptPacketV2Builder",
 )
 
 def capability_report():

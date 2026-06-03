@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "designosforge"
-version = "1.6.1"
-description = "DESIGNOSFORGE source package for Codex with aesthetic quality, LoRA corpus planning, and GitHub management."
+version = "2.0.0"
+description = "DESIGNOSFORGE v2 source package for Codex with a mathematical design kernel, aesthetic memory, LoRA corpus planning, EnvArt CADMCP, photography, and GitHub management."
 requires-python = ">=3.10"
 
 [project.optional-dependencies]

@@ -29,7 +29,15 @@ In Codex, say:
 or ask for a design workflow such as:
 
 ```text
-做一个高端品牌 VI 方案，避免画面细碎脏乱，文字必须准确。
+为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标。
 ```
 
-DESIGNOSFORGE v1.6.1 uses aesthetic quality gates, PromptPacket v1.6, training-aware case memory, project-context routing, EnvArt CADMCP source-fidelity routing, image-generation confirmation gates, text/encoding health checks, and GitHub/GitOps release planning.
+DESIGNOSFORGE v2.0.0 uses a mathematical DesignKernel, PromptPacketV2, aesthetic quality gates, training-aware case memory, failure memory, project-context routing, EnvArt CADMCP source-fidelity routing, photography identity locks, image-generation confirmation gates, text/encoding health checks, and GitHub/GitOps release planning.
+
+## Math Audit
+
+Use this when you want to see why the system chose a route or candidate direction:
+
+```powershell
+py -m app.cli kernel math-audit "拯救课堂纪实照片，不要改变人物本来的面貌形象"
+```

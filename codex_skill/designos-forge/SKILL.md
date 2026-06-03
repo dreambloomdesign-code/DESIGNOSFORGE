@@ -1,9 +1,9 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v1.6.1 with photography and EnvArt CADMCP specialty support. Use when Codex needs to act as a design assistant for brand VI, logo systems, posters, typography, PPT/decks, UI/web/Figma, infovis, environmental or exhibition boards, CAD/DWG/DXF drawing inspection, AutoCAD/Tianzheng routing, construction drawing QA, packaging, photography, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, PromptPacket generation, aesthetic quality gates, training-aware case memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA aesthetic corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 人像精修, 产品摄影, 汉服拍摄, 构图优化, 环艺, CADMCP, DWG, DXF, AutoCAD, 天正, 施工图, 图层语义, 案例图分类, 高校竞赛, 文化中国, 城市标识系统.
+description: End-to-end local design-agent orchestration for DesignOS Forge v2.0.0 with a mathematical DesignKernel, PromptPacketV2, photography, EnvArt CADMCP, LoRA aesthetic memory, and GitHub workflows. Use for brand VI, city identity, logo systems, posters, typography, UI/web/Figma, PPT/decks, infovis, environmental art boards, CAD/DWG/DXF inspection, AutoCAD/Tianzheng routing, construction drawing QA, packaging, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, aesthetic quality gates, training-aware memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 环艺, CADMCP, 城市标识系统, 数学算法升级.
 ---
 
-# DesignOS Forge v1.6.1
+# DesignOS Forge v2.0.0
 
 ## Core Rule
 
@@ -15,7 +15,7 @@ When triggered, explicitly state:
 
 Treat DesignOS Forge as a design-progress partner, not a one-shot factory. For open or high-stakes work, guide the user through briefing, strategy, exploration, refinement, validation, and then delivery.
 
-Use the v1.6.1 environment and memory layer before execution: identify local skills, plugins, runtimes, source packages, Git/GitHub state, asset tools, CADMCP state, project contexts, and aesthetic-memory cases, then route to the strongest capability.
+Use the v2.0 mathematical environment before execution: parse intent, infer project context, retrieve aesthetic memory, build constraints, route through the strongest capability, rank candidate directions, run critic aggregation, and expose `math_trace` when the user asks why the system chose a path.
 
 Read:
 
@@ -32,6 +32,26 @@ Official wake command:
 
 When this command appears by itself, introduce DesignForge, explain core capabilities, usage patterns, reference-image mode, self-update loop, and delivery commands. Do not run generation or delivery for the wake command alone.
 
+## v2 Mathematical Kernel
+
+DESIGNOSFORGE v2.0 uses `DesignKernel` as the default reasoning core:
+
+1. `SemanticIntentParser`: mixed Chinese/Latin intent parsing with domain, project-context, style-axis, delivery-mode, hard-requirement, and risk extraction.
+2. `TextVectorizer`: Latin words plus Chinese character, bigram, and trigram features.
+3. `HybridRouter`: keyword priors + domain/context priors + vector similarity, normalized through softmax with entropy and probability-margin confidence.
+4. `DesignMemoryVectorIndex`: case memory scored by cosine similarity, jaccard similarity, taxonomy overlap, and taxonomy prior.
+5. `ConstraintSolver`: hard constraints, soft goals, CAD/photo/VI locks, residual-risk penalty vector, and constraint-satisfaction score.
+6. `MultiCandidateGenerator`: multiple design directions ranked by Pareto front, TOPSIS, and normalized weighted utility.
+7. `CriticEnsemble`: aesthetic, domain, constraint, candidate, memory, text, and identity critics aggregated by weighted sum.
+8. `FailureMemoryBank`: previous failed directions retrieved by vector similarity plus domain bonus.
+9. `PromptPacketV2Builder`: final design contract with memory, candidates, critics, constraints, tool plan, failure memory, and `math_trace`.
+
+For algorithm inspection:
+
+```powershell
+py -m app.cli kernel math-audit "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"
+```
+
 ## Project Contexts
 
 Always lock one primary context before prompt construction:
@@ -47,41 +67,31 @@ Always lock one primary context before prompt construction:
 
 Never mix commercial, academic, public-cultural, portrait, and product-photo logic casually.
 
-## v1.6 Inference Protocol
+## PromptPacketV2
 
-1. `Step 1 - Requirement Boundary Inference`: lock task type, audience, platform specs, delivery format, reference constraints, image-generation status, exact text, encoding, layout, photo-retouching, copyright, and clutter risks.
-2. `Step 2 - Design Strategy Inference`: define project context, style DNA, memory-case selection, one dominant anchor, composition hierarchy, grid, density, color, typography, material/light, reference locks, negative constraints, and allowed variance.
-3. `Step 3 - Generation Readiness Inference`: prepare PromptPacket v1.6 or delivery checklist; pass context lock, memory fit, cohesion, layout order, text precision, UTF-8 health, prompt specificity, photo-retouching safety, failure-memory, and redundancy gates.
+When generating prompts or design contracts, output a complete PromptPacketV2 with:
+
+- task brief and parsed intent
+- route and route math
+- aesthetic genome
+- memory selection and memory similarity math
+- ranked candidate directions
+- critic scores and aggregate score
+- hard constraints and soft goals
+- constraint penalty vector
+- failure memory
+- tool execution plan
+- revision protocol
+- generation policy
 
 Do not generate, edit, or render final visuals unless the user explicitly confirms. Confirmation examples: `确认生图`, `确认出图`, `可以生图`, `可以生成`, `approve image`.
-
-## PromptPacket v1.6
-
-When generating prompts, output one complete copyable PromptPacket with:
-
-01_TASK_BRIEF
-02_DESIGN_INTENT
-03_AUDIENCE_CONTEXT
-04_PROJECT_CONTEXT_LOCK
-05_CASE_MEMORY_SELECTION
-06_REFERENCE_LOCK
-07_AESTHETIC_THESIS
-08_COMPOSITION_HIERARCHY
-09_LAYOUT_GRID_DENSITY
-10_STYLE_DNA_MATERIAL
-11_COLOR_LIGHT_TYPOGRAPHY
-12_TEXT_ACCURACY
-13_MODEL_RENDER_RULES
-14_ANTI_FRAGMENTATION_NEGATIVE_PROMPT
-15_FAILURE_MEMORY
-16_QA_GATES
-17_DELIVERY_SPEC
-18_REVISION_PROTOCOL
 
 ## Routing
 
 Use the closest route:
 
+- `DesignKernel`: v2 mathematical orchestration and PromptPacketV2.
+- `DesignMathEngine`: vector scoring, route probability, memory similarity, Pareto/TOPSIS, and constraint penalty.
 - `brandVIos`: brand VI, logo, marks, city identity, visual identity systems.
 - `TypographyDesignOS`: typography posters, type systems, glyph rhythm.
 - `PosterDesignOS`: posters, key visuals, campaign visuals.
@@ -91,24 +101,14 @@ Use the closest route:
 - `EnvArtBoardOS`: environmental art, exhibition boards, CAD/space/landscape.
 - `EnvArtCADMCPBridge`: CADMCP fusion for `cad_health`, DXF inspection/audit, DWG Core Console workflows, AutoCAD COM, Tianzheng Architecture/Structure, semantic layers, geometry locks, and construction drawing QA.
 - `PhotographyOS`: portrait shooting, portrait retouching, product photography, product retouching, composition optimization, Hanfu cultural portrait, lighting plans, and photo QA.
-- `ShortDramaAIGC_OS`: video, storyboard, short-form visual prompts.
 - `LayeredBoardComposer`: layered PSD/PDF/PNG/ZIP delivery and manifests.
 - `LoRAAestheticSpace`: training corpus taxonomy, case images, rejected examples, captions, manifests, quality reviews.
 - `AestheticMemoryIndex`: corpus audit, case-memory recommendation, project-context coverage.
-- `ProjectContextRouter`: commercial, academic, Culture China, public-cultural, portrait, and product-photo separation.
-- `AestheticQualityGate`: visual cleanliness, layout order, exact text, encoding health, prompt specificity, photo-retouching safety, redundancy control.
 - `GitOpsManager` and `GitHubManager`: local version state, branch/tag/PR/release planning, registry sync.
 
 ## PhotographyOS Rules
 
-Use PhotographyOS for:
-
-- portrait scene retouching and background cleanup
-- natural portrait refinement, skin texture, hair, clothing, eyes, color, and identity preservation
-- product photography generation and product post-production
-- product edge, label, reflection, material and contact-shadow control
-- crop, straightening, perspective correction, and composition optimization
-- Hanfu and cultural portrait shooting, including costume, hair, makeup, prop, scene, pose, and light coherence
+Use PhotographyOS for portrait scene retouching, background cleanup, natural portrait refinement, product photography generation, product post-production, composition optimization, and Hanfu cultural portrait planning.
 
 Photography quality gates:
 
@@ -131,20 +131,11 @@ Always start CAD-related environmental-art work with CAD channel selection:
 - `autocad_state`, `autocad_open`, `autocad_send_command`, `autocad_lisp`: use for running AutoCAD document state or live UI control.
 - `tianzheng_launch`: use when Chinese architecture/Tianzheng wall, door/window, column, axis, room, stair, or annotation components are needed.
 
-CAD geometry locks:
-
-- drawing units, scale, north arrow, site boundary, structural axes
-- outer envelope, wall topology, column positions, door/window openings
-- stair/core, circulation paths, room/zone names, dimensions, title block
-- semantic layers and editable text
-
 Never let style or image-generation overwrite CAD truth. For plan-to-board or image2 workflows, add analysis overlays above the locked base drawing; do not stretch, redraw, invent, crop away, or beautify walls, openings, columns, axes, dimensions, north arrows, roads, site boundaries, or title blocks.
-
-For construction-level work, treat wall/opening segmentation, semantic layers, editable `TEXT/MTEXT/DIM`, door/window hosting, lineweight-by-layer, material notes, elevations, detail indexes, and title-block clarity as quality gates before visual polish.
 
 ## Aesthetic Memory Rules
 
-Use memory cases as design grammar, not as copied images.
+Use memory cases as design grammar, not as copied images:
 
 - High-end tea packaging: commercial packaging, single-object focus, quiet premium surface, label hierarchy.
 - Milan Chinese Cultural Center: public cultural identity, modular symbols, civic palette, poster identity system.
@@ -173,28 +164,16 @@ Before visual generation or final delivery, check:
 
 ## Execution
 
-For interactive design progress:
-
-```powershell
-.\scripts\designos.ps1
-```
-
-For one-off workflow packaging after a complete brief:
-
-```powershell
-.\scripts\designos.ps1 run "USER REQUEST HERE" -o png,pdf,zip
-```
-
 For source checks:
 
 ```powershell
 $env:PYTHONPATH='.'
 py -m app.cli capabilities
+py -m app.cli kernel plan "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"
+py -m app.cli kernel math-audit "拯救课堂纪实照片，不要改变人物本来的面貌形象"
 py -m app.cli lora audit-corpus
 py -m app.cli lora build-memory-index
-py -m app.cli lora recommend --domain photography --context portrait-session
-py -m app.cli envart-cad plan "用 CADMCP 审核环艺 DWG 平面并生成展板分析图提示词"
-py -m app.cli lora recommend --domain environmental-art --context spatial-cad-production
+py -m app.cli envart-cad plan "用CADMCP审核环艺DWG平面并生成展板分析图提示词"
 ```
 
 ## Output Contract

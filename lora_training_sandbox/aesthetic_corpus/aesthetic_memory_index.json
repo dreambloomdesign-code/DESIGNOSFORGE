@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.6.1",
-  "purpose": "Aesthetic memory index for training-aware DESIGNOSFORGE routing, EnvArt CADMCP routing, and PromptPacket v1.6 case selection.",
+  "schema_version": "2.0.0",
+  "purpose": "Aesthetic memory index for DESIGNOSFORGE v2.0 DesignKernel routing, EnvArt CADMCP routing, FailureMemoryBank, and PromptPacketV2 case selection.",
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
-    "schema_version": "1.6.1",
+    "schema_version": "2.0.0",
     "caption_item_count": 60,
     "batch_count": 8,
     "domain_distribution": {

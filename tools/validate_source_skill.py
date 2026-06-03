@@ -38,8 +38,10 @@ def main() -> int:
     if not re.fullmatch(r"[a-z0-9-]+", fields["name"]):
         print("skill name must be hyphen-case")
         return 1
-    if "v1.6" not in text or "PromptPacket v1.6" not in text:
-        print("v1.6 governance text missing")
+    required = ("v2.0.0", "DesignKernel", "DesignMathEngine", "PromptPacketV2", "math_trace")
+    missing = [item for item in required if item not in text]
+    if missing:
+        print(f"v2.0 governance text missing: {', '.join(missing)}")
         return 1
 
     print("source skill is valid")

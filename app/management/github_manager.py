@@ -60,7 +60,7 @@ class GitHubManager:
         }
         return json.dumps(payload, ensure_ascii=False, indent=2)
 
-    def release_plan(self, version="v1.6.1"):
+    def release_plan(self, version="v2.0.0"):
         branch = f"release/{version.lstrip('v')}"
         lines = [
             f"# DESIGNOSFORGE {version} GitHub Release Plan",
@@ -77,12 +77,12 @@ class GitHubManager:
         ]
         return "\n".join(lines)
 
-    def pr_template(self, version="v1.6.1"):
+    def pr_template(self, version="v2.0.0"):
         return "\n".join([
             f"# Release DESIGNOSFORGE {version}",
             "",
             "## Summary",
-            "- Add v1.6 training-aware aesthetic memory, project-context routing, corpus audit, case recommendation, and v1.6.1 EnvArt CADMCP fusion.",
+            "- Add v2.0 DesignKernel, DesignStateGraph, HybridRouter, PromptPacketV2, FailureMemoryBank, CriticEnsemble, ConstraintSolver, and candidate-direction search.",
             "- Preserve DESIGNOSFORGE inference, GitHub management, image confirmation gates, and v1.5 quality controls.",
             "",
             "## Validation",

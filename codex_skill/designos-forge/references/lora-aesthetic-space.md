@@ -22,7 +22,7 @@ lora_training_sandbox/aesthetic_corpus
 ```
 
 Images are ignored by git. Track only taxonomy, captions, manifests, quality reviews, and `.gitkeep` placeholders.
-DESIGNOSFORGE v1.6 also tracks `aesthetic_memory_index.json`, which summarizes captions into case-memory batches for routing and PromptPacket v1.6 case selection.
+DESIGNOSFORGE v2.0 also tracks `aesthetic_memory_index.json`, which summarizes captions into case-memory batches for DesignKernel routing, vector memory similarity, failure-memory retrieval, and PromptPacketV2 case selection.
 
 ## Domain Classes
 
@@ -54,6 +54,9 @@ DESIGNOSFORGE v1.6 also tracks `aesthetic_memory_index.json`, which summarizes c
 - `studio-product-lighting`
 - `composition-optimization`
 - `hanfu-cultural-portrait`
+- `city-identity-dynamic-system`
+- `cad-topology-fidelity`
+- `construction-drawing-logic`
 
 ## Project Contexts
 
@@ -75,6 +78,7 @@ Run `lora build-memory-index` after adding or updating captions. The index is us
 - audit missing `project_context_ids`
 - summarize batch-level style DNA and risks
 - recommend cases by domain, project context, and style axis
+- feed DesignKernel memory similarity with cosine, jaccard, taxonomy overlap, and taxonomy prior
 - prevent commercial, academic, public-culture, and Culture China samples from being mixed accidentally
 
 Recommended queries:
@@ -85,6 +89,7 @@ py -3 -m app.cli lora recommend --domain exhibition-board --context academic-dis
 py -3 -m app.cli lora recommend --domain infovis --context cultural-china-research
 py -3 -m app.cli lora recommend --domain photography --context portrait-session
 py -3 -m app.cli lora recommend --domain photography --context product-photo-production
+py -3 -m app.cli kernel math-audit "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"
 ```
 
 ## Photography Specialty Rules

@@ -1,7 +1,7 @@
 interface:
   display_name: "DesignOS Forge"
-  short_description: "DesignOS Forge v1.6.1 training-aware design, photography, EnvArt CADMCP, LoRA, and GitHub orchestration"
-  default_prompt: "Use $designos-forge to route this design request through v1.6.1 inference, aesthetic quality gates, project-context routing, aesthetic memory case selection, EnvArt CADMCP channel selection, LoRA corpus planning, prompt precision, text/encoding health, environment-aware tool selection, GitHub/GitOps management, and final delivery."
+  short_description: "DesignOS Forge v2.0.0 mathematical DesignKernel for design routing, memory, photography, EnvArt CADMCP, LoRA, and GitHub orchestration"
+  default_prompt: "Use $designos-forge to route this design request through the v2.0 DesignKernel: semantic vector parsing, softmax route probability, aesthetic memory similarity, constraint penalty, Pareto/TOPSIS candidate ranking, critic aggregation, PromptPacketV2, EnvArt CADMCP channel selection, photography identity locks, LoRA corpus planning, prompt precision, text/encoding health, and GitHub/GitOps management."
 
 policy:
   allow_implicit_invocation: true

@@ -1,6 +1,6 @@
 {
-  "version": "1.6.1",
-  "purpose": "Reserved taxonomy and project-context vocabulary for LoRA aesthetic tuning, training-aware case memory, EnvArt CADMCP routing, and DESIGNOSFORGE v1.6 prompt routing.",
+  "version": "2.0.0",
+  "purpose": "Reserved taxonomy and project-context vocabulary for LoRA aesthetic tuning, DesignKernel routing, FailureMemoryBank, EnvArt CADMCP routing, and DESIGNOSFORGE v2.0 PromptPacketV2 orchestration.",
   "dataset_root": "lora_training_sandbox/aesthetic_corpus",
   "track_images_in_git": false,
   "image_groups": [
