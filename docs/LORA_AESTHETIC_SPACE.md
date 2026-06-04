@@ -54,6 +54,9 @@ Use these as multi-label aesthetic axes:
 - `construction-drawing-logic`: editable text, semantic lineweights, hosted door/window openings, construction dimensions, elevations, material notes, and detail indexes
 - `experimental-typography`: expressive letterform, exact text, controlled distortion
 - `infographic-technical`: label accuracy, diagram clarity, thin-line discipline
+- `academic-infovis-narrative`: university competition research proposition, dominant anchor, evidence modules, maps/timelines/charts/process diagrams, and application proof
+- `heritage-ritual-infovis`: dark cultural field, luminous hierarchy, radial ritual wheel, taxonomy cards, source/pattern references, and controlled ornament logic
+- `isometric-process-infovis`: isometric craft or science process scene, numbered steps, technical callouts, material/plant analysis, and readable educational sequencing
 - `natural-portrait-retouch`: preserved skin texture, believable facial anatomy, natural color, and local non-destructive retouching
 - `studio-product-lighting`: clean product edge contour, controlled reflections, accurate material, and inspectable studio lighting
 - `composition-optimization`: balanced crop, perspective correction, subject breathing room, leading lines, and clear focal hierarchy
@@ -110,6 +113,8 @@ For CAD or plan-based references:
 - never invent roads, POI, room names, dimensions, north arrows, or site facts
 
 When a case is `academic-discipline-competition`, prefer captions that describe research structure, section hierarchy, evidence display, information visualization, and application proof. Do not let it inherit commercial conversion language unless the case is explicitly commercial.
+
+For college competition information visualization cases, require a five-layer strategy: research title and proposition, concept summary, dominant visual anchor, evidence modules, and application proof. Use dense information only when module names, margins, grid, reading path, and text-source policy are explicit. Separate non-heritage dark-gold radial taxonomy boards from blue-green isometric process boards instead of mixing all "Chinese style" references into one prompt.
 
 ## Aesthetic Memory Index
 

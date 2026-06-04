@@ -1,0 +1,195 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "college-competition-infovis-2026",
+  "title_zh": "高校赛事信息可视化方案策略与视觉呈现训练集",
+  "title_en": "College Competition Information Visualization Strategy and Presentation Boards",
+  "source_collection": "User-provided university competition, China Good Creative, and New Quality Point award reference images",
+  "source_original_dir_label": "C:/Users/taojian/Downloads",
+  "source_type": "case_image",
+  "primary_domain_id": "exhibition-board",
+  "secondary_domain_ids": [
+    "infovis",
+    "poster",
+    "environmental-art"
+  ],
+  "style_axis_ids": [
+    "academic-infovis-narrative",
+    "heritage-ritual-infovis",
+    "isometric-process-infovis",
+    "editorial-grid",
+    "infographic-technical",
+    "cultural-contemporary"
+  ],
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "cultural-china-research",
+    "public-cultural-communication"
+  ],
+  "visual_genre_tags": [
+    "college-competition-infovis",
+    "culture-china-competition",
+    "heritage-ritual-infovis",
+    "zodiac-mask-system",
+    "longjing-tea-process",
+    "isometric-process-infovis",
+    "application-proof-board",
+    "research-evidence-chain"
+  ],
+  "commercial_separation_rule": "Treat this batch as academic competition and cultural research work. Do not use commercial conversion, retail campaign, packaging hero shot, or generic advertising logic unless the user explicitly asks for adaptation.",
+  "quality_labels_positive": [
+    "layout_ordered",
+    "color_controlled",
+    "strong_focal_anchor",
+    "research_logic_clear",
+    "academic_narrative_coherent",
+    "information_density_controlled",
+    "application_proof_present"
+  ],
+  "quality_risk_labels": [
+    "watermark_contamination",
+    "overdense_information",
+    "text_error",
+    "mojibake",
+    "pseudo_text_risk",
+    "generic_style",
+    "overdecorated"
+  ],
+  "rights_status": "public_reference_only",
+  "user_training_note": "User identified these references as a university competition information-visualization strategy and visual-presentation training batch. The repository stores captions, manifests, strategy notes, and quality reviews; image files remain local and ignored by git until rights and training permission are cleared.",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "image_count": 7,
+  "unique_primary_image_count": 7,
+  "local_image_dir": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/case_images/college-competition-infovis-2026",
+  "caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/college-competition-infovis-2026.caption.jsonl",
+  "quality_review_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/quality_reviews/college-competition-infovis-2026.quality_review.json",
+  "cross_domain_manifest_files": [
+    "lora_training_sandbox/aesthetic_corpus/domains/infovis/manifests/college-competition-infovis-2026.cross_domain_manifest.json"
+  ],
+  "design_dna": {
+    "visual_positioning": "Research-led university competition boards that transform cultural material, craft processes, regional history, maps, timelines, charts, and application proofs into a coherent information-visualization system.",
+    "context_difference_from_commercial_work": [
+      "goal is to prove research value and design logic, not to sell a product",
+      "dense information is acceptable only when a visible reading order, module names, spacing, and hierarchy are locked",
+      "visual spectacle must be tied to evidence, taxonomy, timeline, map, process, or application proof",
+      "exact Chinese copy requires source text; micro labels are structural placeholders during prompt generation"
+    ],
+    "strategy_layers": [
+      "research title and academic proposition",
+      "project concept or design description",
+      "dominant visual anchor such as a ritual wheel, isometric process island, map, or data structure",
+      "evidence modules including timeline, taxonomy, maps, charts, icon inventories, source references, and process steps",
+      "application proof including poster series, web or spatial display, product mockup, exhibition board or public media scenario"
+    ],
+    "substyle_clusters": [
+      {
+        "id": "heritage-ritual-infovis",
+        "role": "For intangible heritage, zodiac, ritual, mask, mythology, pattern and historical evolution topics.",
+        "composition": "dark field, luminous title, radial wheel or calendar anchor, taxonomy cards, source callouts, pattern reference chart, bottom timeline.",
+        "palette": "deep purple or black, luminous gold, muted pastel illustration inserts, restrained red or blue highlights."
+      },
+      {
+        "id": "isometric-process-infovis",
+        "role": "For craft, production, science, tourism and educational process topics such as tea making.",
+        "composition": "white or blue frame, central isometric process landscape, numbered callouts, side technical diagrams, plant/material analysis, application display board.",
+        "palette": "blue, teal, green, white, light gradient, limited warm highlights."
+      },
+      {
+        "id": "dark-technical-cultural-board",
+        "role": "For heritage plus technology, route systems, installation proof or high-density chart display.",
+        "composition": "dark background, specification row, chart strip, map or route diagram, result rendering and poster application display.",
+        "palette": "black, deep blue, muted peach, pale blue, white label accents."
+      }
+    ],
+    "anti_fragmentation_rules": [
+      "start prompts with project context: academic-discipline-competition and information visualization",
+      "define one dominant anchor before listing submodules",
+      "group dense information into named modules with margins and clear labels",
+      "do not use cultural motifs as loose decoration; assign each motif to taxonomy, timeline, map, process, pattern or application proof",
+      "exclude watermarks, social-media overlays, unverified award badges and creator marks",
+      "require verified source copy for body text, maps, charts, and bilingual captions"
+    ],
+    "prompt_packet_bias": {
+      "primary_domain": "exhibition-board",
+      "secondary_domain": "infovis",
+      "preferred_routes": [
+        "InfoVisOS",
+        "LayeredBoardComposer",
+        "PosterDesignOS"
+      ],
+      "density_policy": "high-evidence-density with explicit grid and reading path",
+      "text_policy": "exact large titles when supplied; placeholder blocks for microcopy until source text is verified"
+    }
+  },
+  "images": [
+    {
+      "image_id": "college_infovis_01",
+      "file_name": "college_infovis_01_heritage_zodiac_full_board.jpg",
+      "original_file_name": "好创意国一作品赏析 _ 中国风传统文化类_1_酷酷拿大奖_来自小红书网页版.jpg",
+      "sha256": "1e9c3a360ef9ea0a2d26e3b8cc246a02c84fc81bcfad0beadb58b93c5f40dba7",
+      "width": 1080,
+      "height": 1528,
+      "view_type": "full academic infovis board for intangible heritage zodiac masks",
+      "training_weight_hint": 0.94
+    },
+    {
+      "image_id": "college_infovis_02",
+      "file_name": "college_infovis_02_silk_road_weave_system_board.jpg",
+      "original_file_name": "中国好创意国一获奖作品｜视传应用类_1_Fickle_来自小红书网页版.jpg",
+      "sha256": "00c5c68f9dfaede78dce6f6e604b02a0d1710065b5e065d23370100b7bcf3547",
+      "width": 1080,
+      "height": 1528,
+      "view_type": "silk road weaving technical information visualization board system",
+      "training_weight_hint": 0.88
+    },
+    {
+      "image_id": "college_infovis_03",
+      "file_name": "college_infovis_03_longjing_process_isometric_spread.jpg",
+      "original_file_name": "「新质点设计铜奖」古法制茶经，新图话龙井_3_新质点设计_来自小红书网页版.jpg",
+      "sha256": "686987265482de6cc0c4a013aa97f2462c5fc9f85739ba9c13f23f66da47c0c7",
+      "width": 1080,
+      "height": 1440,
+      "view_type": "two-page isometric tea-making process infographic spread",
+      "training_weight_hint": 0.93
+    },
+    {
+      "image_id": "college_infovis_04",
+      "file_name": "college_infovis_04_longjing_vertical_overview_board.jpg",
+      "original_file_name": "「新质点设计铜奖」古法制茶经，新图话龙井_1_新质点设计_来自小红书网页版.jpg",
+      "sha256": "eec78d4793a50e260a202b609a045986d35fece5e17f675b7cbac36eb72cd5a7",
+      "width": 1080,
+      "height": 1440,
+      "view_type": "vertical overview board for Longjing tea museum information visualization",
+      "training_weight_hint": 0.95
+    },
+    {
+      "image_id": "college_infovis_05",
+      "file_name": "college_infovis_05_heritage_zodiac_mask_taxonomy.jpg",
+      "original_file_name": "好创意国一作品赏析 _ 中国风传统文化类_3_酷酷拿大奖_来自小红书网页版.jpg",
+      "sha256": "215568cbf986ebc7ae9cb97665c6f1ea97716b10e7f6f3eb70ee239e00dba122",
+      "width": 1080,
+      "height": 1529,
+      "view_type": "heritage zodiac mask taxonomy and radial image board",
+      "training_weight_hint": 0.94
+    },
+    {
+      "image_id": "college_infovis_06",
+      "file_name": "college_infovis_06_longjing_board_system_display.jpg",
+      "original_file_name": "「新质点设计铜奖」古法制茶经，新图话龙井_2_新质点设计_来自小红书网页版.jpg",
+      "sha256": "506e83c9081feba36999eeda584be281332460e71f37f720fea9f98356e83d49",
+      "width": 1080,
+      "height": 1440,
+      "view_type": "Longjing tea board system and application display",
+      "training_weight_hint": 0.9
+    },
+    {
+      "image_id": "college_infovis_07",
+      "file_name": "college_infovis_07_heritage_zodiac_radial_analysis.jpg",
+      "original_file_name": "好创意国一作品赏析 _ 中国风传统文化类_2_酷酷拿大奖_来自小红书网页版.jpg",
+      "sha256": "5a6a8eb6e96c00c5932004ae79804b0b9a7084706a9f32f559b4bdacba4082a6",
+      "width": 1080,
+      "height": 1529,
+      "view_type": "heritage zodiac radial analysis board with mask cards and source callouts",
+      "training_weight_hint": 0.92
+    }
+  ]
+}

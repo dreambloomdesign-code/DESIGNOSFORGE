@@ -13,6 +13,12 @@ CAD_SOURCE_TERMS = ("cad", "dwg", "dxf", "autocad", "cadmcp", "天正", "施工�
 CAD_RISK_TERMS = ("改墙", "删墙", "加墙", "墙体变形", "门窗漂移", "轴网错", "比例错", "尺寸乱", "图层0", "layer 0", "fake plan", "wrong scale", "topology chaos")
 
 
+LAYOUT_TERMS += ("网格", "层级", "留白", "主次", "对齐", "版心", "秩序", "阅读顺序", "模块")
+TEXT_TERMS += ("准确", "可读", "拼写", "不乱码", "标题", "字距", "行距", "占位文本", "伪文字")
+CLUTTER_MARKERS += ("细碎", "脏乱", "凌乱", "杂乱", "信息爆炸", "元素很多", "堆满")
+ACADEMIC_INFOVIS_TERMS = ("高校", "学科竞赛", "信息可视化", "研究", "证据链", "展板", "非遗", "文化中国", "流程图", "地图", "时间线", "应用展示")
+
+
 @dataclass(frozen=True)
 class QualityReport:
     aesthetic_cohesion: int
@@ -89,6 +95,11 @@ class AestheticQualityGate:
         if cad_risk_hits:
             risks.append(f"cad_topology_risk:{','.join(cad_risk_hits)}")
             guardrails.append("Never repair environmental-art visuals by changing CAD topology. Keep walls split at openings, doors/windows in host walls, and analysis overlays separate from base geometry.")
+
+        academic_infovis_hits = self._hits(normalized, ACADEMIC_INFOVIS_TERMS)
+        if academic_infovis_hits:
+            guardrails.append("For academic infovis boards, lock the sequence: research title, concept summary, dominant visual anchor, evidence modules, charts/maps/timelines, and application proof.")
+            guardrails.append("Use dense information only inside named modules; exclude watermarks and require verified source text for Chinese micro-labels.")
 
         return QualityReport(
             aesthetic_cohesion=self._score(92, 14 * len(clutter_hits) + 6 * len(generic_hits)),

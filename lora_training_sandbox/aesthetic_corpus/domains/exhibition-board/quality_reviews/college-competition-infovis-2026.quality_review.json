@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "college-competition-infovis-2026",
+  "review_date": "2026-06-04",
+  "reviewer": "DESIGNOSFORGE v2.0.0",
+  "overall_score": 8.8,
+  "project_context_fit": {
+    "academic-discipline-competition": 0.98,
+    "cultural-china-research": 0.93,
+    "public-cultural-communication": 0.86,
+    "commercial-project": 0.16
+  },
+  "domain_fit": {
+    "exhibition-board": 0.97,
+    "infovis": 0.95,
+    "poster": 0.72,
+    "environmental-art": 0.52,
+    "vi-brand": 0.28
+  },
+  "style_axis_fit": {
+    "academic-infovis-narrative": 0.98,
+    "heritage-ritual-infovis": 0.9,
+    "isometric-process-infovis": 0.88,
+    "editorial-grid": 0.91,
+    "infographic-technical": 0.94,
+    "cultural-contemporary": 0.9,
+    "commercial-product": 0.08
+  },
+  "quality_scores": {
+    "research_logic_clear": 8.9,
+    "academic_narrative_coherent": 8.7,
+    "information_density_controlled": 8.4,
+    "layout_ordered": 8.8,
+    "color_controlled": 8.9,
+    "strong_focal_anchor": 9.2,
+    "application_proof_present": 8.3,
+    "text_precision_risk_control": 6.8,
+    "watermark_contamination_risk": 7.9
+  },
+  "core_aesthetic_takeaways": [
+    "The batch teaches that university competition information visualization is an evidence system: a research proposition must be supported by maps, timelines, taxonomies, process diagrams, charts, and application proof.",
+    "A high-density board can still feel ordered when one dominant anchor owns the composition and secondary modules follow a named reading path.",
+    "The heritage boards use dark purple or black fields, luminous gold hierarchy, radial ritual wheels, mask taxonomies, historical timelines, and pattern references.",
+    "The Longjing boards use blue-green isometric process landscapes, numbered steps, plant/material analysis, clean white information areas, and system display pages.",
+    "The strongest transfer value is not the exact illustration style, but the strategy of converting cultural material into analyzable visual evidence."
+  ],
+  "prompt_structure_lessons": [
+    "Start with project context: university discipline competition, cultural research, information visualization.",
+    "Name the board role: research overview board, technical process board, heritage taxonomy board, or application proof board.",
+    "Define one dominant anchor before listing supporting modules.",
+    "Describe every cultural symbol by its information role: source evidence, taxonomy, map, timeline, pattern, process, chart, or application proof.",
+    "For dense copy, require verified text or use readable placeholder blocks."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "project title when supplied by the user",
+      "section labels such as project introduction, design description, chart display, result display, process, taxonomy, timeline, application display",
+      "large bilingual title blocks if source text is provided"
+    ],
+    "requires_source_confirmation": [
+      "long Chinese project paragraphs",
+      "historical source quotations",
+      "zodiac deity names and mask attributes",
+      "map labels and regional distributions",
+      "chart values and axis labels",
+      "award marks, competition seals, and all watermark text"
+    ],
+    "training_rule": "Use this batch for structure, palette, board strategy, data-module grammar, and application-proof layout. Never train watermark text, social-media overlays, or unverifiable microcopy as positive targets."
+  },
+  "risk_controls": [
+    {
+      "risk": "turning academic infovis into a commercial poster",
+      "severity": "high",
+      "mitigation": "Keep academic-discipline-competition as the primary context and require research title, concept, evidence modules, and application proof."
+    },
+    {
+      "risk": "watermark contamination",
+      "severity": "high",
+      "mitigation": "Caption every affected source with watermark_contamination and exclude watermark atoms from positive prompts."
+    },
+    {
+      "risk": "pseudo-Chinese microcopy",
+      "severity": "high",
+      "mitigation": "Use source-confirmed text for real deliverables; otherwise render microcopy as clean placeholder blocks."
+    },
+    {
+      "risk": "ornament stacking",
+      "severity": "medium",
+      "mitigation": "Require every decorative motif to map to taxonomy, timeline, pattern reference, process, or data category."
+    },
+    {
+      "risk": "overdense board without hierarchy",
+      "severity": "medium",
+      "mitigation": "Use one dominant anchor, named module groups, margins, divider lines, and a top-to-bottom or radial reading path."
+    }
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "Use as metadata-ready references for academic competition infovis after rights review.",
+    "stage_2_caption_tuning": "Train captions to separate heritage ritual boards, isometric process boards, and dark technical cultural boards.",
+    "stage_3_lora_training": "Keep as an academic-discipline-competition subset before mixing with commercial brand, packaging, or product-photo references.",
+    "stage_4_prompt_runtime": "Use for PromptPacketV2 memory retrieval when prompts mention university competition, information visualization, Culture China, non-heritage, craft process, maps, timelines, or application proof.",
+    "suggested_weighting": {
+      "heritage_full_board": 0.94,
+      "silk_road_dark_technical_board": 0.88,
+      "longjing_process_spread": 0.93,
+      "longjing_vertical_overview": 0.95,
+      "heritage_taxonomy_detail": 0.94,
+      "longjing_system_display": 0.9,
+      "heritage_radial_analysis": 0.92
+    }
+  },
+  "negative_prompt_atoms": [
+    "commercial ad layout",
+    "retail product hero shot",
+    "diagonal watermark text",
+    "social media watermark",
+    "garbled Chinese micro-labels",
+    "fake historical quotation",
+    "unverified award badge",
+    "random traditional ornaments",
+    "overdense board without modules",
+    "all elements same visual weight",
+    "decorative chart without data role",
+    "illegible tiny body text",
+    "generic Chinese style collage"
+  ]
+}

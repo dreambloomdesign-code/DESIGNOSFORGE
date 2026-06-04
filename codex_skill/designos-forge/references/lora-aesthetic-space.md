@@ -50,6 +50,9 @@ DESIGNOSFORGE v2.0 also tracks `aesthetic_memory_index.json`, which summarizes c
 - `environmental-competition`
 - `experimental-typography`
 - `infographic-technical`
+- `academic-infovis-narrative`
+- `heritage-ritual-infovis`
+- `isometric-process-infovis`
 - `natural-portrait-retouch`
 - `studio-product-lighting`
 - `composition-optimization`
@@ -71,6 +74,8 @@ Use project context tags to separate business deliverables from competition and 
 
 For `academic-discipline-competition`, describe research logic, information hierarchy, visual analysis, and application validation. Avoid treating dense boards as commercial ads.
 
+For college competition information visualization, lock the strategy sequence: research proposition, dominant visual anchor, evidence modules, data or map logic, process/timeline/taxonomy, and application proof. Separate `heritage-ritual-infovis` dark-gold radial/taxonomy boards from `isometric-process-infovis` blue-green craft/process boards.
+
 ## Aesthetic Memory Index
 
 Run `lora build-memory-index` after adding or updating captions. The index is used to:
@@ -87,6 +92,7 @@ Recommended queries:
 py -3 -m app.cli lora recommend --domain vi-brand --context commercial-project
 py -3 -m app.cli lora recommend --domain exhibition-board --context academic-discipline-competition
 py -3 -m app.cli lora recommend --domain infovis --context cultural-china-research
+py -3 -m app.cli lora recommend --domain infovis --context academic-discipline-competition --style-axis academic-infovis-narrative
 py -3 -m app.cli lora recommend --domain photography --context portrait-session
 py -3 -m app.cli lora recommend --domain photography --context product-photo-production
 py -3 -m app.cli kernel math-audit "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"

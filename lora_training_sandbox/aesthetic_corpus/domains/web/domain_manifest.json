@@ -14,8 +14,17 @@
     "tech-futurism",
     "cultural-contemporary",
     "environmental-competition",
+    "cad-topology-fidelity",
+    "construction-drawing-logic",
     "experimental-typography",
-    "infographic-technical"
+    "infographic-technical",
+    "academic-infovis-narrative",
+    "heritage-ritual-infovis",
+    "isometric-process-infovis",
+    "natural-portrait-retouch",
+    "studio-product-lighting",
+    "composition-optimization",
+    "hanfu-cultural-portrait"
   ],
   "project_contexts": [
     {
@@ -41,6 +50,24 @@
       "name_zh": "公共文化传播",
       "description": "Public culture, museum, tourism, education, and city communication projects with civic or educational value.",
       "control_goal": "accessibility, cultural clarity, public readability, respectful visual language"
+    },
+    {
+      "id": "portrait-session",
+      "name_zh": "人像拍摄项目",
+      "description": "Personal, editorial, fashion, Hanfu, cultural portrait, and portrait-retouching sessions that require subject dignity, natural anatomy, and controlled mood.",
+      "control_goal": "flattering but believable portrait, coherent scene, natural skin, stable pose, and respectful styling"
+    },
+    {
+      "id": "product-photo-production",
+      "name_zh": "产品摄影制作",
+      "description": "Product photography generation, post-production, e-commerce hero shots, still life, and material/lighting correction references.",
+      "control_goal": "inspectable product, accurate material, clean edges, credible reflection, and conversion-ready polish"
+    },
+    {
+      "id": "spatial-cad-production",
+      "name_zh": "空间 CAD 制作",
+      "description": "Environmental art, architecture, interior, exhibition, landscape, and construction-drawing workflows driven by DWG/DXF/CAD MCP inspection, semantic layers, geometry locks, and source-fidelity QA.",
+      "control_goal": "CAD source truth, topology preservation, layer semantics, construction drawing clarity, and accurate analysis overlays"
     }
   ],
   "allowed_quality_labels": [
@@ -55,6 +82,10 @@
     "research_logic_clear",
     "academic_narrative_coherent",
     "information_density_controlled",
+    "module_reading_path_clear",
+    "diagram_label_accuracy",
+    "application_proof_present",
+    "watermark_excluded",
     "fragmented_visual",
     "dirty_texture_noise",
     "layout_disorder",
@@ -63,7 +94,32 @@
     "generic_style",
     "overdecorated",
     "overdense_information",
-    "watermark_contamination"
+    "watermark_contamination",
+    "pseudo_text_risk",
+    "skin_texture_preserved",
+    "light_direction_consistent",
+    "pose_natural",
+    "product_edges_clean",
+    "reflection_controlled",
+    "composition_balanced",
+    "cultural_styling_coherent",
+    "plastic_skin",
+    "over_smoothed_face",
+    "wrong_light_direction",
+    "product_glare",
+    "warped_body_face",
+    "costume_culture_mismatch",
+    "cad_source_fidelity",
+    "semantic_layers",
+    "wall_topology_locked",
+    "opening_accuracy",
+    "dimension_editable",
+    "title_block_preserved",
+    "construction_annotation_complete",
+    "cad_topology_drift",
+    "wall_crosses_opening",
+    "source_layer_zero_copied",
+    "fake_site_geometry"
   ],
   "caption_schema": {
     "required_fields": [
@@ -86,7 +142,13 @@
       "reference_image",
       "case_image",
       "rejected_image",
-      "comparison_set"
+      "comparison_set",
+      "tutorial_reference",
+      "shooting_recipe",
+      "retouching_recipe",
+      "cad_reference",
+      "cad_workflow_recipe",
+      "drawing_qa_recipe"
     ],
     "rights_status": [
       "owned",

@@ -142,6 +142,7 @@ Use memory cases as design grammar, not as copied images:
 - Chi Vintage: commercial brand VI, saturated packaging, strong typography, retail collateral.
 - Waiting Machine: academic competition board, environmental installation, mechanism explanation.
 - Cultural China Tianjin Tourism: Culture China academic boards, illustrated infovis, application proof strips.
+- College Competition InfoVis: academic information-visualization boards, research proposition, dominant visual anchor, evidence modules, maps, timelines, taxonomies, process diagrams, and application proof; keep separate from commercial ad logic.
 - City Identity Logo Systems: public city identity, modular lettermarks, dynamic logo systems, parent-child sublogos, grid-derived icons.
 - Photography Foundation Web Sources: portrait retouching, product photography, composition optimization, Hanfu cultural portrait, lighting and post-production quality gates.
 - EnvArt CADMCP Foundation: CAD channel selection, geometry locks, semantic layers, construction drawing QA, and plan-fidelity board/image2 prompt rules.

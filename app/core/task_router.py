@@ -18,6 +18,22 @@ ROUTES = (
 )
 
 
+ROUTE_KEYWORD_EXTENSIONS = {
+    "brand_vi": ("品牌", "标识", "视觉识别", "城市标识"),
+    "typography_poster": ("字体海报", "字体设计", "字形", "排版"),
+    "poster": ("海报", "主视觉", "活动视觉"),
+    "info_vis": ("信息可视化", "图表", "流程图", "数据", "地图", "图解", "时间线", "分类图谱", "高校赛事信息可视化"),
+    "envart_board": ("环艺", "展板", "空间", "景观", "平面图", "立面图", "剖面图", "分析图"),
+    "photography": ("摄影", "修图", "人像", "产品摄影", "精修", "汉服", "构图", "拯救", "照片"),
+    "lora_training": ("训练", "训练集", "审美训练", "风格训练", "语料库"),
+}
+
+ROUTES = tuple(
+    (task_type, skill_name, tuple(keywords) + ROUTE_KEYWORD_EXTENSIONS.get(task_type, ()))
+    for task_type, skill_name, keywords in ROUTES
+)
+
+
 class TaskRouterAgent:
     def route(self, text):
         lowered = str(text or "").lower()

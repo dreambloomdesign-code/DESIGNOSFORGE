@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "college-competition-infovis-2026",
+  "primary_domain_id": "exhibition-board",
+  "cross_domain_id": "infovis",
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "cultural-china-research",
+    "public-cultural-communication"
+  ],
+  "style_axis_ids": [
+    "academic-infovis-narrative",
+    "heritage-ritual-infovis",
+    "isometric-process-infovis",
+    "editorial-grid",
+    "infographic-technical",
+    "cultural-contemporary"
+  ],
+  "source_manifest": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/manifests/college-competition-infovis-2026.dataset_manifest.json",
+  "source_caption_file": "lora_training_sandbox/aesthetic_corpus/domains/exhibition-board/captions/college-competition-infovis-2026.caption.jsonl",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_image_weights_pending_rights_review",
+  "cross_domain_use": "Use for university competition information visualization strategy: research proposition, dominant anchor, evidence modules, process diagrams, maps, timelines, taxonomies, chart systems, cultural symbol translation, and application proof boards.",
+  "exclusion_rule": "Do not train watermark overlays, social-media source marks, unverified award badges, exact dense microcopy, fake map labels, or decorative cultural motifs that lack a research role.",
+  "commercial_separation_rule": "Do not merge with commercial-project cases by default. This batch is for academic research boards and public cultural communication, not sales-driven advertising.",
+  "runtime_prompt_hint": "When a prompt mentions 高校赛事, 信息可视化, 好创意, 新质点, 非遗, 十二生肖, 傩面, 制茶, 龙井, 地图, 时间线, 流程图, or 应用展示, retrieve this batch before generic infovis references."
+}

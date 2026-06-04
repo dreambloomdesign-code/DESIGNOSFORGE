@@ -4,45 +4,49 @@
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
     "schema_version": "2.0.0",
-    "caption_item_count": 60,
-    "batch_count": 8,
+    "caption_item_count": 67,
+    "batch_count": 9,
     "domain_distribution": {
       "environmental-art": 6,
-      "exhibition-board": 8,
+      "exhibition-board": 15,
       "photography": 8,
       "vi-brand": 38
     },
     "project_context_distribution": {
-      "academic-discipline-competition": 11,
+      "academic-discipline-competition": 18,
       "commercial-project": 22,
-      "cultural-china-research": 15,
+      "cultural-china-research": 22,
       "portrait-session": 6,
       "product-photo-production": 4,
-      "public-cultural-communication": 30,
+      "public-cultural-communication": 37,
       "spatial-cad-production": 6
     },
     "style_axis_distribution": {
+      "academic-infovis-narrative": 7,
       "cad-topology-fidelity": 5,
       "commercial-product": 20,
       "composition-optimization": 5,
       "construction-drawing-logic": 3,
-      "cultural-contemporary": 35,
-      "editorial-grid": 33,
+      "cultural-contemporary": 42,
+      "editorial-grid": 40,
       "environmental-competition": 11,
       "experimental-typography": 21,
       "hanfu-cultural-portrait": 1,
-      "infographic-technical": 19,
+      "heritage-ritual-infovis": 3,
+      "infographic-technical": 26,
+      "isometric-process-infovis": 3,
       "minimal-premium": 21,
       "natural-portrait-retouch": 4,
       "soft-luxury": 9,
       "studio-product-lighting": 3,
-      "swiss-modern": 20
+      "swiss-modern": 20,
+      "tech-futurism": 1
     },
     "rights_distribution": {
-      "public_reference_only": 60
+      "public_reference_only": 67
     },
     "project_context_coverage": {
-      "with_context": 60,
+      "with_context": 67,
       "missing_context": 0
     },
     "missing_project_context": [],
@@ -158,6 +162,78 @@
         "do not copy the exact wordmark or city name",
         "avoid candy-color chaos without block logic",
         "do not add mascot illustrations or extra landmark icons"
+      ]
+    },
+    {
+      "batch_id": "college-competition-infovis-2026",
+      "primary_domain_ids": [
+        "exhibition-board"
+      ],
+      "secondary_domain_ids": [
+        "environmental-art",
+        "infovis",
+        "poster"
+      ],
+      "style_axis_ids": [
+        "academic-infovis-narrative",
+        "cultural-contemporary",
+        "editorial-grid",
+        "heritage-ritual-infovis",
+        "infographic-technical",
+        "isometric-process-infovis",
+        "tech-futurism"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "cultural-china-research",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "application-proof-board",
+        "blue-gradient-cultural-science",
+        "blue-green-technical-illustration",
+        "blue-white-exhibition-layout",
+        "chart-strip-system",
+        "college-competition-infovis",
+        "craft-process-diagram",
+        "dark-gold-academic-board",
+        "dark-gold-cultural-board",
+        "dark-gold-evidence-board",
+        "dark-tech-cultural-board",
+        "heritage-radial-analysis",
+        "heritage-radial-wheel",
+        "heritage-ritual-infovis",
+        "infographic-series-display",
+        "isometric-process-infovis",
+        "longjing-system-display",
+        "longjing-tea-process",
+        "longjing-tea-vertical-board",
+        "mask-card-system",
+        "museum-style-infovis",
+        "pattern-flow-chart",
+        "pattern-reference-chart",
+        "process-column-layout",
+        "radial-calendar-anchor",
+        "silk-road-technical-infovis",
+        "spatial-application-proof",
+        "taxonomy-board",
+        "zodiac-mask-system",
+        "zodiac-mask-taxonomy"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 7,
+      "sample_caption": "University competition information-visualization board for intangible cultural heritage, deep purple background, luminous gold title, large ritual wheel and zodiac calendar anchor on the left, project introduction block, regional distribution maps, mask taxonomy, historical timeline, chart modules, circular deity mask cards, pattern references, and bottom cultural evolution timeline. The board is dense but organized by a strong radial anchor, framed modules, gold divider lines, and evidence categories.",
+      "sample_positive_notes": [
+        "a single oversized ritual wheel creates authority and prevents the dense board from feeling scattered",
+        "gold linework, dark purple field, and cultural illustration inserts form a clear heritage-infovis mood",
+        "maps, timeline, taxonomy, chart and pattern references prove the topic through evidence rather than decoration"
+      ],
+      "sample_negative_notes": [
+        "do not copy watermark text or creator marks",
+        "do not generate random zodiac ornaments without a research category",
+        "avoid overfilling the whole board with equal-weight micro icons"
       ]
     },
     {

@@ -144,6 +144,21 @@
       "control_goal": "label accuracy, diagram clarity, visual grouping, thin-line discipline"
     },
     {
+      "id": "academic-infovis-narrative",
+      "name_zh": "高校赛事信息叙事",
+      "control_goal": "research proposition first, one dominant visual anchor, named evidence modules, maps/timelines/charts/process diagrams, application proof, and strict separation from commercial advertising"
+    },
+    {
+      "id": "heritage-ritual-infovis",
+      "name_zh": "非遗仪式信息图",
+      "control_goal": "dark ritual field, luminous hierarchy, radial wheel or calendar anchor, taxonomy cards, pattern/source references, and no loose traditional ornament stacking"
+    },
+    {
+      "id": "isometric-process-infovis",
+      "name_zh": "等轴流程信息图",
+      "control_goal": "isometric process scene, numbered steps, technical callouts, material or plant analysis, clean blue-green palette, and readable educational sequencing"
+    },
+    {
       "id": "natural-portrait-retouch",
       "name_zh": "自然人像精修",
       "control_goal": "preserve skin texture, facial anatomy, catchlights, natural color, and believable local corrections"
@@ -220,6 +235,10 @@
     "research_logic_clear",
     "academic_narrative_coherent",
     "information_density_controlled",
+    "module_reading_path_clear",
+    "diagram_label_accuracy",
+    "application_proof_present",
+    "watermark_excluded",
     "fragmented_visual",
     "dirty_texture_noise",
     "layout_disorder",
@@ -229,6 +248,7 @@
     "overdecorated",
     "overdense_information",
     "watermark_contamination",
+    "pseudo_text_risk",
     "skin_texture_preserved",
     "light_direction_consistent",
     "pose_natural",

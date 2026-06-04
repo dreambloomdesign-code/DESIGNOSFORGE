@@ -70,6 +70,35 @@ STYLE_AXIS_KEYWORDS = {
 }
 
 
+# Keep historical encoded keywords for backward compatibility, and add clean
+# Chinese triggers so current prompts route correctly through the v2 kernel.
+PROJECT_CONTEXT_KEYWORDS["commercial-project"] += ("商业", "品牌", "包装", "产品", "零售", "客户")
+PROJECT_CONTEXT_KEYWORDS["academic-discipline-competition"] += (
+    "高校", "学科竞赛", "竞赛", "赛事", "课程", "研究", "展板", "作品板", "获奖作品", "国一", "好创意", "新质点"
+)
+PROJECT_CONTEXT_KEYWORDS["cultural-china-research"] += (
+    "文化中国", "文化旅游", "非遗", "地域文化", "传统文化", "龙井", "制茶", "生肖", "傩面", "傩戏", "丝路", "丝绸之路"
+)
+PROJECT_CONTEXT_KEYWORDS["public-cultural-communication"] += ("公共文化", "城市", "博物馆", "文化中心", "标识", "文旅")
+
+DOMAIN_KEYWORDS["vi-brand"] += ("品牌", "标识", "视觉识别", "城市标识")
+DOMAIN_KEYWORDS["poster"] += ("海报", "主视觉", "活动视觉")
+DOMAIN_KEYWORDS["typography"] += ("字体", "字形", "排版")
+DOMAIN_KEYWORDS["exhibition-board"] += ("展板", "竞赛板", "汇报板", "作品板", "板式")
+DOMAIN_KEYWORDS["infovis"] += ("信息可视化", "可视化", "图表", "流程图", "地图", "数据", "图解", "时间线", "分类图谱", "系统图")
+
+STYLE_AXIS_KEYWORDS["minimal-premium"] += ("极简", "高级", "留白", "克制")
+STYLE_AXIS_KEYWORDS["editorial-grid"] += ("网格", "编辑", "版心", "秩序")
+STYLE_AXIS_KEYWORDS["swiss-modern"] += ("瑞士", "现代主义", "几何")
+STYLE_AXIS_KEYWORDS["cultural-contemporary"] += ("文化", "当代", "地域", "东方", "非遗", "传统")
+STYLE_AXIS_KEYWORDS["infographic-technical"] += ("技术图解", "流程", "说明图", "标注", "图表")
+STYLE_AXIS_KEYWORDS.update({
+    "academic-infovis-narrative": ("高校赛事", "学科竞赛", "信息可视化", "研究叙事", "证据链", "展板策略", "应用展示", "获奖作品"),
+    "heritage-ritual-infovis": ("非遗", "十二生肖", "傩面", "傩戏", "神兽", "仪式", "纹样", "暗色", "金色", "时间轮盘"),
+    "isometric-process-infovis": ("等轴", "轴测", "制茶", "龙井", "流程场景", "生产流程", "工艺流程", "蓝绿", "科普图解"),
+})
+
+
 @dataclass(frozen=True)
 class DesignIntent:
     raw_text: str
@@ -338,6 +367,12 @@ class AestheticGenomeExtractor:
             return "subject identity anchor + light direction + background separation"
         if domain == "vi-brand":
             return "mark lockup + modular application system"
+        if domain == "infovis":
+            return "research thesis header + central data/illustration anchor + modular evidence rails + application proof"
+        if domain == "exhibition-board":
+            return "competition-board reading path + dominant anchor + evidence modules + proof strip"
+        if "academic-infovis-narrative" in axes:
+            return "academic thesis -> visual evidence -> process/data modules -> applied validation"
         if "city-identity-dynamic-system" in axes:
             return "grid-derived city mark + dynamic sublogo family + application proof"
         if "editorial-grid" in axes:
@@ -347,6 +382,10 @@ class AestheticGenomeExtractor:
     def _color_gene(self, axes):
         if "cad-topology-fidelity" in axes:
             return "neutral CAD base + limited analysis accent colors"
+        if "heritage-ritual-infovis" in axes:
+            return "deep purple or black cultural field + luminous gold hierarchy + restrained illustration accents"
+        if "isometric-process-infovis" in axes:
+            return "blue-green process palette + white information base + limited warm highlights"
         if "soft-luxury" in axes:
             return "warm restrained neutrals + soft contrast"
         if "tech-futurism" in axes:
@@ -428,6 +467,17 @@ class DesignMemoryVectorIndex:
             item_labels.update(("environmental-art", "spatial-cad-production", "cad-topology-fidelity", "environmental-competition"))
         if "cultural-china" in batch_id:
             item_labels.update(("cultural-china-research", "public-cultural-communication", "exhibition-board", "infographic-technical"))
+        if "college-competition-infovis" in batch_id:
+            item_labels.update((
+                "academic-discipline-competition",
+                "cultural-china-research",
+                "public-cultural-communication",
+                "exhibition-board",
+                "infovis",
+                "academic-infovis-narrative",
+                "heritage-ritual-infovis",
+                "isometric-process-infovis",
+            ))
         if not intent_labels:
             return 0.0
         return len(intent_labels & item_labels) / len(intent_labels)
@@ -465,6 +515,12 @@ class MultiCandidateGenerator:
                 CandidateDirection("grid_city_mark", "City identity starts from a repeatable geometric grammar", "primary mark + grid proof + dynamic submarks + civic applications", "borrow city identity logo systems", "generic landmark stacking"),
                 CandidateDirection("letter_place_system", "Letterform and place features fuse into a modular civic sign", "lettermark core, semantic color family, bilingual lockups", "borrow dynamic logo systems", "weak local specificity"),
                 CandidateDirection("industrial_culture_abstraction", "Industrial heritage becomes abstract rhythm, not literal steel icons", "compressed geometry, strong negative space, restrained applications", "borrow public-cultural identity memory", "too heavy or corporate"),
+            )
+        elif domain in ("infovis", "exhibition-board"):
+            candidates = (
+                CandidateDirection("research_evidence_chain", "A competition board must prove a research proposition, not just decorate a topic", "large thesis title, one central anchor, numbered evidence modules, data charts, application proof strip", "borrow college competition infovis and Culture China cases", "overdense board without reading order"),
+                CandidateDirection("cultural_symbol_translation", "Cultural symbols become a taxonomy and timeline system", "radial calendar or map anchor, icon taxonomy, pattern/material references, source notes", "borrow heritage ritual infovis memory", "random traditional ornament stacking"),
+                CandidateDirection("isometric_process_narrative", "A technical process becomes an isometric learning landscape", "stacked process scenes, callout labels, step numbers, plant/material analysis, clean blue-green grid", "borrow Longjing process infovis memory", "pseudo labels and tiny unreadable text"),
             )
         else:
             candidates = (
@@ -578,6 +634,13 @@ class ConstraintSolver:
         if "vi-brand" in intent.domains:
             hard.extend(["single mark grammar", "grid derivation", "dynamic submark system", "application proof"])
             risk_controls.extend(["no random landmark stacking", "local symbol must be abstracted into repeatable geometry"])
+        if "infovis" in intent.domains or "exhibition-board" in intent.domains or "academic-discipline-competition" in intent.project_contexts:
+            hard.extend(["research thesis hierarchy", "module reading path", "diagram label source policy", "watermark exclusion"])
+            risk_controls.extend([
+                "separate title, concept, evidence, process, data, and application display",
+                "use dense information only inside named modules with margins",
+                "do not hallucinate Chinese microcopy or map labels",
+            ])
         constraints = {
             "hard_constraints": tuple(dict.fromkeys(hard)),
             "soft_goals": tuple(dict.fromkeys(soft)),
