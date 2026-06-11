@@ -61,6 +61,37 @@ revision_protocol
 generation_policy
 ```
 
+## LoopPromptPack Companion Contract
+
+LoopPromptPack is a separate prompt scheme. It does not replace PromptPacketV2 and must not remove any PromptPacketV2 section.
+
+Use LoopPromptPack only when the task needs iterative prompting, failed-result recovery, branch search, visual-result repair, or seamless video-loop prompting. It should be exported as an independent JSON object or attached beside PromptPacketV2 as a companion pack.
+
+LoopPromptPack must include:
+
+```text
+schema_version
+packet_type = LoopPromptPack
+relationship_to_prompt_packet_v2
+activation
+loop_contract
+context_snapshot
+stage_prompts
+quality_gate
+export_policy
+```
+
+Required loop types:
+
+- `self_refine_loop`: draft, critique, revise, rescore.
+- `design_critic_loop`: repair aesthetics, layout order, density, typography, and text accuracy.
+- `failure_memory_loop`: transform rejected outputs into explicit failure modes and safer next prompts.
+- `branch_search_loop`: explore candidate prompt branches, score them, and recombine the strongest parts.
+- `visual_result_loop`: diagnose an image/result and write a targeted edit or regeneration prompt.
+- `seamless_video_loop`: enforce first/last frame consistency, periodic motion, and temporal artifact controls.
+
+The loop must change one axis at a time and stop when the quality target passes, no meaningful revision remains, the same failure repeats, the user accepts the result, or the maximum iteration count is reached.
+
 ## Rewrite Pattern
 
 Replace vague visual language with controlled structure:

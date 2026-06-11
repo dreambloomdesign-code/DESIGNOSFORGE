@@ -16,6 +16,7 @@ from .design_math import (
     weighted_sum,
 )
 from .envart_cadmcp import EnvArtCADMCPBridge
+from .loop_prompt import LoopPromptPackBuilder
 from .task_router import ROUTES, TaskRouterAgent
 
 
@@ -152,6 +153,7 @@ class DesignKernelPlan:
     failure_memory: dict
     math_trace: dict
     prompt_packet_v2: dict
+    loop_prompt_pack: dict
 
     def to_dict(self):
         return asdict(self)
@@ -341,6 +343,8 @@ class DesignStateGraph:
             nodes.insert(2, StateNode("cadmcp", "CAD Source-Fidelity Pass", "EnvArtCADMCPBridge", inputs=("source_assets",), outputs=("cad_channel", "geometry_locks"), gates=("cad_health", "dxf_audit_when_available")))
         if "photography" in intent.domains:
             nodes.insert(2, StateNode("photo_truth", "Photo Identity And Light Lock", "PhotoTruthOS", inputs=("source_image",), outputs=("identity_lock", "retouch_chain"), gates=("do_not_change_identity",)))
+        if LoopPromptPackBuilder.should_activate_text(intent.raw_text):
+            nodes.insert(-2, StateNode("loop_prompt", "Loop Prompt Companion Pack", "LoopPromptEngine", inputs=("intent", "critic_scores", "failure_memory"), outputs=("LoopPromptPack",), gates=("does_not_replace_prompt_packet_v2",)))
         return [asdict(node) for node in nodes]
 
 
@@ -656,10 +660,16 @@ class ToolExecutionPlanner:
     def plan(self, intent, route, constraints):
         steps = ["parse_intent", "retrieve_memory", "solve_constraints", "rank_candidates", "run_critic_ensemble"]
         tools = []
+        loop_detection = LoopPromptPackBuilder().detect(intent.raw_text, intent=intent, route=route)
         if constraints.get("cad_plan"):
             tools.extend(constraints["cad_plan"].get("preferred_tools", []))
         if "prompt_packet" in intent.delivery_modes:
             tools.append("PromptPacketV2")
+        if loop_detection.active:
+            steps.append("build_loop_prompt_companion_pack")
+            tools.append("LoopPromptPack")
+            if loop_detection.loop_type == "seamless_video_loop":
+                tools.append("ShortDramaAIGC_OS")
         if "git_release" in intent.delivery_modes:
             tools.extend(["GitOpsManager", "GitHubManager"])
         if route["skill_name"] == "PhotographyOS":
@@ -760,6 +770,7 @@ class DesignKernel:
         self.tool_plan = ToolExecutionPlanner()
         self.failures = FailureMemoryBank()
         self.packet = PromptPacketV2Builder()
+        self.loop_prompt = LoopPromptPackBuilder()
 
     def plan(self, text):
         intent = self.intent_parser.parse(text)
@@ -774,6 +785,17 @@ class DesignKernel:
         state_graph = self.graph.build(intent, route)
         math_trace = self._math_trace(route, memory, constraints, candidates, critics, failure_memory)
         prompt_packet = self.packet.build(intent, route, genome, memory, candidates, critics, constraints, tool_plan, failure_memory, math_trace)
+        loop_prompt_pack = self.loop_prompt.build(
+            intent.raw_text,
+            intent=intent,
+            route=route,
+            genome=genome,
+            memory=memory,
+            candidates=candidates,
+            critics=critics,
+            constraints=constraints,
+            failure_memory=failure_memory,
+        )
         return DesignKernelPlan(
             schema_version=VERSION,
             intent=asdict(intent),
@@ -788,6 +810,7 @@ class DesignKernel:
             failure_memory=failure_memory,
             math_trace=math_trace,
             prompt_packet_v2=prompt_packet,
+            loop_prompt_pack=loop_prompt_pack,
         )
 
     def _math_trace(self, route, memory, constraints, candidates, critics, failure_memory):

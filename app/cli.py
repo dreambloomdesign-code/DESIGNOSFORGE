@@ -47,7 +47,7 @@ def main():
     envart_cad_parser.add_argument("action", choices=("plan",))
     envart_cad_parser.add_argument("text")
     kernel_parser = sub.add_parser("kernel")
-    kernel_parser.add_argument("action", choices=("plan", "prompt-packet", "math-audit", "record-failure"))
+    kernel_parser.add_argument("action", choices=("plan", "prompt-packet", "loop-prompt", "math-audit", "record-failure"))
     kernel_parser.add_argument("text")
     kernel_parser.add_argument("--domain", default="general-design")
     kernel_parser.add_argument("--failure-mode", default="unspecified_failure")
@@ -92,6 +92,8 @@ def main():
             plan = DesignKernel().plan(args.text).to_dict()
             if args.action == "prompt-packet":
                 print(json_dumps(plan["prompt_packet_v2"]))
+            elif args.action == "loop-prompt":
+                print(json_dumps(plan["loop_prompt_pack"]))
             elif args.action == "math-audit":
                 print(json_dumps(plan["math_trace"]))
             else:

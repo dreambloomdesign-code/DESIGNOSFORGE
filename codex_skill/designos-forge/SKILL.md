@@ -1,6 +1,6 @@
 ---
 name: designos-forge
-description: End-to-end local design-agent orchestration for DesignOS Forge v2.0.0 with a mathematical DesignKernel, PromptPacketV2, photography, EnvArt CADMCP, LoRA aesthetic memory, and GitHub workflows. Use for brand VI, city identity, logo systems, posters, typography, UI/web/Figma, PPT/decks, infovis, environmental art boards, CAD/DWG/DXF inspection, AutoCAD/Tianzheng routing, construction drawing QA, packaging, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, aesthetic quality gates, training-aware memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 环艺, CADMCP, 城市标识系统, 数学算法升级.
+description: End-to-end local design-agent orchestration for DesignOS Forge v2.0.0 with a mathematical DesignKernel, PromptPacketV2, independent LoopPromptPack companion prompts, photography, EnvArt CADMCP, LoRA aesthetic memory, and GitHub workflows. Use for brand VI, city identity, logo systems, posters, typography, UI/web/Figma, PPT/decks, infovis, environmental art boards, CAD/DWG/DXF inspection, AutoCAD/Tianzheng routing, construction drawing QA, packaging, portrait retouching, product photography, Hanfu shoots, composition optimization, AIGC visual prompts, iterative loop prompts, failed-result recovery, seamless video loops, aesthetic quality gates, training-aware memory, project-context routing, anti-fragmentation control, text precision, UTF-8 checks, layout order, LoRA corpus planning, GitOps, GitHub management, or when the user says DESIGNOSFORGE, DesignOS, DesignForge, 超级设计智能体, 审美升级, 画面脏乱, 细碎感, 提示词精准, 乱码, 排版秩序, LoRA训练, 摄影, 修图, 环艺, CADMCP, 城市标识系统, loop提示词, 循环提示词, 无缝循环视频, 数学算法升级.
 ---
 
 # DesignOS Forge v2.0.0
@@ -21,7 +21,8 @@ Read:
 
 - `references/environment-toolchain.md` for environment checks, Figma, browser QA, image generation, documents, presentations, spreadsheets, and source/package health.
 - `references/github-management.md` for Git, GitHub, branch, tag, PR, release, CI, and version-upgrade work.
-- `references/aesthetic-prompt-governance.md` for aesthetics, dirty or fragmented visuals, prompt richness, text precision, mojibake, layout order, or redundant mechanisms.
+- `references/aesthetic-prompt-governance.md` for aesthetics, dirty or fragmented visuals, prompt richness, text precision, mojibake, layout order, redundant mechanisms, and LoopPromptPack governance.
+- `references/loop-prompt-pack.md` for the standalone loop prompt scheme, loop types, iteration rules, and seamless video-loop prompts.
 - `references/lora-aesthetic-space.md` for LoRA training, case images, reference images, aesthetic corpus, style classification, project context, academic competition, Culture China, photography, and domain classification.
 
 Official wake command:
@@ -45,6 +46,7 @@ DESIGNOSFORGE v2.0 uses `DesignKernel` as the default reasoning core:
 7. `CriticEnsemble`: aesthetic, domain, constraint, candidate, memory, text, and identity critics aggregated by weighted sum.
 8. `FailureMemoryBank`: previous failed directions retrieved by vector similarity plus domain bonus.
 9. `PromptPacketV2Builder`: final design contract with memory, candidates, critics, constraints, tool plan, failure memory, and `math_trace`.
+10. `LoopPromptPackBuilder`: independent companion prompt scheme for self-refine loops, failed-result recovery, branch search, visual-result repair, and seamless video loops. It never replaces PromptPacketV2.
 
 For algorithm inspection:
 
@@ -84,13 +86,41 @@ When generating prompts or design contracts, output a complete PromptPacketV2 wi
 - revision protocol
 - generation policy
 
+LoopPromptPack is separate from PromptPacketV2. When the user asks for loop, 循环, 迭代, 自我检查, 失败修复, 多方案分支, visual-result repair, or seamless video loop prompts, use `LoopPromptPackBuilder` or:
+
+```powershell
+py -m app.cli kernel loop-prompt "..."
+```
+
+Produce an independent companion pack. Do not remove, replace, or rewrite the PromptPacketV2 contract.
+
 Do not generate, edit, or render final visuals unless the user explicitly confirms. Confirmation examples: `确认生图`, `确认出图`, `可以生图`, `可以生成`, `approve image`.
+
+## LoopPromptPack Rules
+
+LoopPromptPack supports:
+
+- `self_refine_loop`: draft, critique, revise, and rescore a prompt.
+- `design_critic_loop`: repair aesthetics, layout order, density, typography, and text accuracy.
+- `failure_memory_loop`: turn rejected outputs into explicit failure modes and safer next prompts.
+- `branch_search_loop`: explore candidate prompt branches, score them, and recombine the strongest parts.
+- `visual_result_loop`: diagnose an image/result and write a targeted edit or regeneration prompt.
+- `seamless_video_loop`: enforce first/last frame consistency, periodic motion, closed camera path, and temporal artifact controls.
+
+Loop rules:
+
+- Change one axis per iteration.
+- Preserve the original brief and hard constraints.
+- Keep visible text exact.
+- Stop when the target quality passes, no meaningful revision remains, a failure repeats, the user accepts the result, or max iterations are reached.
+- Write rejected patterns to failure memory when the user rejects a direction.
 
 ## Routing
 
 Use the closest route:
 
 - `DesignKernel`: v2 mathematical orchestration and PromptPacketV2.
+- `LoopPromptEngine`: independent LoopPromptPack companion prompts for iterative refinement, failed-result recovery, branch exploration, visual-result repair, and seamless video loops.
 - `DesignMathEngine`: vector scoring, route probability, memory similarity, Pareto/TOPSIS, and constraint penalty.
 - `brandVIos`: brand VI, logo, marks, city identity, visual identity systems.
 - `TypographyDesignOS`: typography posters, type systems, glyph rhythm.
@@ -171,6 +201,8 @@ For source checks:
 $env:PYTHONPATH='.'
 py -m app.cli capabilities
 py -m app.cli kernel plan "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"
+py -m app.cli kernel loop-prompt "create a design prompt with three loop iterations and self critique"
+py -m app.cli kernel loop-prompt "generate a seamless loop video prompt; first and last frame must match"
 py -m app.cli kernel math-audit "拯救课堂纪实照片，不要改变人物本来的面貌形象"
 py -m app.cli lora audit-corpus
 py -m app.cli lora build-memory-index

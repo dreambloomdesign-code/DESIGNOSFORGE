@@ -1,6 +1,6 @@
 # DESIGNOSFORGE v2.0 Architecture Blueprint
 
-DESIGNOSFORGE v2.0 upgrades the system from prompt governance to a mathematical design kernel.
+DESIGNOSFORGE v2.0 upgrades the system from prompt governance to a mathematical design kernel. The new LoopPromptPack module is developed as an independent companion protocol, not as a replacement for PromptPacketV2.
 
 ## Core Pipeline
 
@@ -19,6 +19,8 @@ flowchart LR
   H --> I
   E --> I
   J["FailureMemoryBank"] --> I
+  G --> K["LoopPromptPackBuilder (optional companion)"]
+  J --> K
 ```
 
 ## Mathematical Layer
@@ -105,10 +107,28 @@ Ranking combines normalized weighted utility, TOPSIS closeness, and Pareto-front
 
 The aggregate score uses weighted normalized scores so feedback is inspectable.
 
+## LoopPromptPack
+
+`app/core/loop_prompt.py` adds an independent LoopPromptPack scheme. It is not a replacement for PromptPacketV2. It is a companion output used when a brief asks for loop, iteration, failed-result recovery, branch exploration, visual-result repair, or seamless video-loop prompting.
+
+LoopPromptPack provides:
+
+- loop activation scoring and trigger hits
+- loop type selection: self-refine, design critic, failure memory, branch search, visual result repair, or seamless video loop
+- iteration state schema
+- critique axes and revision axes
+- stop conditions
+- stage prompts for draft, critique, revision, and stop checks
+- export policy for standalone JSON or attachment beside PromptPacketV2
+
+PromptPacketV2 remains the main design contract. LoopPromptPack is exposed as `loop_prompt_pack` in `DesignKernelPlan` and through the CLI action `kernel loop-prompt`.
+
 ## CLI
 
 ```powershell
 py -m app.cli kernel plan "为安徽省钢城马鞍山市设计城市标识系统logo，要求现代、公共文化传播、不要堆砌地标"
 py -m app.cli kernel prompt-packet "用CADMCP审核环艺DWG平面并生成展板分析图提示词"
+py -m app.cli kernel loop-prompt "create a design prompt with three loop iterations and self critique"
+py -m app.cli kernel loop-prompt "generate a seamless loop video prompt; first and last frame must match"
 py -m app.cli kernel math-audit "拯救课堂纪实照片，不要改变人物本来的面貌形象"
 ```

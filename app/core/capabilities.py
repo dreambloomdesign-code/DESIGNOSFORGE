@@ -15,6 +15,7 @@ AGENTS = (
     "ConstraintPenaltyModel", "DesignStateGraph", "HybridRouter", "AestheticGenomeExtractor",
     "DesignMemoryVectorIndex", "FailureMemoryBank", "MultiCandidateGenerator",
     "CriticEnsemble", "ConstraintSolver", "ToolExecutionPlanner", "PromptPacketV2Builder",
+    "LoopPromptEngine", "LoopPromptPackBuilder",
 )
 
 def capability_report():
