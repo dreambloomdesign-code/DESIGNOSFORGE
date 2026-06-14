@@ -4,50 +4,54 @@
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
     "schema_version": "2.0.0",
-    "caption_item_count": 72,
-    "batch_count": 10,
+    "caption_item_count": 86,
+    "batch_count": 13,
     "domain_distribution": {
       "environmental-art": 6,
       "exhibition-board": 15,
+      "infovis": 5,
       "photography": 8,
-      "short-video-aigc": 5,
+      "poster": 4,
+      "short-video-aigc": 10,
       "vi-brand": 38
     },
     "project_context_distribution": {
-      "academic-discipline-competition": 22,
-      "commercial-project": 22,
-      "cultural-china-research": 27,
+      "academic-discipline-competition": 31,
+      "commercial-project": 27,
+      "cultural-china-research": 32,
+      "experimental-design": 4,
       "portrait-session": 6,
       "product-photo-production": 4,
-      "public-cultural-communication": 40,
+      "public-cultural-communication": 52,
       "spatial-cad-production": 6
     },
     "style_axis_distribution": {
-      "academic-infovis-narrative": 11,
+      "academic-infovis-narrative": 18,
+      "bold-pop-science-ip": 5,
       "cad-topology-fidelity": 5,
-      "commercial-product": 20,
+      "commercial-product": 21,
       "composition-optimization": 5,
       "construction-drawing-logic": 3,
-      "cultural-contemporary": 47,
-      "editorial-grid": 42,
+      "cultural-contemporary": 56,
+      "editorial-grid": 53,
       "environmental-competition": 11,
-      "experimental-typography": 21,
+      "experimental-typography": 26,
       "hanfu-cultural-portrait": 1,
-      "heritage-ritual-infovis": 7,
-      "infographic-technical": 27,
+      "heritage-ritual-infovis": 11,
+      "infographic-technical": 33,
       "isometric-process-infovis": 3,
       "minimal-premium": 21,
       "natural-portrait-retouch": 4,
-      "soft-luxury": 9,
+      "soft-luxury": 12,
       "studio-product-lighting": 3,
       "swiss-modern": 20,
-      "tech-futurism": 1
+      "tech-futurism": 3
     },
     "rights_distribution": {
-      "public_reference_only": 72
+      "public_reference_only": 86
     },
     "project_context_coverage": {
-      "with_context": 72,
+      "with_context": 86,
       "missing_context": 0
     },
     "missing_project_context": [],
@@ -410,6 +414,60 @@
       ]
     },
     {
+      "batch_id": "golden-melody-gpt-image2-poster-language-2026",
+      "primary_domain_ids": [
+        "poster"
+      ],
+      "secondary_domain_ids": [
+        "infovis",
+        "typography",
+        "vi-brand"
+      ],
+      "style_axis_ids": [
+        "cultural-contemporary",
+        "editorial-grid",
+        "experimental-typography",
+        "soft-luxury"
+      ],
+      "project_context_ids": [
+        "commercial-project",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "ai-poster-qa",
+        "award-key-visual",
+        "award-poster-framework",
+        "design-language-extraction",
+        "emotional-key-visual",
+        "event-poster-system",
+        "gpt-image2-prompt-framework",
+        "metaphor-driven-poster",
+        "music-award-visual",
+        "poster-series-system",
+        "prompt-governance",
+        "prompt-template",
+        "replaceable-content-slots",
+        "series-poster",
+        "source-safe-reference",
+        "visual-language-audit"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 4,
+      "sample_caption": "Reference memory for extracting reusable poster language from a high-profile music award key visual. The transferable value is a method: identify the central metaphor, atmosphere, material texture, rhythm, typography hierarchy, content slots and replacement rules, then turn them into a clean GPT-image2 poster framework for new event themes.",
+      "sample_positive_notes": [
+        "design-language extraction separates reusable grammar from copyrighted official visuals",
+        "a central metaphor gives the poster emotional coherence before typography and decoration",
+        "prompt slots make event name, award name, edition, brand mark and title replaceable without losing hierarchy"
+      ],
+      "sample_negative_notes": [
+        "do not copy the official Golden Melody Awards visual, brand assets or exact poster composition",
+        "do not treat an extracted prompt framework as permission to clone a source campaign",
+        "avoid generic AI poster gloss without a clear metaphor and text hierarchy"
+      ]
+    },
+    {
       "batch_id": "milan-chinese-cultural-center-identity-2025",
       "primary_domain_ids": [
         "vi-brand"
@@ -529,6 +587,67 @@
       ]
     },
     {
+      "batch_id": "qiang-ranbiwa-aigc-picturebook-2026",
+      "primary_domain_ids": [
+        "short-video-aigc"
+      ],
+      "secondary_domain_ids": [
+        "exhibition-board",
+        "infovis",
+        "poster"
+      ],
+      "style_axis_ids": [
+        "academic-infovis-narrative",
+        "cultural-contemporary",
+        "editorial-grid",
+        "heritage-ritual-infovis",
+        "infographic-technical"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "cultural-china-research",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "aigc-picturebook",
+        "aigc-production-workflow",
+        "character-bible",
+        "continuity-qa",
+        "cultural-fantasy",
+        "ethnic-culture-infovis",
+        "ethnic-myth-palette",
+        "ethnic-myth-storytelling",
+        "fire-myth",
+        "hero-journey",
+        "mountain-picturebook",
+        "myth-research-board",
+        "mythic-object-system",
+        "picturebook-animation",
+        "prompt-to-storyboard",
+        "qiang-culture",
+        "quest-narrative",
+        "seamless-story-cycle",
+        "storyboard-loop",
+        "symbol-taxonomy",
+        "warm-cold-contrast"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 5,
+      "sample_caption": "Reference memory for an AIGC picturebook based on a Qiang ethnic myth: a young protagonist leaves a cold village, follows a red bird, carries a white stone, crosses forest, snow and cliff challenges, confronts danger, reaches a sacred mountain, retrieves fire and returns warmth to the community.",
+      "sample_positive_notes": [
+        "the story has a clear heroic journey that is easy to convert into storyboard beats",
+        "white stone, red bird, sacred mountain and fire seed create a compact symbolic system",
+        "the community problem and return-with-gift ending make the myth emotionally legible"
+      ],
+      "sample_negative_notes": [
+        "do not copy the original article images or long story text",
+        "do not flatten Qiang cultural material into generic fantasy China",
+        "avoid adding arbitrary monsters, temples or ornaments without a mythic function"
+      ]
+    },
+    {
       "batch_id": "the-waiting-machine-2025",
       "primary_domain_ids": [
         "exhibition-board"
@@ -564,6 +683,79 @@
         "do not overtrain cutout people style as required for all boards",
         "avoid turning the dark lattice ceiling into random dirty visual noise",
         "do not generate dense Chinese concept copy without verified text"
+      ]
+    },
+    {
+      "batch_id": "yuansu-qingbaiju-experimental-ip-infovis-2026",
+      "primary_domain_ids": [
+        "infovis"
+      ],
+      "secondary_domain_ids": [
+        "exhibition-board",
+        "packaging",
+        "poster",
+        "typography",
+        "ui",
+        "vi-brand"
+      ],
+      "style_axis_ids": [
+        "academic-infovis-narrative",
+        "bold-pop-science-ip",
+        "commercial-product",
+        "editorial-grid",
+        "experimental-typography",
+        "infographic-technical",
+        "tech-futurism"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "commercial-project",
+        "experimental-design",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "application-proof",
+        "black-neon-infovis",
+        "bold-science-ip",
+        "book-design",
+        "card-game-extension",
+        "chemistry-data-board",
+        "chemistry-education-visualization",
+        "competition-board-system",
+        "element-mascot-system",
+        "emoji-extension",
+        "expression-pack",
+        "graduation-design",
+        "graduation-display",
+        "high-innovation-reference",
+        "intelligence-board",
+        "ip-behavior-taxonomy",
+        "ip-infovis-board",
+        "ip-manual-cover",
+        "mascot-expression-sheet",
+        "merchandising-system",
+        "neon-pop-palette",
+        "periodic-table-inspired-layout",
+        "pop-science-productization",
+        "science-communication",
+        "science-data-narrative",
+        "social-communication",
+        "system-summary-board"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 5,
+      "sample_caption": "Reference memory for a graduation-design IP system that turns chemistry education into an Element Intelligence Agency universe. The opening system cover uses a custom experimental Chinese title, electric blue block geometry, playful element mascots and a lab scene to create an immediately recognizable science-communication identity.",
+      "sample_positive_notes": [
+        "scientific concepts are personified into a coherent mascot system instead of decorative icons",
+        "the title, blue geometric block and lab scene create a clear first-viewport identity anchor",
+        "bold color and childlike energy are controlled by a manual-like presentation frame"
+      ],
+      "sample_negative_notes": [
+        "do not copy the original mascots, title lettering or scene composition",
+        "avoid making chemistry symbols into random cute stickers without a system role",
+        "do not let bright colors erase hierarchy or text legibility"
       ]
     },
     {

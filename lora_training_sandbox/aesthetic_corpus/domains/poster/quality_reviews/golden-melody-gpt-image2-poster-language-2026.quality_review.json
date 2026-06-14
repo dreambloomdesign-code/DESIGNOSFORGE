@@ -1,0 +1,106 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "golden-melody-gpt-image2-poster-language-2026",
+  "review_date": "2026-06-14",
+  "reviewer": "DESIGNOSFORGE v2.0.0",
+  "source_url": "https://mp.weixin.qq.com/s/-aRAdF1Fgd6G7YlPNy-ywA",
+  "overall_score": 8.35,
+  "project_context_fit": {
+    "public-cultural-communication": 0.9,
+    "commercial-project": 0.82,
+    "academic-discipline-competition": 0.46,
+    "cultural-china-research": 0.28
+  },
+  "domain_fit": {
+    "poster": 0.95,
+    "typography": 0.78,
+    "vi-brand": 0.64,
+    "infovis": 0.52,
+    "short-video-aigc": 0.24
+  },
+  "style_axis_fit": {
+    "cultural-contemporary": 0.84,
+    "editorial-grid": 0.82,
+    "soft-luxury": 0.76,
+    "experimental-typography": 0.68,
+    "commercial-product": 0.36
+  },
+  "quality_scores": {
+    "design_language_extraction": 9.0,
+    "prompt_slot_clarity": 8.8,
+    "poster_hierarchy_transfer": 8.4,
+    "source_safety": 8.6,
+    "text_precision_risk_control": 7.8,
+    "visual_originality_guard": 8.1
+  },
+  "core_aesthetic_takeaways": [
+    "The source is useful as a method reference for extracting poster grammar, not as a visual asset source.",
+    "Poster prompts become stronger when metaphor, type hierarchy and content slots are separated.",
+    "A source visual can inspire mood and structure only after official marks, names and copyrighted layout are excluded.",
+    "For AI-generated posters, visible text must be locked before style and texture are described.",
+    "Series posters need a repeatable framework: central metaphor, palette rules, text zones and variation logic."
+  ],
+  "prompt_structure_lessons": [
+    "Start with the new event brief and never default to the source event.",
+    "Define replaceable variables before visual style.",
+    "Name the central metaphor and explain its emotional role.",
+    "Lock title, subtitle, edition, metadata and logo placeholder policy.",
+    "Add negative controls for copied official marks, watermarks, pseudo text and source-layout cloning."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "current user-supplied event name",
+      "current user-supplied award name",
+      "edition or year supplied by the user",
+      "placeholder strings such as EVENT NAME, AWARD TITLE, YEAR and LOGO MARK"
+    ],
+    "requires_source_confirmation": [
+      "official award names",
+      "official brand marks",
+      "article promotional text",
+      "source event slogans",
+      "small poster metadata and sponsor names"
+    ],
+    "training_rule": "Use for poster prompt structure and QA. Do not memorize official campaign copy, marks or the article's reusable prompt examples as exact output text."
+  },
+  "risk_controls": [
+    {
+      "risk": "official visual cloning",
+      "severity": "high",
+      "mitigation": "Use grammar-level extraction only; require a new theme and new content slots."
+    },
+    {
+      "risk": "unauthorized mark generation",
+      "severity": "high",
+      "mitigation": "Use brand mark placeholders unless the user supplies authorized assets."
+    },
+    {
+      "risk": "AI poster text errors",
+      "severity": "high",
+      "mitigation": "Lock exact visible text first and keep microcopy schematic or editable."
+    },
+    {
+      "risk": "generic AI gloss",
+      "severity": "medium",
+      "mitigation": "Require a central metaphor, restraint, hierarchy and originality QA."
+    }
+  ],
+  "negative_prompt_atoms": [
+    "copied official award visual",
+    "official logo hallucination",
+    "source article screenshot",
+    "WeChat watermark",
+    "fake award seal",
+    "pseudo English poster title",
+    "pseudo Chinese event copy",
+    "unreadable micro typography",
+    "generic glossy AI poster",
+    "style copied without new theme"
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "Keep as metadata-only poster prompt reference.",
+    "stage_2_caption_tuning": "Use for design-language extraction and prompt-slot governance.",
+    "stage_3_lora_training": "Only ingest images if rights are cleared; otherwise retain as prompt methodology memory.",
+    "stage_4_prompt_runtime": "Retrieve when prompts mention GPT-image2 poster, award key visual, design language extraction, event poster template or AI poster QA."
+  }
+}

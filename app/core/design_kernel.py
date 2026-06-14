@@ -83,13 +83,13 @@ PROJECT_CONTEXT_KEYWORDS["cultural-china-research"] += (
 PROJECT_CONTEXT_KEYWORDS["public-cultural-communication"] += ("公共文化", "城市", "博物馆", "文化中心", "标识", "文旅")
 
 DOMAIN_KEYWORDS["vi-brand"] += ("品牌", "标识", "视觉识别", "城市标识")
-DOMAIN_KEYWORDS["poster"] += ("海报", "主视觉", "活动视觉")
+DOMAIN_KEYWORDS["poster"] += ("海报", "主视觉", "活动视觉", "海报提示词", "提示词框架", "设计语言", "视觉语言", "key visual", "gpt-image2")
 DOMAIN_KEYWORDS["typography"] += ("字体", "字形", "排版")
 DOMAIN_KEYWORDS["exhibition-board"] += ("展板", "竞赛板", "汇报板", "作品板", "板式")
 DOMAIN_KEYWORDS["infovis"] += ("信息可视化", "可视化", "图表", "流程图", "地图", "数据", "图解", "时间线", "分类图谱", "系统图")
 
 STYLE_AXIS_KEYWORDS["minimal-premium"] += ("极简", "高级", "留白", "克制")
-STYLE_AXIS_KEYWORDS["editorial-grid"] += ("网格", "编辑", "版心", "秩序")
+STYLE_AXIS_KEYWORDS["editorial-grid"] += ("网格", "编辑", "版心", "秩序", "提示词框架", "设计语言", "视觉语言", "可替换", "主视觉")
 STYLE_AXIS_KEYWORDS["swiss-modern"] += ("瑞士", "现代主义", "几何")
 STYLE_AXIS_KEYWORDS["cultural-contemporary"] += ("文化", "当代", "地域", "东方", "非遗", "传统")
 STYLE_AXIS_KEYWORDS["infographic-technical"] += ("技术图解", "流程", "说明图", "标注", "图表")
@@ -97,7 +97,35 @@ STYLE_AXIS_KEYWORDS.update({
     "academic-infovis-narrative": ("高校赛事", "学科竞赛", "信息可视化", "研究叙事", "证据链", "展板策略", "应用展示", "获奖作品"),
     "heritage-ritual-infovis": ("非遗", "十二生肖", "傩面", "傩戏", "神兽", "仪式", "纹样", "暗色", "金色", "时间轮盘"),
     "isometric-process-infovis": ("等轴", "轴测", "制茶", "龙井", "流程场景", "生产流程", "工艺流程", "蓝绿", "科普图解"),
+    "bold-pop-science-ip": (
+        "\u5143\u7d20\u60c5\u62a5\u5c40",
+        "\u5316\u5b66\u5143\u7d20",
+        "\u79d1\u666eIP",
+        "\u79d1\u666e\u53ef\u89c6\u5316",
+        "\u8868\u60c5\u5305",
+        "\u5468\u8fb9\u8bbe\u8ba1",
+        "\u5927\u80c6",
+        "\u521b\u65b0",
+        "\u9ad8\u9971\u548c",
+        "\u8367\u5149",
+    ),
 })
+
+PROJECT_CONTEXT_KEYWORDS["academic-discipline-competition"] += (
+    "\u6bd5\u4e1a\u8bbe\u8ba1",
+    "\u9ad8\u6821\u6bd5\u8bbe",
+    "\u521b\u610f\u8bbe\u8ba1",
+    "\u4f5c\u54c1\u7ebf\u4e0b\u5c55\u89c8",
+)
+PROJECT_CONTEXT_KEYWORDS["experimental-design"] += ("\u5927\u80c6", "\u521b\u65b0", "\u5b9e\u9a8c\u6027", "\u9ad8\u521b\u65b0")
+DOMAIN_KEYWORDS["infovis"] += (
+    "\u5143\u7d20\u60c5\u62a5\u5c40",
+    "\u5316\u5b66\u5143\u7d20",
+    "\u79d1\u666e\u53ef\u89c6\u5316",
+    "\u4fe1\u606f\u56fe\u8868\u8bbe\u8ba1",
+)
+DOMAIN_KEYWORDS["vi-brand"] += ("\u0049\u0050\u5f62\u8c61", "\u8868\u60c5\u5305", "\u5468\u8fb9\u8bbe\u8ba1")
+DOMAIN_KEYWORDS["exhibition-board"] += ("\u6bd5\u4e1a\u8bbe\u8ba1", "\u7ebf\u4e0b\u5c55\u89c8", "\u5c55\u89c8")
 
 
 @dataclass(frozen=True)
@@ -172,6 +200,14 @@ class SemanticIntentParser:
         domains = self._score_vocab(lowered, DOMAIN_KEYWORDS)
         contexts = self._score_vocab(lowered, PROJECT_CONTEXT_KEYWORDS)
         axes = self._score_vocab(lowered, STYLE_AXIS_KEYWORDS)
+        if self._is_ai_poster_prompt(lowered):
+            domains = self._prefer_label(domains, "poster")
+            contexts = self._prefer_label(
+                [context for context in contexts if context != "portrait-session"],
+                "commercial-project",
+                "public-cultural-communication",
+            )
+            axes = self._prefer_label(axes, "editorial-grid")
         delivery = self._delivery_modes(lowered)
         hard = []
         risks = []
@@ -197,6 +233,23 @@ class SemanticIntentParser:
             hard_requirements=tuple(dict.fromkeys(hard)),
             risks=tuple(dict.fromkeys(risks)),
         )
+
+    def _is_ai_poster_prompt(self, lowered):
+        has_ai_prompt = any(token in lowered for token in (
+            "gpt-image2",
+            "gpt image2",
+            "image2",
+            "海报提示词",
+            "提示词框架",
+            "设计语言",
+            "视觉语言",
+        ))
+        has_poster_context = any(token in lowered for token in ("海报", "主视觉", "poster", "key visual", "活动视觉"))
+        return has_ai_prompt and has_poster_context
+
+    def _prefer_label(self, labels, *preferred):
+        ordered = list(dict.fromkeys([*preferred, *labels]))
+        return ordered[:3]
 
     def _score_vocab(self, lowered, vocab):
         query = self.vectorizer.tokens(lowered)
@@ -265,6 +318,14 @@ class HybridRouter:
                 scores[skill] += bonus
                 reasons[skill].append({"source": "domain_prior", "domain": domain, "bonus": bonus})
 
+        if self._is_ai_poster_prompt(lowered):
+            scores["PosterDesignOS"] += 6.0
+            reasons["PosterDesignOS"].append({
+                "source": "ai_poster_prompt_prior",
+                "matched": "gpt-image2/poster/prompt-framework",
+                "bonus": 6.0,
+            })
+
         if "spatial-cad-production" in intent.project_contexts:
             scores["EnvArtCADMCPBridge"] += 14.0
             reasons["EnvArtCADMCPBridge"].append({"source": "context_prior", "context": "spatial-cad-production", "bonus": 14.0})
@@ -290,6 +351,19 @@ class HybridRouter:
         confidence = math_profile["confidence"]
         task_type = keyword_route.task_type if skill == keyword_route.skill_name else "design_kernel_routed"
         return self._route_payload(task_type, skill, confidence, keyword_route, scores, reasons, math_profile, "")
+
+    def _is_ai_poster_prompt(self, lowered):
+        has_ai_prompt = any(token in lowered for token in (
+            "gpt-image2",
+            "gpt image2",
+            "image2",
+            "海报提示词",
+            "提示词框架",
+            "设计语言",
+            "视觉语言",
+        ))
+        has_poster_context = any(token in lowered for token in ("海报", "主视觉", "poster", "key visual", "活动视觉"))
+        return has_ai_prompt and has_poster_context
 
     def _math_profile(self, scores):
         labels = list(scores)
@@ -365,6 +439,8 @@ class AestheticGenomeExtractor:
         }
 
     def _composition_gene(self, domain, axes):
+        if "bold-pop-science-ip" in axes:
+            return "science IP universe anchor + mascot taxonomy + black neon infovis board + product/book/application proof"
         if domain == "environmental-art":
             return "source plan as anchor + overlay analysis + axon/section support"
         if domain == "photography":
@@ -386,6 +462,8 @@ class AestheticGenomeExtractor:
     def _color_gene(self, axes):
         if "cad-topology-fidelity" in axes:
             return "neutral CAD base + limited analysis accent colors"
+        if "bold-pop-science-ip" in axes:
+            return "electric blue and violet base + neon yellow/green/pink accents + black intelligence-board contrast"
         if "heritage-ritual-infovis" in axes:
             return "deep purple or black cultural field + luminous gold hierarchy + restrained illustration accents"
         if "isometric-process-infovis" in axes:
@@ -482,6 +560,19 @@ class DesignMemoryVectorIndex:
                 "heritage-ritual-infovis",
                 "isometric-process-infovis",
             ))
+        if "yuansu-qingbaiju" in batch_id or "element-intelligence" in batch_id:
+            item_labels.update((
+                "infovis",
+                "vi-brand",
+                "exhibition-board",
+                "academic-discipline-competition",
+                "public-cultural-communication",
+                "experimental-design",
+                "academic-infovis-narrative",
+                "bold-pop-science-ip",
+                "experimental-typography",
+                "infographic-technical",
+            ))
         if not intent_labels:
             return 0.0
         return len(intent_labels & item_labels) / len(intent_labels)
@@ -521,11 +612,18 @@ class MultiCandidateGenerator:
                 CandidateDirection("industrial_culture_abstraction", "Industrial heritage becomes abstract rhythm, not literal steel icons", "compressed geometry, strong negative space, restrained applications", "borrow public-cultural identity memory", "too heavy or corporate"),
             )
         elif domain in ("infovis", "exhibition-board"):
-            candidates = (
-                CandidateDirection("research_evidence_chain", "A competition board must prove a research proposition, not just decorate a topic", "large thesis title, one central anchor, numbered evidence modules, data charts, application proof strip", "borrow college competition infovis and Culture China cases", "overdense board without reading order"),
-                CandidateDirection("cultural_symbol_translation", "Cultural symbols become a taxonomy and timeline system", "radial calendar or map anchor, icon taxonomy, pattern/material references, source notes", "borrow heritage ritual infovis memory", "random traditional ornament stacking"),
-                CandidateDirection("isometric_process_narrative", "A technical process becomes an isometric learning landscape", "stacked process scenes, callout labels, step numbers, plant/material analysis, clean blue-green grid", "borrow Longjing process infovis memory", "pseudo labels and tiny unreadable text"),
-            )
+            if "bold-pop-science-ip" in intent.style_axes:
+                candidates = (
+                    CandidateDirection("science_ip_universe", "Scientific knowledge becomes a character-driven identity universe", "large IP system title, mascot taxonomy, expression/action sheets, black neon data board, book and merch proof", "borrow Element Intelligence Agency memory", "turning scientific concepts into random cute stickers"),
+                    CandidateDirection("research_evidence_chain", "A competition board must prove a research proposition, not just decorate a topic", "large thesis title, one central anchor, numbered evidence modules, data charts, application proof strip", "borrow college competition infovis and Culture China cases", "overdense board without reading order"),
+                    CandidateDirection("technical_pop_infovis", "A technical topic can be loud if every color and icon has a role", "dark intelligence-board base, neon label hierarchy, modular data panels, exact legends, restrained white-space islands", "borrow bold pop science IP and technical infovis memory", "neon noise with unreadable labels"),
+                )
+            else:
+                candidates = (
+                    CandidateDirection("research_evidence_chain", "A competition board must prove a research proposition, not just decorate a topic", "large thesis title, one central anchor, numbered evidence modules, data charts, application proof strip", "borrow college competition infovis and Culture China cases", "overdense board without reading order"),
+                    CandidateDirection("cultural_symbol_translation", "Cultural symbols become a taxonomy and timeline system", "radial calendar or map anchor, icon taxonomy, pattern/material references, source notes", "borrow heritage ritual infovis memory", "random traditional ornament stacking"),
+                    CandidateDirection("isometric_process_narrative", "A technical process becomes an isometric learning landscape", "stacked process scenes, callout labels, step numbers, plant/material analysis, clean blue-green grid", "borrow Longjing process infovis memory", "pseudo labels and tiny unreadable text"),
+                )
         else:
             candidates = (
                 CandidateDirection("clean_system", "System clarity over decoration", "one anchor, two supports, strict grid", "borrow closest memory case", "generic style language"),

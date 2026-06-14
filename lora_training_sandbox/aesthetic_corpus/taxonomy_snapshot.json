@@ -177,6 +177,11 @@
       "id": "hanfu-cultural-portrait",
       "name_zh": "汉服古风人像",
       "control_goal": "coherent costume, hair, makeup, prop, architecture or landscape scene, soft cultural atmosphere, and respectful styling"
+    },
+    {
+      "id": "bold-pop-science-ip",
+      "name_zh": "大胆科普 IP 信息可视化",
+      "control_goal": "high-saturation science communication, mascot taxonomy, expression-pack extension, black neon data board, product/book/exhibition proof, and strict text/source accuracy"
     }
   ],
   "project_contexts": [
@@ -221,6 +226,12 @@
       "name_zh": "空间 CAD 制作",
       "description": "Environmental art, architecture, interior, exhibition, landscape, and construction-drawing workflows driven by DWG/DXF/CAD MCP inspection, semantic layers, geometry locks, and source-fidelity QA.",
       "control_goal": "CAD source truth, topology preservation, layer semantics, construction drawing clarity, and accurate analysis overlays"
+    },
+    {
+      "id": "experimental-design",
+      "name_zh": "实验性设计",
+      "description": "Speculative, exploratory, high-innovation design references, including bold academic experiments, IP systems, visual-language tests, and generative-design studies.",
+      "control_goal": "high novelty with explicit system logic, source accuracy, layout order, and risk controls"
     }
   ],
   "quality_labels": [
@@ -272,7 +283,10 @@
     "cad_topology_drift",
     "wall_crosses_opening",
     "source_layer_zero_copied",
-    "fake_site_geometry"
+    "fake_site_geometry",
+    "high_innovation",
+    "bold_color_system",
+    "ip_system_coherent"
   ],
   "caption_schema": {
     "required_fields": [

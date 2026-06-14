@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "yuansu-qingbaiju-experimental-ip-infovis-2026",
+  "review_type": "derived_style_quality_review",
+  "source_url": "https://mp.weixin.qq.com/s/AxNeAiNw_HOKD2wPelNZaA",
+  "source_title": "2026届毕业设计 | 元素情报局",
+  "domain_fit": {
+    "primary_domain_id": "infovis",
+    "primary_fit_score": 0.94,
+    "secondary_domain_fit": {
+      "vi-brand": 0.92,
+      "exhibition-board": 0.9,
+      "poster": 0.78,
+      "packaging": 0.75,
+      "typography": 0.74
+    }
+  },
+  "quality_scores": {
+    "innovation_score": 0.97,
+    "boldness_score": 0.96,
+    "system_coherence": 0.91,
+    "color_control": 0.88,
+    "layout_order": 0.84,
+    "text_accuracy_risk_control": 0.79,
+    "application_proof": 0.93,
+    "training_value": 0.95
+  },
+  "core_aesthetic_takeaways": [
+    "The project proves that academic information visualization can be playful, high-saturation and character-driven when the topic is educational science.",
+    "The strongest move is a two-mode system: clean white manual pages for IP rules and black neon boards for dense intelligence-style information.",
+    "Mascots, reaction stickers, chemical icons, periodic-table tiles and product extensions form one visual ecology rather than isolated illustrations.",
+    "High innovation comes from a controlled collision: cute mascot language plus dark technical-data interface plus physical product proof."
+  ],
+  "prompt_structure_lessons": [
+    "First define the science metaphor and IP universe; do not start with color.",
+    "Specify two background modes: white system manual mode and black neon data-board mode.",
+    "Describe mascot family rules, expression pack categories, diagram modules, product applications and exhibition proof as separate prompt sections.",
+    "Require exact visible titles and source-verified scientific labels; put uncertain formulas into placeholders.",
+    "Use high saturation only with category roles and modular boundaries."
+  ],
+  "text_accuracy_policy": {
+    "risk_level": "high",
+    "rules": [
+      "Scientific names, element symbols, formulas, charts and legends require source text.",
+      "Small microcopy should be rendered as neutral editable blocks unless exact copy is supplied.",
+      "No pseudo-Chinese, mojibake, fake equations or invented experiment labels."
+    ]
+  },
+  "risk_controls": [
+    "One system anchor before many characters.",
+    "No equal-weight sticker flooding.",
+    "Separate illustration, data, product and exhibition modules.",
+    "Use black-neon contrast for information focus, not decorative glow.",
+    "Keep the project in academic/educational logic, not commercial toy advertising."
+  ],
+  "negative_prompt_atoms": [
+    "generic cute sticker clutter",
+    "unreadable neon text",
+    "random chemical symbols",
+    "fake formulas",
+    "pseudo-Chinese microcopy",
+    "copied mascot design",
+    "overcrowded equal-size assets",
+    "color without category logic"
+  ],
+  "recommended_training_use": [
+    "High-weight memory for bold academic science infovis.",
+    "Reference for IP-driven information visualization and graduation project boards.",
+    "Reference for converting a research topic into mascot, sticker, book, merchandise and exhibition systems.",
+    "Failure-prevention memory for neon pop designs that must still keep layout order and text accuracy."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "golden-melody-gpt-image2-poster-language-2026",
+  "source_type": "wechat_article_reference",
+  "primary_domain_id": "poster",
+  "secondary_domain_ids": [
+    "typography",
+    "vi-brand",
+    "infovis"
+  ],
+  "project_context_ids": [
+    "public-cultural-communication",
+    "commercial-project"
+  ],
+  "style_axis_ids": [
+    "cultural-contemporary",
+    "editorial-grid",
+    "soft-luxury",
+    "experimental-typography"
+  ],
+  "source_url": "https://mp.weixin.qq.com/s/-aRAdF1Fgd6G7YlPNy-ywA",
+  "source_title": "第37届金曲奖主视觉正式揭晓！用GPT-image2提取设计语言，适合任意主题",
+  "source_author": "gh_3fd7bf608693",
+  "publish_time_extracted": "2026-05-06 18:20:26 +08:00",
+  "retrieved_at": "2026-06-14",
+  "observed_article_stats": {
+    "html_length": 3034002,
+    "article_text_length": 2061,
+    "image_count_observed": 20
+  },
+  "content_storage_policy": {
+    "article_text": "not_stored",
+    "original_images": "not_downloaded",
+    "training_mode": "metadata_and_derived_aesthetic_rules_only",
+    "reason": "External web article is used as a public reference for method learning; do not ingest official campaign images, article images or full text without explicit rights."
+  },
+  "learning_summary": [
+    "Extract design language at the grammar level: metaphor, palette, texture, rhythm, type hierarchy and replaceable content slots.",
+    "Separate source inspiration from authorized production assets; never copy official visuals, marks or campaign composition.",
+    "For GPT-image2 poster work, name content variables before style adjectives to improve text accuracy.",
+    "A strong event poster starts from an abstract thesis and one dominant visual anchor.",
+    "Quality review must check originality, text accuracy, watermark exclusion and series consistency."
+  ],
+  "cross_domain_use": "Use this batch for AI poster prompt engineering, event key visual systems, award poster templates, campaign poster QA and prompt-slot design.",
+  "exclusion_rule": "Do not copy Golden Melody Awards visual assets, official marks, article images, long article text, screenshots, watermarks or promotional QR artifacts.",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_no_image_ingest"
+}

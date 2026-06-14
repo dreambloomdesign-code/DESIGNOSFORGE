@@ -1,0 +1,80 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "yuansu-qingbaiju-experimental-ip-infovis-2026",
+  "source_type": "wechat_public_article_reference",
+  "primary_domain_id": "infovis",
+  "secondary_domain_ids": [
+    "vi-brand",
+    "exhibition-board",
+    "poster",
+    "packaging",
+    "typography"
+  ],
+  "project_context_ids": [
+    "academic-discipline-competition",
+    "public-cultural-communication",
+    "experimental-design"
+  ],
+  "style_axis_ids": [
+    "academic-infovis-narrative",
+    "bold-pop-science-ip",
+    "editorial-grid",
+    "experimental-typography",
+    "infographic-technical",
+    "tech-futurism"
+  ],
+  "source_url": "https://mp.weixin.qq.com/s/AxNeAiNw_HOKD2wPelNZaA",
+  "source_title": "2026届毕业设计 | 元素情报局",
+  "source_author": "",
+  "publish_time_extracted": "2026-06-07 21:39:06 +08:00",
+  "retrieved_at": "2026-06-14T00:00:00+08:00",
+  "observed_article_stats": {
+    "html_length": 3225904,
+    "text_length": 781,
+    "image_count": 34,
+    "visible_sections": [
+      "IP形象及周边设计",
+      "IP形象设计",
+      "IP表情包延展",
+      "IP插画延展",
+      "IP延展应用",
+      "信息可视化设计",
+      "信息图表设计",
+      "图形设计",
+      "书籍设计",
+      "作品线下展览"
+    ]
+  },
+  "content_storage_policy": {
+    "store_original_images": false,
+    "store_full_article_text": false,
+    "store_only_derived_style_metadata": true,
+    "reason": "public reference article; use as aesthetic memory and prompt grammar only"
+  },
+  "learning_summary": {
+    "core_observation": "A chemistry education topic is transformed into a bold IP universe with mascots, expression packs, neon-black information boards, book design, merchandise, packaging and exhibition proof.",
+    "innovation_value": "Very high: the work combines science communication, character IP, experimental title lettering, dark neon data visualization and product-system extension without collapsing into generic academic boards.",
+    "transferable_design_rules": [
+      "Turn abstract knowledge into a character family only after defining a clear system metaphor.",
+      "Use high saturation and neon contrast when every color is assigned a role: identity, warning, data, emotion or category.",
+      "Separate cute IP expression from serious data panels through background mode: white/manual mode for system assets and black/intelligence-board mode for information density.",
+      "Use application proof to validate the system: sticker, book, card, packaging, merchandise and physical booth should all repeat the same visual grammar.",
+      "For high-density boards, require named clusters, scale jumps and a single dominant overview block."
+    ]
+  },
+  "cross_domain_use": {
+    "infovis": "science communication, data board, periodic-table tile grammar, technical labels",
+    "vi-brand": "IP character family, mascot behavior rules, expression pack, title lettering",
+    "exhibition-board": "graduation project board, competition board, application proof display",
+    "packaging": "card game, book, gift box, peripheral product proof",
+    "poster": "bold science key visual and campaign poster direction"
+  },
+  "exclusion_rule": [
+    "Do not copy original mascots, title lettering, product photographs or page composition.",
+    "Do not use the original article images as LoRA images without explicit rights.",
+    "Do not hallucinate chemical formulas, element names, equations or scientific claims.",
+    "Do not turn bold color into uncontrolled neon clutter."
+  ],
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_no_image_ingest"
+}

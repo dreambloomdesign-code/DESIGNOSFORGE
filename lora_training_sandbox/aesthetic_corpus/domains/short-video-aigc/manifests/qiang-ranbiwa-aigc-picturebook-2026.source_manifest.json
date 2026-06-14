@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "qiang-ranbiwa-aigc-picturebook-2026",
+  "source_type": "wechat_article_reference",
+  "primary_domain_id": "short-video-aigc",
+  "secondary_domain_ids": [
+    "infovis",
+    "exhibition-board",
+    "poster"
+  ],
+  "project_context_ids": [
+    "cultural-china-research",
+    "academic-discipline-competition",
+    "public-cultural-communication"
+  ],
+  "style_axis_ids": [
+    "academic-infovis-narrative",
+    "heritage-ritual-infovis",
+    "cultural-contemporary",
+    "editorial-grid",
+    "infographic-technical"
+  ],
+  "source_url": "https://mp.weixin.qq.com/s/Hk3ymNaHZVbS7Tb1sqQHmw",
+  "source_title": "AIGC绘本创作 ｜《羌族神话燃比娃的故事》中式美学诉说民族神话",
+  "source_author": "gh_35a0db1d1191",
+  "publish_time_extracted": "2026-06-13 22:52:54 +08:00",
+  "retrieved_at": "2026-06-14",
+  "observed_article_stats": {
+    "html_length": 3056928,
+    "article_text_length": 3197,
+    "image_count_observed": 29
+  },
+  "content_storage_policy": {
+    "article_text": "not_stored",
+    "original_images": "not_downloaded",
+    "training_mode": "metadata_and_derived_aesthetic_rules_only",
+    "reason": "External web article is used as public reference only; do not ingest copyrighted article images or full story text into local training assets without explicit rights."
+  },
+  "learning_summary": [
+    "Use a mythic quest engine: community problem, elder mission, guide animal, ritual object, escalating trials, sacred mountain, gift retrieval and warm return.",
+    "Build a compact symbol taxonomy: protagonist, red bird, white stone, sacred mountain, fire seed, obstacles and community.",
+    "Use warm-cold contrast to make transformation visible across picturebook pages and animation frames.",
+    "For Culture China and university competition boards, present source research, myth structure, storyboard and continuity QA as evidence.",
+    "Avoid generic fantasy styling; every costume, object and landscape cue must have cultural or narrative function."
+  ],
+  "cross_domain_use": "Use this batch for ethnic myth AIGC picturebooks, child-hero journey animation prompts, cultural storytelling boards, symbol taxonomy diagrams and Culture China competition process displays.",
+  "exclusion_rule": "Do not copy original article images, long story text, dialogue, watermarks, source page layout, or unverified cultural claims.",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_no_image_ingest"
+}
