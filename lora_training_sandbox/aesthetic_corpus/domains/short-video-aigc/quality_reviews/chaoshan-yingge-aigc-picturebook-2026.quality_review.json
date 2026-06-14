@@ -1,0 +1,114 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "chaoshan-yingge-aigc-picturebook-2026",
+  "review_date": "2026-06-14",
+  "reviewer": "DESIGNOSFORGE v2.0.0",
+  "source_url": "https://mp.weixin.qq.com/s/b0SC7L9f6gk5gunhWKNTFA",
+  "overall_score": 8.45,
+  "project_context_fit": {
+    "cultural-china-research": 0.96,
+    "academic-discipline-competition": 0.9,
+    "public-cultural-communication": 0.86,
+    "commercial-project": 0.18,
+    "product-photo-production": 0.02
+  },
+  "domain_fit": {
+    "short-video-aigc": 0.94,
+    "infovis": 0.84,
+    "exhibition-board": 0.78,
+    "poster": 0.72,
+    "vi-brand": 0.18
+  },
+  "style_axis_fit": {
+    "heritage-ritual-infovis": 0.92,
+    "academic-infovis-narrative": 0.87,
+    "cultural-contemporary": 0.86,
+    "editorial-grid": 0.74,
+    "infographic-technical": 0.7,
+    "commercial-product": 0.06
+  },
+  "quality_scores": {
+    "cultural_story_engine": 9.1,
+    "storyboard_reading_order": 8.7,
+    "character_taxonomy_value": 8.6,
+    "aigc_process_documentation": 8.2,
+    "visual_style_transferability": 8.1,
+    "text_precision_risk_control": 7.6,
+    "rights_safety": 8.8
+  },
+  "core_aesthetic_takeaways": [
+    "The case is valuable because it turns heritage into a sequence of actions, not a background pattern.",
+    "The strongest reusable structure is the narrative loop: everyday village, threshold, ritual token, mural awakening, hero emergence, group formation, inheritance.",
+    "A role-based hero taxonomy can stabilize AIGC character continuity across still frames and animation tests.",
+    "Warm folk atmosphere should be controlled through palette, light and one focal event per frame, not through unlimited ornaments.",
+    "For competition use, the AIGC process itself should be presented as evidence: research, script, character bible, storyboard, prompt packet, continuity QA and application proof."
+  ],
+  "prompt_structure_lessons": [
+    "Lock the project context first: Culture China, university competition, public cultural storytelling, or AIGC picturebook.",
+    "Name the cultural story engine before describing visual style.",
+    "Separate scene beats, character taxonomy, visual palette, typography rules and continuity checks.",
+    "Require one focal action per frame to prevent fragmented image noise.",
+    "Use exact cultural terms only after verification; otherwise use neutral placeholder labels."
+  ],
+  "text_accuracy_policy": {
+    "safe_exact_text_candidates": [
+      "user-supplied project title",
+      "short section labels such as story script, character system, storyboard, visual style and production path",
+      "verified names of cultural topics supplied by the user"
+    ],
+    "requires_source_confirmation": [
+      "long article paragraphs",
+      "dialogue",
+      "hero names and attributes",
+      "regional folklore claims",
+      "historical explanations",
+      "WeChat account metadata and watermark text"
+    ],
+    "training_rule": "Use the source for derived structure and aesthetic grammar only. Do not train full article text, original images, dialogue or unverified microcopy."
+  },
+  "risk_controls": [
+    {
+      "risk": "copyright contamination from external article images",
+      "severity": "high",
+      "mitigation": "Store metadata and derived aesthetic rules only; keep source URL for citation; require rights clearance before image ingestion."
+    },
+    {
+      "risk": "generic Chinese heritage collage",
+      "severity": "high",
+      "mitigation": "Require every motif to serve a scene action, taxonomy role, storyboard beat or process explanation."
+    },
+    {
+      "risk": "character continuity drift in AIGC animation",
+      "severity": "medium",
+      "mitigation": "Use a character bible with face color, prop, silhouette, gesture, role and scene function before generating frames."
+    },
+    {
+      "risk": "over-saturated red-gold festival clutter",
+      "severity": "medium",
+      "mitigation": "Use controlled warm palette, focal lighting, negative space and one major action per frame."
+    },
+    {
+      "risk": "unverified cultural facts",
+      "severity": "medium",
+      "mitigation": "Tag uncertain content as placeholder or research-needed instead of presenting it as exact text."
+    }
+  ],
+  "negative_prompt_atoms": [
+    "copied WeChat article image",
+    "full copied article text",
+    "generic red gold Chinese festival clutter",
+    "random opera masks without taxonomy",
+    "pseudo Chinese dialogue",
+    "unverified folklore claim",
+    "all scenes at the same intensity",
+    "mural texture covering character readability",
+    "watermark remnants",
+    "AIGC process without source research"
+  ],
+  "recommended_training_use": {
+    "stage_1_curation": "Keep as metadata-only external reference with source URL and no image ingestion.",
+    "stage_2_caption_tuning": "Use captions to teach cultural story engines, storyboard loops, character taxonomy and AIGC production boards.",
+    "stage_3_lora_training": "If rights are cleared later, add selected images to a short-video-aigc and Culture China subset with separate continuity tags.",
+    "stage_4_prompt_runtime": "Retrieve when prompts mention AIGC picturebook, heritage animation, Yingge, folk ritual storytelling, Culture China, university competition process board or storyboard."
+  }
+}

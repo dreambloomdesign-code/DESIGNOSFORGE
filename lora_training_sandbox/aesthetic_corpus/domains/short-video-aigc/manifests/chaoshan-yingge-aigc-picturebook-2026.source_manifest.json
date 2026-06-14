@@ -1,0 +1,50 @@
+{
+  "schema_version": "2.0.0",
+  "batch_id": "chaoshan-yingge-aigc-picturebook-2026",
+  "source_type": "wechat_article_reference",
+  "primary_domain_id": "short-video-aigc",
+  "secondary_domain_ids": [
+    "infovis",
+    "exhibition-board",
+    "poster"
+  ],
+  "project_context_ids": [
+    "cultural-china-research",
+    "academic-discipline-competition",
+    "public-cultural-communication"
+  ],
+  "style_axis_ids": [
+    "academic-infovis-narrative",
+    "heritage-ritual-infovis",
+    "cultural-contemporary",
+    "editorial-grid",
+    "infographic-technical"
+  ],
+  "source_url": "https://mp.weixin.qq.com/s/b0SC7L9f6gk5gunhWKNTFA",
+  "source_title": "AIGC绘本创作｜《潮汕英歌 水浒英雄》一段古村祠堂壁画与民俗仪式传灯少年的奇遇",
+  "source_author": "gh_35a0db1d1191",
+  "publish_time_extracted": "2026-06-09 07:40:45 +08:00",
+  "retrieved_at": "2026-06-14",
+  "observed_article_stats": {
+    "html_length": 3092021,
+    "article_text_length": 2440,
+    "image_count_observed": 39
+  },
+  "content_storage_policy": {
+    "article_text": "not_stored",
+    "original_images": "not_downloaded",
+    "training_mode": "metadata_and_derived_aesthetic_rules_only",
+    "reason": "External web article is used as public reference only; do not ingest copyrighted article images or full text into local training assets without explicit rights."
+  },
+  "learning_summary": [
+    "Use a cultural story engine instead of isolated motif stacking: setting, protagonist, ritual token, mural activation, hero sequence, climax and inheritance close.",
+    "Convert folk performance content into a taxonomy of roles, colors, props, gestures, costume silhouettes and scene functions.",
+    "For AIGC picturebooks, keep script, storyboard, character bible, style board and continuity QA as separate production layers.",
+    "For Culture China and university competition boards, show the process path and source reasoning rather than only final images.",
+    "Control heritage atmosphere through a limited palette and one dominant focus per frame; avoid noisy red-gold festival clutter."
+  ],
+  "cross_domain_use": "Use this batch for AIGC cultural picturebook prompts, heritage animation storyboards, Culture China competition process boards, illustrated infovis, and public cultural communication with child-friendly narrative access.",
+  "exclusion_rule": "Do not copy original article images, long article text, dialogue, watermarks, source page layout, or unverified cultural facts. Do not generalize Yingge references into every Chinese heritage project.",
+  "rights_status": "public_reference_only",
+  "training_readiness": "metadata_ready_no_image_ingest"
+}

@@ -4,36 +4,37 @@
   "root": "lora_training_sandbox/aesthetic_corpus",
   "audit": {
     "schema_version": "2.0.0",
-    "caption_item_count": 67,
-    "batch_count": 9,
+    "caption_item_count": 72,
+    "batch_count": 10,
     "domain_distribution": {
       "environmental-art": 6,
       "exhibition-board": 15,
       "photography": 8,
+      "short-video-aigc": 5,
       "vi-brand": 38
     },
     "project_context_distribution": {
-      "academic-discipline-competition": 18,
+      "academic-discipline-competition": 22,
       "commercial-project": 22,
-      "cultural-china-research": 22,
+      "cultural-china-research": 27,
       "portrait-session": 6,
       "product-photo-production": 4,
-      "public-cultural-communication": 37,
+      "public-cultural-communication": 40,
       "spatial-cad-production": 6
     },
     "style_axis_distribution": {
-      "academic-infovis-narrative": 7,
+      "academic-infovis-narrative": 11,
       "cad-topology-fidelity": 5,
       "commercial-product": 20,
       "composition-optimization": 5,
       "construction-drawing-logic": 3,
-      "cultural-contemporary": 42,
-      "editorial-grid": 40,
+      "cultural-contemporary": 47,
+      "editorial-grid": 42,
       "environmental-competition": 11,
       "experimental-typography": 21,
       "hanfu-cultural-portrait": 1,
-      "heritage-ritual-infovis": 3,
-      "infographic-technical": 26,
+      "heritage-ritual-infovis": 7,
+      "infographic-technical": 27,
       "isometric-process-infovis": 3,
       "minimal-premium": 21,
       "natural-portrait-retouch": 4,
@@ -43,16 +44,77 @@
       "tech-futurism": 1
     },
     "rights_distribution": {
-      "public_reference_only": 67
+      "public_reference_only": 72
     },
     "project_context_coverage": {
-      "with_context": 67,
+      "with_context": 72,
       "missing_context": 0
     },
     "missing_project_context": [],
     "missing_quality_review_batches": []
   },
   "batches": [
+    {
+      "batch_id": "chaoshan-yingge-aigc-picturebook-2026",
+      "primary_domain_ids": [
+        "short-video-aigc"
+      ],
+      "secondary_domain_ids": [
+        "exhibition-board",
+        "infovis",
+        "poster"
+      ],
+      "style_axis_ids": [
+        "academic-infovis-narrative",
+        "cultural-contemporary",
+        "editorial-grid",
+        "heritage-ritual-infovis",
+        "infographic-technical"
+      ],
+      "project_context_ids": [
+        "academic-discipline-competition",
+        "cultural-china-research",
+        "public-cultural-communication"
+      ],
+      "visual_genre_tags": [
+        "aigc-picturebook",
+        "aigc-production-workflow",
+        "ancestral-hall-narrative",
+        "animation-path",
+        "character-taxonomy",
+        "folk-ritual-heroes",
+        "folk-ritual-palette",
+        "heritage-adventure",
+        "heritage-infovis",
+        "heritage-motion",
+        "heritage-storytelling",
+        "mask-and-costume-system",
+        "mural-texture",
+        "picturebook-animation",
+        "process-documentation",
+        "prompt-to-storyboard",
+        "scene-progression",
+        "storyboard-loop",
+        "storyboard-system",
+        "warm-cinematic-picturebook",
+        "yingge-dance"
+      ],
+      "rights_statuses": [
+        "public_reference_only"
+      ],
+      "image_count": 5,
+      "sample_caption": "Reference memory for an AIGC picturebook built around Chaoshan Yingge dance, Water Margin hero imagery, ancestral hall murals, and a child protagonist carrying a symbolic token. The transferable design value is a cultural-story engine: field-like setting, ritual object, mural awakening, hero sequence, group formation, and inheritance ending.",
+      "sample_positive_notes": [
+        "heritage content becomes narrative action instead of static ornament",
+        "the child protagonist gives the cultural system an accessible emotional viewpoint",
+        "ancestral hall murals, ritual props, hero masks and group formation create a clear story loop"
+      ],
+      "sample_negative_notes": [
+        "do not copy the original article images or page layout as training targets",
+        "do not reduce Yingge culture to generic Chinese festival decoration",
+        "avoid listing historical heroes without a narrative function"
+      ]
+    },
     {
       "batch_id": "chijing-vintage-identity-2025",
       "primary_domain_ids": [
