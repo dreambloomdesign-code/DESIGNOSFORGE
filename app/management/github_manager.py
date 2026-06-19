@@ -60,15 +60,15 @@ class GitHubManager:
         }
         return json.dumps(payload, ensure_ascii=False, indent=2)
 
-    def release_plan(self, version="v2.0.0"):
+    def release_plan(self, version="v2.1.0"):
         branch = f"release/{version.lstrip('v')}"
         lines = [
             f"# DESIGNOSFORGE {version} GitHub Release Plan",
             "",
             "1. Confirm the working tree is clean or intentionally staged.",
             f"2. Create a release branch: `git switch -c {branch}`.",
-            "3. Update skill metadata, source package version, README notes, and tests.",
-            "4. Run validation: skill quick_validate, source CLI smoke checks, and pytest.",
+            "3. Update skill metadata, source package version, README notes, Loop Engineering docs, and tests.",
+            "4. Run validation: skill quick_validate, source CLI smoke checks, compileall, source validator, and pytest.",
             f"5. Commit with: `release: designosforge {version}`.",
             f"6. Tag with: `git tag {version}` after tests pass.",
             "7. Push branch and tag to GitHub.",
@@ -77,17 +77,21 @@ class GitHubManager:
         ]
         return "\n".join(lines)
 
-    def pr_template(self, version="v2.0.0"):
+    def pr_template(self, version="v2.1.0"):
         return "\n".join([
             f"# Release DESIGNOSFORGE {version}",
             "",
             "## Summary",
-            "- Add v2.0 DesignKernel, DesignStateGraph, HybridRouter, PromptPacketV2, FailureMemoryBank, CriticEnsemble, ConstraintSolver, and candidate-direction search.",
-            "- Preserve DESIGNOSFORGE inference, GitHub management, image confirmation gates, and v1.5 quality controls.",
+            "- Add LoopEngineeringBlueprintBuilder and LoopEngineeringOS as a system-runtime layer for durable agent loops.",
+            "- Preserve PromptPacketV2 and LoopPromptPack as independent design and prompt-iteration contracts.",
+            "- Strengthen GitHub/CI/worktree workflow planning, executor/verifier split, persistent memory, and release validation.",
             "",
             "## Validation",
             "- [ ] Skill quick_validate passed",
+            "- [ ] Source skill validator passed",
             "- [ ] Source CLI smoke checks passed",
+            "- [ ] Loop Engineering CLI smoke check passed",
+            "- [ ] compileall passed",
             "- [ ] pytest passed",
             "- [ ] GitHub branch, tag, and release notes checked",
             "",

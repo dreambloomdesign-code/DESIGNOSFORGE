@@ -92,6 +92,36 @@ Required loop types:
 
 The loop must change one axis at a time and stop when the quality target passes, no meaningful revision remains, the same failure repeats, the user accepts the result, or the maximum iteration count is reached.
 
+## LoopEngineeringBlueprint Contract
+
+LoopEngineeringBlueprint is a separate system-runtime layer. It does not replace PromptPacketV2 or LoopPromptPack.
+
+Use LoopEngineeringBlueprint when the task needs a running workflow with scheduler, worktree isolation, skill context, external connectors, validation gates, persistent memory, handoff, and stop conditions.
+
+LoopEngineeringBlueprint must include:
+
+```text
+schema_version
+packet_type = LoopEngineeringBlueprint
+relationship_to_loop_prompt_pack
+activation
+six_question_contract
+runtime_blueprint.scheduler
+runtime_blueprint.parallel_isolation
+runtime_blueprint.skill_context
+runtime_blueprint.external_connectors
+runtime_blueprint.validation_gate
+runtime_blueprint.persistent_memory
+agent_topology
+state_schema
+handoff_contract
+failure_controls
+prompt_scaffold
+export_policy
+```
+
+For design work, the verifier must enforce the aesthetic gates in this document. For GitHub or engineering work, the verifier must also run compile/tests/source validation before accepting the loop iteration.
+
 ## Rewrite Pattern
 
 Replace vague visual language with controlled structure:
