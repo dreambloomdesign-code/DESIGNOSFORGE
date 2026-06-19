@@ -4,11 +4,21 @@ LoopPromptPack is an independent companion prompt scheme for DESIGNOSFORGE. It d
 
 Use it when the user asks for:
 
-- loop, 循环, 闭环, 迭代, 多轮, 自我检查, 继续优化
-- failed-result recovery: 失败, 不成功, 不算数, 好丑, 跑偏, 重来
+- loop, iteration, self critique, self-check, continue optimizing
+- 循环, 闭环, 迭代, 多轮, 自我检查, 继续优化
+- failed-result recovery: 失败, 不成功, 不算数, 当做没发生, 好丑, 跑偏, 重来
 - branch exploration: 多方案, 分支, 候选, 方案比较
 - visual result repair: 改图, 修图, 拯救, 保留, 不要改变
 - seamless video loops: 无缝循环, 首尾一致, loop video, seamless, closed camera path
+
+## Relationship To Loop Engineering
+
+LoopPromptPack controls repeated prompt attempts. LoopEngineeringBlueprint controls the system runtime around a loop.
+
+Use:
+
+- `kernel loop-prompt` for prompt iteration.
+- `kernel loop-engineering` for scheduler, worktree isolation, connectors, validation, and persistent memory.
 
 ## Required Fields
 

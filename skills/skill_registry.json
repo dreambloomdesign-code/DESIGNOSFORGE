@@ -1,8 +1,13 @@
 {
-  "version": "1.4.0",
+  "version": "2.1.0",
   "skills": [
+    "DesignKernel",
+    "DesignMathEngine",
+    "LoopEngineeringOS",
+    "LoopPromptEngine",
     "ReferenceModeOS",
     "PromptOrchestrationEngine",
+    "EnvArtCADMCPBridge",
     "EnvArtBoardOS",
     "brandVIos",
     "InfoVisOS",
@@ -16,6 +21,7 @@
     "PosterDesignOS",
     "ShortDramaAIGC_OS",
     "GeneralDesignOS",
-    "LoRAStyleTrainingLibrary"
+    "LoRAStyleTrainingLibrary",
+    "PhotographyOS"
   ]
 }

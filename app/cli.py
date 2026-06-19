@@ -39,7 +39,7 @@ def main():
     github_parser = sub.add_parser("github")
     github_parser.add_argument("action", choices=("status", "release-plan", "pr-template"))
     github_parser.add_argument("--repo", default=".")
-    github_parser.add_argument("--version", default="v2.0.0")
+    github_parser.add_argument("--version", default="v2.1.0")
     quality_parser = sub.add_parser("quality")
     quality_parser.add_argument("action", choices=("audit", "guardrails"))
     quality_parser.add_argument("text")
@@ -47,7 +47,7 @@ def main():
     envart_cad_parser.add_argument("action", choices=("plan",))
     envart_cad_parser.add_argument("text")
     kernel_parser = sub.add_parser("kernel")
-    kernel_parser.add_argument("action", choices=("plan", "prompt-packet", "loop-prompt", "math-audit", "record-failure"))
+    kernel_parser.add_argument("action", choices=("plan", "prompt-packet", "loop-prompt", "loop-engineering", "math-audit", "record-failure"))
     kernel_parser.add_argument("text")
     kernel_parser.add_argument("--domain", default="general-design")
     kernel_parser.add_argument("--failure-mode", default="unspecified_failure")
@@ -94,6 +94,8 @@ def main():
                 print(json_dumps(plan["prompt_packet_v2"]))
             elif args.action == "loop-prompt":
                 print(json_dumps(plan["loop_prompt_pack"]))
+            elif args.action == "loop-engineering":
+                print(json_dumps(plan["loop_engineering"]))
             elif args.action == "math-audit":
                 print(json_dumps(plan["math_trace"]))
             else:

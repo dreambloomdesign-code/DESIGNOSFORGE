@@ -1,24 +1,26 @@
 # LoopPromptPack Companion Protocol
 
-LoopPromptPack is an independent prompt-engineering scheme for DESIGNOSFORGE v2.0. It does not replace PromptPacketV2. It runs beside it when a task needs iteration, failed-result recovery, branch exploration, visual-result repair, or seamless video-loop prompts.
+LoopPromptPack is an independent prompt-engineering scheme for DESIGNOSFORGE v2.1. It does not replace PromptPacketV2.
 
-## Why It Exists
+Use it when a task needs prompt iteration, failed-result recovery, branch exploration, visual-result repair, or seamless video-loop prompts.
 
-PromptPacketV2 is the main design contract: route, memory, candidates, constraints, critics, tool plan, and generation policy.
+LoopPromptPack is not the same as Loop Engineering:
 
-LoopPromptPack is a loop controller: it defines how to run repeated prompt attempts safely, how to critique each iteration, how to stop, and how to write failure knowledge back into memory.
+- `LoopPromptPack` controls repeated prompt attempts.
+- `LoopEngineeringBlueprint` controls the system runtime around a loop: scheduler, worktree isolation, skills, connectors, validation, and memory.
 
 ## Activation
 
 LoopPromptPack activates when the brief contains signals such as:
 
-- loop, seamless, video loop, first and last frame, closed camera path
+- loop, iteration, self critique, self-check, continue optimizing
 - 循环, 闭环, 迭代, 多轮, 自我检查, 继续优化
-- 失败, 不成功, 不算数, 好丑, 跑偏, 重来
-- 改图, 修图, 拯救, 保留, 不要改变
-- 多方案, 分支, 候选, 方案比较
-
-When no loop signal exists, the pack remains available but inactive.
+- failed, not successful, does not count, redo
+- 失败, 不成功, 不算数, 当做没发生, 好丑, 跑偏, 重来
+- edit image, retouch, repair, preserve, do not change
+- 改图, 修图, 拯救, 保留, 不要改变, 参考图
+- seamless, loop video, first and last frame, closed camera path
+- 无缝循环, 循环视频, 首尾一致, 镜头循环
 
 ## Loop Types
 
@@ -48,7 +50,7 @@ Every LoopPromptPack returns:
 
 ```json
 {
-  "schema_version": "2.0.0-loop.1",
+  "schema_version": "2.1.0-loop.1",
   "packet_type": "LoopPromptPack",
   "relationship_to_prompt_packet_v2": {
     "mode": "independent_companion_pack",
@@ -63,38 +65,21 @@ Every LoopPromptPack returns:
 }
 ```
 
-## State Model
+## Iteration Rules
 
-Each iteration must preserve:
-
-- `iteration`
-- stable original brief
-- current draft prompt
-- critique findings
-- revision delta
-- quality score
-- stop or continue decision
-
-The loop must change one axis at a time. This prevents prompt drift and avoids turning critique into an uncontrolled rewrite.
-
-## Stop Conditions
-
-A loop should stop when:
-
-- the score reaches the target threshold
-- no material revision delta remains
-- the same failure repeats
-- the user accepts the direction
-- the maximum iteration count is reached
-
-Default maximum iterations: `3`.
+- Preserve the stable original brief.
+- Change one axis per iteration.
+- Output state, critique, revision delta, revised prompt, score, and stop-or-continue decision.
+- Keep visible text exact.
+- Stop on score pass, no meaningful revision delta, repeated failure, user acceptance, or max iterations.
+- Default max iterations: `3`.
 
 ## CLI
 
 ```powershell
 py -m app.cli kernel loop-prompt "create a design prompt with three loop iterations and self critique"
 py -m app.cli kernel loop-prompt "generate a seamless loop video prompt; first and last frame must match"
-py -m app.cli kernel prompt-packet "make a logo"
+py -m app.cli kernel loop-engineering "Loop Engineering 调度 issue CI，worktree 并行隔离，validator 验收，写入长期记忆"
 ```
 
-The third command still returns PromptPacketV2. It does not become a LoopPromptPack.
+Use `kernel loop-prompt` for prompt iteration. Use `kernel loop-engineering` when the loop must become a running system.

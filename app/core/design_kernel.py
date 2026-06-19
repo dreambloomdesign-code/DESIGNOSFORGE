@@ -16,11 +16,11 @@ from .design_math import (
     weighted_sum,
 )
 from .envart_cadmcp import EnvArtCADMCPBridge
-from .loop_prompt import LoopPromptPackBuilder
+from .loop_prompt import LoopEngineeringBlueprintBuilder, LoopPromptPackBuilder
 from .task_router import ROUTES, TaskRouterAgent
 
 
-VERSION = "2.0.0"
+VERSION = "2.1.0"
 FAILURE_MEMORY_PATH = Path("lora_training_sandbox/aesthetic_corpus/failure_memory.jsonl")
 
 
@@ -182,6 +182,7 @@ class DesignKernelPlan:
     math_trace: dict
     prompt_packet_v2: dict
     loop_prompt_pack: dict
+    loop_engineering: dict
 
     def to_dict(self):
         return asdict(self)
@@ -759,6 +760,7 @@ class ToolExecutionPlanner:
         steps = ["parse_intent", "retrieve_memory", "solve_constraints", "rank_candidates", "run_critic_ensemble"]
         tools = []
         loop_detection = LoopPromptPackBuilder().detect(intent.raw_text, intent=intent, route=route)
+        loop_engineering_detection = LoopEngineeringBlueprintBuilder().detect(intent.raw_text, loop_detection=loop_detection)
         if constraints.get("cad_plan"):
             tools.extend(constraints["cad_plan"].get("preferred_tools", []))
         if "prompt_packet" in intent.delivery_modes:
@@ -768,6 +770,9 @@ class ToolExecutionPlanner:
             tools.append("LoopPromptPack")
             if loop_detection.loop_type == "seamless_video_loop":
                 tools.append("ShortDramaAIGC_OS")
+        if loop_engineering_detection.active:
+            steps.extend(["build_loop_engineering_blueprint", "define_scheduler_isolation_validation_memory"])
+            tools.append("LoopEngineeringBlueprint")
         if "git_release" in intent.delivery_modes:
             tools.extend(["GitOpsManager", "GitHubManager"])
         if route["skill_name"] == "PhotographyOS":
@@ -869,6 +874,7 @@ class DesignKernel:
         self.failures = FailureMemoryBank()
         self.packet = PromptPacketV2Builder()
         self.loop_prompt = LoopPromptPackBuilder()
+        self.loop_engineering = LoopEngineeringBlueprintBuilder()
 
     def plan(self, text):
         intent = self.intent_parser.parse(text)
@@ -894,6 +900,14 @@ class DesignKernel:
             constraints=constraints,
             failure_memory=failure_memory,
         )
+        loop_engineering = self.loop_engineering.build(
+            intent.raw_text,
+            intent=intent,
+            route=route,
+            loop_detection=LoopPromptPackBuilder().detect(intent.raw_text, intent=intent, route=route),
+            constraints=constraints,
+            failure_memory=failure_memory,
+        )
         return DesignKernelPlan(
             schema_version=VERSION,
             intent=asdict(intent),
@@ -909,6 +923,7 @@ class DesignKernel:
             math_trace=math_trace,
             prompt_packet_v2=prompt_packet,
             loop_prompt_pack=loop_prompt_pack,
+            loop_engineering=loop_engineering,
         )
 
     def _math_trace(self, route, memory, constraints, candidates, critics, failure_memory):

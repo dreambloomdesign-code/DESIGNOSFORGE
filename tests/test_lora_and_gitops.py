@@ -48,5 +48,7 @@ def test_github_release_plan_mentions_version():
     assert "v9.9.9" in plan
     assert "draft PR" in plan
 
-def test_github_default_release_plan_targets_v1_6_0():
-    assert "v1.6.0" in GitHubManager(".").release_plan()
+def test_github_default_release_plan_targets_v2_1_0():
+    plan = GitHubManager(".").release_plan()
+    assert "v2.1.0" in plan
+    assert "Loop Engineering docs" in plan
